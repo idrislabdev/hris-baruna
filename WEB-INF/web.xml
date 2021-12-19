@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ | $Header: setup/struts4php.xml
+ | $Revision: 1.0
+ | $Date: 2004.06.19
+ |
+ | ====================================================================
+ -->
+<configuration>
+	<path name="datasource">
+		<configValue name="default">valsix</configValue>
+		<path name="valsix">
+			<configValue name="driver">oci8</configValue>
+			<configValue name="server">localhost</configValue>
+			<configValue name="database">orcl</configValue>
+			<configValue name="username">PPI</configValue>
+			<configValue name="password">PPI</configValue>
+			<configValue name="pathreport">C:\\wamp\\www\\baruna\\</configValue>
+			<configValue name="serverreport">orcl</configValue>
+		</path>
+	</path>
+</configuration>

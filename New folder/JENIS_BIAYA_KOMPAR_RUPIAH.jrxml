@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JENIS_BIAYA_KOMPAR_RUPIAH" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d136b94e-2e8b-4e89-861d-90734e1e92e9">
+	<property name="ireport.zoom" value="1.7715610000000057"/>
+	<property name="ireport.x" value="265"/>
+	<property name="ireport.y" value="257"/>
+	<queryString>
+		<![CDATA[SELECT KD_LEVEL1,KD_LEVEL2,KD_BUKU_BESAR1,SUB_JUDUL1,NAMA_REKENING1,ANGGARAN1,KINI1,LALU1 FROM
+(
+SELECT 1 KD_LEVEL1, 1 KD_LEVEL2, substr(KD_BUKU_BESAR,1,3) AS KD_BUKU_BESAR1,
+SUB_JUDUL1 AS SUB_JUDUL1, NAMA_REKENING AS NAMA_REKENING1, ANGGARAN AS ANGGARAN1,
+MUT_YTD_YYKINI AS KINI1, MUT_YTD_YYLALU AS LALU1
+FROM KBBT_TEMPL_LRBIAYA
+WHERE NO_JUDUL=1
+UNION ALL
+SELECT 1 KD_LEVEL1, 2 NO_JUDUL2, substr(KD_BUKU_BESAR,1,3) AS KD_BUKU_BESAR2,
+SUB_JUDUL1 AS SUB_JUDUL2, NAMA_REKENING AS NAMA_REKENING2, ANGGARAN AS ANGGARAN2,
+MUT_YTD_YYKINI AS KINI2, MUT_YTD_YYLALU AS LALU2
+FROM KBBT_TEMPL_LRBIAYA
+WHERE NO_JUDUL=2
+UNION ALL
+SELECT 2 KD_LEVEL1, 3 NO_JUDUL3, substr(KD_BUKU_BESAR,1,3) AS KD_BUKU_BESAR3,
+SUB_JUDUL1 AS SUB_JUDUL3, NAMA_REKENING AS NAMA_REKENING3, ANGGARAN AS ANGGARAN3,
+MUT_YTD_YYKINI AS KINI3, MUT_YTD_YYLALU AS LALU3
+FROM KBBT_TEMPL_LRBIAYA
+WHERE NO_JUDUL=3
+UNION ALL
+SELECT 3 KD_LEVEL1, NO_JUDUL4,KD_BUKU_BESAR4,SUB_JUDUL4,NAMA_REKENING4,ANGGARAN4,KINI4,LALU4
+FROM (
+      SELECT
+       NO_JUDUL NO_JUDUL4
+      ,substr(KD_BUKU_BESAR,1,3) KD_BUKU_BESAR4
+      ,SUB_JUDUL1 SUB_JUDUL4
+      ,NAMA_REKENING NAMA_REKENING4
+       , DECODE(substr(KD_BUKU_BESAR,1,3), '809', 0 - ANGGARAN, ANGGARAN) ANGGARAN4
+       ,DECODE(substr(KD_BUKU_BESAR,1,3), '809', 0 - MUT_YTD_YYKINI, MUT_YTD_YYKINI) KINI4
+       ,DECODE(substr(KD_BUKU_BESAR,1,3), '809', 0 - MUT_YTD_YYLALU, MUT_YTD_YYLALU) LALU4
+      FROM KBBT_TEMPL_LRBIAYA
+      WHERE ((TO_NUMBER(SUBSTR(KD_BUKU_BESAR,1,3)) BETWEEN 809 AND 809) OR
+            (TO_NUMBER(SUBSTR(KD_BUKU_BESAR,1,3)) = 791)) AND
+              NO_JUDUL=4)
+UNION ALL
+SELECT DECODE(KD_BUKU_BESAR4, '810', 4, '811', 5, '812', 6, '890', 7) KD_LEVEL1, 5 NO_JUDUL4,KD_BUKU_BESAR4, NULL SUB_JUDUL4,NAMA_REKENING4,ANGGARAN4,KINI4,LALU4
+FROM (
+      SELECT
+       NO_JUDUL NO_JUDUL4
+      ,substr(KD_BUKU_BESAR,1,3) KD_BUKU_BESAR4
+      ,SUB_JUDUL1 SUB_JUDUL4
+      ,NAMA_REKENING NAMA_REKENING4
+      ,ANGGARAN ANGGARAN4
+      ,MUT_YTD_YYKINI KINI4
+      ,MUT_YTD_YYLALU LALU4
+      FROM KBBT_TEMPL_LRBIAYA
+      WHERE (((TO_NUMBER(SUBSTR(KD_BUKU_BESAR,1,3)) BETWEEN 810 AND 811)) AND
+              NO_JUDUL=4) OR TO_NUMBER(SUBSTR(KD_BUKU_BESAR,1,3)) IN (812, 890))
+) A
+ORDER BY KD_LEVEL1, KD_LEVEL2, KD_BUKU_BESAR1]]>
+	</queryString>
+	<field name="KD_LEVEL1" class="java.math.BigDecimal"/>
+	<field name="KD_LEVEL2" class="java.math.BigDecimal"/>
+	<field name="KD_BUKU_BESAR1" class="java.lang.String"/>
+	<field name="SUB_JUDUL1" class="java.lang.String"/>
+	<field name="NAMA_REKENING1" class="java.lang.String"/>
+	<field name="ANGGARAN1" class="java.math.BigDecimal"/>
+	<field name="KINI1" class="java.math.BigDecimal"/>
+	<field name="LALU1" class="java.math.BigDecimal"/>
+	<variable name="ANGGARAN_ABS" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{ANGGARAN1}.abs()]]></variableExpression>
+	</variable>
+	<variable name="KODE_SUB_JUDUL" class="java.lang.String">
+		<variableExpression><![CDATA[$F{KD_LEVEL2} == 1 ? 'I.' :
+$F{KD_LEVEL2} == 2 ? 'II.' :
+$F{KD_LEVEL2} == 3 ? 'III.' :
+$F{KD_LEVEL2} == 4 ? 'IV.' :
+$F{KD_LEVEL2} == 5 ? 'V.' :
+'']]></variableExpression>
+	</variable>
+	<variable name="KETERANGAN_FOOTER_GROUP_2" class="java.lang.String">
+		<variableExpression><![CDATA[$F{KD_LEVEL2} == 1 ? 'JUMLAH PENDAPATAN KOTOR' :
+$F{KD_LEVEL2} == 2 ? 'JUMLAH REDUKSI PENDAPATAN' :
+$F{KD_LEVEL2} == 3 ? 'JUMLAH BIAYA USAHA' :
+$F{KD_LEVEL2} == 4 ? 'RUGI/LABA DILUAR USAHA' : '']]></variableExpression>
+	</variable>
+	<variable name="KETERANGAN_GROUP_1" class="java.lang.String">
+		<variableExpression><![CDATA[$F{KD_LEVEL1} == 1 ? 'JUMLAH PENDAPATAN BERSIH' :
+$F{KD_LEVEL1} == 2 ? 'RUGI / LABA USAHA' :
+$F{KD_LEVEL1} == 3 ? 'R/L SEBELUM BIAYA BUNGA' :
+$F{KD_LEVEL1} == 4 ? 'R/L SBELUM BIAYA PENUGASAN' :
+$F{KD_LEVEL1} == 5 ? 'R/L SEBELUM POS-POS LUAR BIASA' :
+$F{KD_LEVEL1} == 6 ? 'LABA-RUGI SEBELUM PAJAK' :
+$F{KD_LEVEL1} == 7 ? 'LABA/RUGI TOTAL' :'']]></variableExpression>
+	</variable>
+	<variable name="KINI_ABS" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{KINI1}.abs()]]></variableExpression>
+	</variable>
+	<variable name="LALU_ABS" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{LALU1}.abs()]]></variableExpression>
+	</variable>
+	<variable name="DEVIASI_4_3" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{ANGGARAN_ABS} == 0 ? 0 : ($V{KINI_ABS}/$V{ANGGARAN_ABS})*100]]></variableExpression>
+	</variable>
+	<variable name="DEVIASI_4_5" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$V{LALU_ABS} == 0 ? 0 : ($V{KINI_ABS}/$V{LALU_ABS})*100]]></variableExpression>
+	</variable>
+	<group name="KD_LEVEL1">
+		<groupExpression><![CDATA[$F{KD_LEVEL1}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<textField>
+					<reportElement x="58" y="0" width="287" height="14" uuid="af056d8b-2963-41e1-a73e-f797b0c014e8"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{KETERANGAN_GROUP_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="KD_LEVEL2">
+		<groupExpression><![CDATA[$F{KD_LEVEL2}]]></groupExpression>
+		<groupHeader>
+			<band height="17">
+				<printWhenExpression><![CDATA[new Boolean($F{KD_LEVEL2} == 5 ? false:true)]]></printWhenExpression>
+				<textField isBlankWhenNull="true">
+					<reportElement x="3" y="0" width="53" height="17" uuid="e2d3e268-f391-43a9-b78b-5e0651f6d369"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{KODE_SUB_JUDUL}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="58" y="0" width="288" height="17" uuid="ca29d086-0d8d-4a5b-8005-3c20a693bcca"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SUB_JUDUL1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="16">
+				<printWhenExpression><![CDATA[new Boolean($F{KD_LEVEL2} == 5 ? false:true)]]></printWhenExpression>
+				<textField>
+					<reportElement x="58" y="0" width="287" height="16" uuid="27830d1b-6735-4a67-9142-8d9345b1000e"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{KETERANGAN_FOOTER_GROUP_2}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="155" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="15" width="154" height="20" uuid="87079ad1-e758-46ac-a7e2-ba74ed428334"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PT PELINDO MARINE SERVICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="35" width="367" height="31" uuid="446a2f47-d52c-48ba-b3aa-51f94909a5fc"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PERHITUNGAN LABA / RUGI KOMPARATIF
+MENURUT JENIS BIAYA
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="597" y="4" width="73" height="15" uuid="e5aad206-408f-4023-a12d-4b088424fb2e"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BENTUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="597" y="18" width="73" height="16" uuid="387ce443-4ace-4953-b756-7a9424bc70bc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TGL PROSES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="597" y="33" width="73" height="16" uuid="5c96fe71-c2a8-4c35-ab1b-a835304fe126"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[HALAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="33" width="11" height="16" uuid="dbd564ae-8cc9-4f2d-8a57-499ab028fa85"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="18" width="11" height="16" uuid="017b71ed-c038-4e5b-8cf8-eaffcf2b46d1"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="4" width="11" height="15" uuid="f15e129c-768d-44f2-83a9-45d7104a3613"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="114" width="53" height="20" uuid="56c5a865-90b7-41ff-8334-5d72c95bdc1a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NO. REK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="114" width="291" height="20" uuid="c2424da9-cb22-4852-88b6-c1548c55e993"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[URAIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="114" width="104" height="20" uuid="1df5a9d2-10ac-4dbc-8baa-3704dee21fc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ANGGARAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="114" width="104" height="20" uuid="5a46f652-3e9e-48fb-b677-d485796784e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SD JANUARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="114" width="104" height="20" uuid="af83048d-262b-4730-a969-b8a8e85914ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SD JANUARI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="114" width="145" height="20" uuid="399d84ae-5603-4397-aebf-cb17dc4e7fee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PROSENTASE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="727" y="134" width="73" height="20" uuid="c1cf74d0-2648-45dd-985f-84ba2c2166da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[4/5 x 100]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="655" y="134" width="73" height="20" uuid="b5aab877-1749-4b45-8056-d2ee53c76fc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[4/3 x 100]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="134" width="104" height="20" uuid="363bce53-430e-44c1-88a6-21fe646cf164"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="134" width="53" height="20" uuid="57a3047d-e16d-4ea2-9929-ff760ac0c4ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="134" width="291" height="20" uuid="1d809534-e859-48ec-946e-e1d9b81c8c37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="134" width="104" height="20" uuid="3c9f6aad-77cd-4965-ac5e-bf14b812db6b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="551" y="134" width="104" height="20" uuid="068d1498-8b89-4b8d-a91c-59dafd204f38"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<printWhenExpression><![CDATA[new Boolean($F{KD_LEVEL2}==5 ? false : true)]]></printWhenExpression>
+			<textField>
+				<reportElement x="58" y="0" width="287" height="15" uuid="6f3ebd6d-8e6d-496e-9ba9-1748a590e147"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAMA_REKENING1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="3" y="0" width="52" height="15" uuid="227828c3-ae5e-4f09-b900-9b58a86bf77e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KD_BUKU_BESAR1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement stretchType="RelativeToTallestObject" x="346" y="0" width="99" height="15" uuid="5ea32ce5-88fb-43a3-bf83-2a7f9534b24e"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{ANGGARAN_ABS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement stretchType="RelativeToTallestObject" x="448" y="0" width="98" height="15" uuid="93e90d83-ee64-4f45-a966-2be0ae94a6b7"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{KINI_ABS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement stretchType="RelativeToTallestObject" x="550" y="0" width="100" height="15" uuid="6c96cdb2-7ba9-448e-aa17-dbed1bf67798"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{LALU_ABS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="655" y="0" width="69" height="15" uuid="48d63e33-2251-4fe8-ae3c-c3779fc04b6b"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{DEVIASI_4_3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="726" y="0" width="71" height="15" uuid="8c727d1f-f6af-4db6-95dc-b25ce4f1e1f7"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{DEVIASI_4_5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

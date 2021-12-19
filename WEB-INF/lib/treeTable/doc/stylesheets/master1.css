@@ -1,0 +1,87 @@
+pre.listing {
+  background: #eee;
+  border: 1px solid #ccc;
+  margin: .3em auto;
+  padding: .1em .3em;
+  width: 100%;
+}
+
+pre.listing b {
+  color: #f00;
+}
+
+/*
+ * ========================================================================= */
+.example {
+  border: 1px solid #888;
+  border-collapse: collapse;
+  line-height: 1;
+  margin: 1em auto;
+  width: 100%;
+}
+
+/* Caption
+ * ------------------------------------------------------------------------- */
+.example caption {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Header
+ * ------------------------------------------------------------------------- */
+.example thead {
+  background: #edf0fb url(../images/bg-table-thead.png) repeat-x top left;
+  font-size: 12px;
+}
+
+.example thead tr th {
+  border: 1px solid #888;
+  font-weight: normal;
+  padding: .3em 1.67em .1em 1.67em;
+  text-align: center;
+}
+
+
+/* Body
+ * ------------------------------------------------------------------------- */
+table tbody tr td {
+  cursor: default;
+  padding: .3em .7em;
+}
+
+table tbody tr.even {
+  background: #f3f3f3;
+}
+
+table tbody tr.odd {
+  background: #fff;
+}
+
+table span {
+  background-position: center left;
+  background-repeat: no-repeat;
+  padding: .2em 0 .2em 1.5em;
+}
+
+table span.file {
+  background-image: url(../images/page_white_text.png);
+}
+
+table span.folder {
+  background-image: url(../images/folder.png);
+}
+table.example span.purple {
+  background-image: url(../images/purple.png);
+}
+table.example span.blue_ligth {
+  background-image: url(../images/blue_ligth.png);
+}
+table.example span.blue {
+  background-image: url(../images/blue.png);
+}
+table.example span.green {
+  background-image: url(../images/green.png);
+}
+table.example span.red {
+  background-image: url(../images/red.png);
+}

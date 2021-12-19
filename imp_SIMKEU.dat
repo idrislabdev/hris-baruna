@@ -1,0 +1,6 @@
+FILE="C:\wamp\www\baruna\SIMKEU.DMP"
+LOG="C:\wamp\www\baruna\imp_SIMKEU.log"
+FROMUSER=SIMKEU
+TOUSER=SIMKEU
+IGNORE=Y
+FEEDBACK=1000

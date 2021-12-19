@@ -1,0 +1,84 @@
+/* pagination */
+
+.pagesLL, .pages-marginLL {
+border-top-color: #e3a070;
+}
+
+.pagesLL a, .pagesLL span, .pagesLL-margin a, .pagesLL-margin span {
+color: #18a9d8;
+border-color: #FFF;
+background: #FFF;
+}
+
+.pagesLL span.current, .pagesLL-margin span.current {
+background: #67fbfd;
+color: #FFFFFF;
+border-color: #18a9d8;
+}
+
+.pagesLL span.current a, .pagesLL-margin span.current a {
+background: #18a9d8;
+color: #18a9d8;
+}
+
+.pagesLL a, .pages-marginLL a {
+border-color: #18a9d8;
+background: url(tabsub-background.png) bottom left repeat-x;
+}
+
+.pagesLL a:hover, .pages-marginLL a:hover {
+border-color: #c6f0fe;
+background: #e4f8fe;
+color: #18a9d8;
+}
+
+.pagesLL span.nextprev, .pagesLL-margin span.nextprev {
+color: #FFE2C5;
+}
+
+.pagesLL span.nextprev, .pagesLL-margin span.nextprev {
+border-color: #FFE2C5;
+color: #FFE2C5;
+}
+
+.pagesLL, .pagesLL-margin {
+padding: 0 0 0 0;
+margin: 20px 0 50px 0;
+clear: left;
+font-size: 9pt;
+}
+
+.pagesLL-margin {
+margin-left: 90px;
+}
+
+.pagesLL a, .pagesLL span, .pagesLL-margin a, .pagesLL-margin span {
+display: block;
+float: left;
+padding: 3px 5px 3px 5px;
+margin-right: 3px;
+border: 1px solid;
+}
+
+.pagesLL span.current, .pagesLL-margin span.current {
+border: 1px solid;
+font-weight: bold;
+}
+
+.pagesLL span.current a, .pages-margin span.current a {
+padding: 0;
+border: 0px;
+}
+
+.pagesLL a, .pagesLL-margin a {
+border: 1px solid;
+text-decoration: none;
+}
+
+.pagesLL a.nextprev, .pagesLL-margin a.nextprev {
+font-weight: bold;
+}
+
+.pagesLL span.nextprev, .pagesLL-margin span.nextprev {
+border: 1px solid;
+}

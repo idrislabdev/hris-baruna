@@ -1,0 +1,47 @@
+/* TTF type */
+@font-face {
+  font-family: 'Raleway Regular';
+  src: url('../fonts/Raleway-Regular.ttf');
+}
+body{
+	font-family: 'Raleway Regular';
+}
+
+/*************************************/
+
+
+/* Tutorial button with jQuery */
+.data,
+.upload,
+.scan{
+	clear: both; position:relative; display:block; height: 39px; line-height:39px; width: 220px; background:#003d5f; color:#FFF; border-bottom:1px solid #409ccf;
+	background-position:0 0; cursor: pointer;
+	padding:0 10px;
+}	
+.data:hover,
+.upload:hover,
+.scan:hover,
+ {
+	/*position: absolute; display: block; height: 39px; line-height:39px; width: 240px; */background:#00334f; color:#e85f32; 
+	/*background-position: 0 0;*/
+}
+a{text-decoration:none;}
+a:hover{text-decoration:none; color:#e85f32; }
+
+/*.upload{
+	clear: both; position:relative; display:block; height: 27px; width: 240px; background:url(../images/menukiri_satker/upload.png) no-repeat;
+	background-position:0 0; cursor: pointer;
+}	
+.upload span.hover {
+	position: absolute; display: block; height: 27px; width: 240px; background: url(../images/menukiri_satker/upload.png) no-repeat; 
+	background-position: 0 -27px;
+}
+
+.scan{
+	clear: both; position:relative; display:block; height: 27px; width: 240px; background:url(../images/menukiri_satker/scan.png) no-repeat;
+	background-position:0 0; cursor: pointer;
+}	
+.scan span.hover {
+	position: absolute; display: block; height: 27px; width: 240px; background: url(../images/menukiri_satker/scan.png) no-repeat; 
+	background-position: 0 -27px;
+}*/

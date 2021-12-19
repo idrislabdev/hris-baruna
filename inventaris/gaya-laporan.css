@@ -1,0 +1,227 @@
+body{
+	font-family:Arial;
+	font-size:10px;
+}
+table {
+	font-family:Arial;
+    border-collapse: collapse;
+    width: 100%;
+	*border:1px solid red;
+	
+	margin-bottom:10px;
+}
+th{
+	padding:4px 6px;
+}
+th.hai{
+	border:1px solid cyan;
+}
+td{
+	padding:4px 6px;
+}
+span{
+	display:inline-block;
+	*border:2px solid red;
+	
+}
+.nowrap{
+	white-space:nowrap;
+}
+
+/****/
+table.area-kop th{
+	border:2px solid black;
+}
+
+/****/
+table.area-kop2{
+	border:2px solid black;
+}
+
+/****/
+.area-logo{
+	white-space:nowrap;
+}
+.logo{
+	*border:2px solid blue;
+	height:100px;
+}
+.logo2{
+	height:50px;
+}
+.isi{
+	font-weight:normal;
+	font-size:8px;
+}
+
+/****/
+table.area-pemotong{
+	border:2px solid black;
+	margin-top:5px;
+}
+.area-pemotong td{
+	*border:2px solid pink;
+}
+.area-pemotong td:nth-child(1){
+	width:120px;
+}
+.area-pemotong span{
+	border-bottom:2px solid red;
+}
+
+/****/
+p{
+	
+}
+.nama-kolom{
+	width:100px;
+}
+.kode-biru{
+	color:#00D9EB;
+	width:30px;
+	font-size:9px;
+}
+.border-bawah{
+	border-bottom:1px solid black;
+}
+.titik-dua{
+	width:20px;
+}
+.full-width{
+	width:100% !important;
+}
+.nomor{
+	width:30px;
+	text-align:center;
+}
+.bg-grey{
+	background:#ccc;
+}
+.kotak{
+	border:1px solid black;
+	width:200px;
+}
+
+/****/
+table.kotak-ttd{
+	border:1px solid black;
+	
+}
+
+/****/
+table.area-identitas-penerima{
+	border:2px solid black;
+}
+
+/****/
+table.area-rincian-penghasilan{
+	border:2px solid black;
+}
+table.area-rincian-penghasilan thead th{
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+table.area-rincian-penghasilan tbody td{
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+	padding:4px 8px;
+}
+
+/****/
+table.area-identitas-pemotong{
+	border:2px solid black;
+}
+
+/****/
+table.area-kop-slip{}
+.logo-slip{
+	height:50px;
+}
+table.area-kop-slip td{
+	padding:0 0;
+	*border:1px solid green;
+}
+table.area-kop-slip td:nth-child(1){
+	*padding:20px;
+}
+
+/***/
+.area-keterangan-slip{
+	text-align:right;
+	font-weight:bold;
+}
+.area-keterangan-slip div.atas{
+	border-bottom:1px solid black;
+	padding-bottom:4px;
+}
+.area-keterangan-slip div.bawah{
+	border-top:1px solid black;
+	padding-top:4px;
+}
+
+/****/
+.judul-kolom td{
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	font-weight:bold;
+}
+
+/****/
+table.pph-21-26-dipotong{
+	border:2px solid black;
+}
+table.pph-21-26-dipotong .sub-judul td{
+	background:#eee;
+}
+table.pph-21-26-dipotong th,
+table.pph-21-26-dipotong td{
+	border-right:1px solid black;
+	border-bottom:1px solid black;
+}
+
+/****/
+table.kode-objek-pph-21-26{
+	border:2px solid black;
+}
+table.kode-objek-pph-21-26 th{
+	background:#eee;
+	border-bottom:2px solid black
+}
+table.kode-objek-pph-21-26 td.sub-judul{
+	font-weight:bold;
+}
+
+/****/
+table.area-data-slip{
+	*border:2px solid red !important;
+}
+table.area-data-slip td{
+	*border:2px solid red !important;
+	padding:4px 6px;
+}
+table.area-data-slip td.penerimaan,
+table.area-data-slip td.potongan{
+	*background:yellow;
+	padding:0px 0px;
+}
+table.area-data-slip td.take-home-pay{
+	*background:lime;
+	*border:2px solid red;
+	
+	*display:block;
+	padding:0px 0px !important;
+}
+td.take-home-pay table{
+	margin-bottom:0px;
+}
+td.take-home-pay table td{
+	border:1px solid #000000;
+	text-align:right;
+	padding:4px 5px;
+}
+
+
+
+
+
+

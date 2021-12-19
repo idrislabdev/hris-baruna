@@ -1,0 +1,156 @@
+.displaytd {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #F0F6FF;
+padding-left: 2px;
+padding-right: 2px;
+}
+
+.tdcolor {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #FFFFFF;
+}
+
+td {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+}
+
+.menutable {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FFFFFF;
+background-color: #68A7DA;
+}
+
+.displayTable {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #F0F6FF;
+}
+
+.error {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #FF0000;
+}
+
+.footertable {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #F0F6FF;
+padding:5px;
+border:1px solid #000000;
+}
+
+.tdmain {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #FFFFFF;
+padding:5px;
+}
+
+.headbox {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+font-weight: bold;
+background-color: #FFFFFF;
+border-width: 1px;
+border-color: #68A7DA;
+border-style: solid;
+}
+
+body {
+background-color: #F0F6FF;
+background-image: url('../../images/body_bg.gif');
+margin: 2px;
+padding: 2px;
+}
+
+a:link {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+}
+
+a:visited {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+}
+
+a:active {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+}
+
+a:hover {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+text-decoration: underline;
+}
+
+.formbox {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #F0F6FF;
+border-width: 1px;
+border-color: #68A7DA;
+vertical-align: middle;
+width: 50%;
+padding:5px;
+border-style: solid;
+}
+
+.tags {
+font-size: 11px;
+font-weight: bold;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+background-color: #F0F6FF;
+border-width: 1px;
+border-color: #68A7DA;
+border-style: solid;
+}
+
+.formbutton {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-weight: bold;
+color: #000000;
+height: 20px;
+background-color: #F0F6FF;
+border-width: 1px;
+border-color: #000000;
+border-style: solid;
+}
+
+textarea {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+color: #000000;
+background-color: #F0F6FF;
+border-width: 1px;
+border-color: #68A7DA;
+width: 75%;
+border-style: solid;
+}
+
+select {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-weight: normal;
+}

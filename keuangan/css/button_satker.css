@@ -1,0 +1,27 @@
+/* Tutorial button with jQuery */
+.data{
+	clear: both; position:relative; display:block; height: 27px; width: 240px; background:url(../images/menukiri_satker/data.png) no-repeat;
+	background-position:0 0; cursor: pointer;
+}	
+.data span.hover {
+	position: absolute; display: block; height: 27px; width: 240px; background: url(../images/menukiri_satker/data.png) no-repeat; 
+	background-position: 0 -27px;
+}
+
+.upload{
+	clear: both; position:relative; display:block; height: 27px; width: 240px; background:url(../images/menukiri_satker/upload.png) no-repeat;
+	background-position:0 0; cursor: pointer;
+}	
+.upload span.hover {
+	position: absolute; display: block; height: 27px; width: 240px; background: url(../images/menukiri_satker/upload.png) no-repeat; 
+	background-position: 0 -27px;
+}
+
+.scan{
+	clear: both; position:relative; display:block; height: 27px; width: 240px; background:url(../images/menukiri_satker/scan.png) no-repeat;
+	background-position:0 0; cursor: pointer;
+}	
+.scan span.hover {
+	position: absolute; display: block; height: 27px; width: 240px; background: url(../images/menukiri_satker/scan.png) no-repeat; 
+	background-position: 0 -27px;
+}

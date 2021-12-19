@@ -1,0 +1,26 @@
+#header{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:16px
+}
+
+#kop{
+	
+}
+#kop table{
+	border-collapse:collapse;
+	width:100%;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+}
+
+#detil table{
+	border-collapse: collapse;
+	border: 1px solid black;
+	width:100%;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:10px;
+}
+#detil table td{
+	border: 1px solid black;
+	padding:4px 10px;
+}

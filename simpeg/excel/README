@@ -1,0 +1,26 @@
+What is it all about?
+---------------------
+php_ole is a port of Kawai Takanori's OLE::Storage_Lite Perl package to PHP.
+It allows you to access the contents of Microsoft OLE documents which are
+mainly used by Microsoft Office.
+
+
+
+What can I actually do with it?
+-------------------------------
+Microsoft Office programs (Word, Excel, etc.) all create files (called OLE
+files) with a common structure. These files can be seen as small
+filesystems with directories (called storages) and files (called streams).
+Thus in order to read the actual contents of such a file you first have to
+deal with this OLE container format. php_ole does this job for you - but
+only this job! This means that you still have to deal with the application's
+file format itself. If you don't know anything about it, php_ole is of no use
+for you!
+
+php_ole has been developed for creating files larger than 7 MB with
+php_writeexcel. This release has only been tested to do this job, i.e.
+only class.ole_pps.php, class.ole_pps_root.php and class.ole_pps_file.php
+are supposed to work, and even in these classes most methods are untested
+and will probably contain bugs. class.ole_pps_dir.php is untested but
+might work. Read support (class.ole.php) is incomplete and will certainly
+not work.

@@ -1,0 +1,85 @@
+div.content {
+    clear: left;
+}
+
+ol#toc {
+	font-size: 12px;
+	font-weight:bold;
+    height: 2.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol#toc a {
+    display: block;
+    float: left;
+    padding:0 10px;
+    text-decoration: none;
+	
+	color:#FFF;
+}
+
+ol#toc a:hover {
+	color:#FFF;
+	text-shadow:1px 1px 1px #404040;
+
+}
+
+ol#toc a:hover span {
+}
+
+ol#toc li {
+    float: left;
+    margin: 5px 0 0 1px;
+	padding:7px 10px;
+
+	/*fallback  */
+	background-color: #409ccf; background: url(images/linear_bg_2.png); background-repeat: repeat-x; 	
+	/* Safari 4-5, Chrome 1-9 */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#409ccf), to(#318abc)); 	
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #409ccf, #318abc); 	
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient(top, #409ccf, #318abc); 	
+	/* IE 10 */
+	background: -ms-linear-gradient(top, #409ccf, #318abc); 	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(top, #409ccf, #318abc);
+
+	
+	/*text-shadow:1px 1px 1px #404040;*/	
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	/*text-shadow:1px 1px 1px #FFF;*/
+	
+}
+ol#toc li.current {
+	background:#003d5f;
+}
+
+ol#toc li.current a {
+    color: #fff;
+}
+
+ol#toc li:hover {
+	background: #818181; /* Fallback background color for non supported browsers */
+	
+	background-image: -moz-linear-gradient(top, #818181, #616161); /* Firefox 3.6 */
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #818181),color-stop(1, #616161)); /* Safari & Chrome */
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#818181', endColorstr='#616161'); /* IE6 & IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#818181', endColorstr='#616161')"; /* IE8 */
+	
+}
+
+ol#toc li.current span {
+}
+
+ol#toc span {
+	
+    display: block;
+}

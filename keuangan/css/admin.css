@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'CalibriRegular';
+    src: url('../../main/fonts/calibri-webfont.eot');
+    src: url('../../main/fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../main/fonts/calibri-webfont.woff') format('woff'),
+         url('../../main/fonts/calibri-webfont.ttf') format('truetype'),
+         url('../../main/fonts/calibri-webfont.svg#CalibriRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+	font-family: myPMS-page-title;
+	src: url('../../main/fonts/pacifico.ttf')
+		,url('../../main/fonts/pacifico.ttf'); /* IE9 */
+}
+
+/** { font-family:myPMS-title-page; }*/
+.judul-halaman{ font-family:myPMS-page-title; font-size:23px; color:#FFF; text-shadow:1px 1px 1px #000; line-height:60px; margin-left:15px;}
+  
+/* gradient 1 */
+	.gradient1 h1 {
+		font: bold 330%/100% "Lucida Grande", Arial, sans-serif;
+		position: relative;
+		margin: 30px 0 50px;
+		color: #464646;
+	}
+	.gradient1 h1 span {
+		background: url(../main/plugin/css-gradient-demo/images/gradient-white.png) repeat-x;
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 31px;
+	}
+
+/* form */
+@font-face{
+	font-family: myPMS;
+	src: url('../../main/fonts/OpenSans-CondLight.ttf')
+		,url('../../main/fonts/OpenSans-CondLight.ttf'); /* IE9 */
+}
+
+* { font-family: 'CalibriRegular'; }
+h4 { font-size: 18px; }
+input { padding: 3px; border: 1px solid #999; }
+input.error, select.error { border: 1px solid red; }
+label.error { color:red; margin-left: 10px; }
+td { padding: 5px; }
+
+select{
+	padding: 3px; border: 1px solid #999;
+}
+
+#konten{ padding:18px 20px;}
+.border-frame{
+	border:1px solid #4a5e70;
+	margin:18px 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}

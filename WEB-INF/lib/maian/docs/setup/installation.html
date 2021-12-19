@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Maian Search v1.1 Documentation (Installation)</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center" class="logotablebg">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td align="center" valign="top" colspan="2"><img src="images/logo.gif" alt="Maian Search v1.1 Documentation" title="Maian Search v1.1 Documentation"></td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table><br>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td class="headingtablebg" width="10%" align="center"><b>- <a href="index.html" title="Home">HOME</a> -</b><td>
+    <td width="1">&nbsp;</td>
+    <td class="headingtablebg" width="22%" align="center"><b>- <a href="installation.html" title="Installation">INSTALLATION</a> -</b><td>
+    <td width="1">&nbsp;</td>
+    <td class="headingtablebg" width="18%" align="center"><b>- <a href="upgrade.html" title="Upgrade">UPGRADE</a> -</b><td>
+    <td width="1">&nbsp;</td>
+    <td class="headingtablebg" width="18%" align="center"><b>- <a href="import.html" title="Import Tool">IMPORT TOOL</a> -</b><td>
+    <td width="1">&nbsp;</td>
+    <td class="headingtablebg" width="12%" align="center"><b>- <a href="faq.html" title="F.A.Q">F.A.Q</a> -</b><td>
+    <td width="1">&nbsp;</td>
+    <td class="headingtablebg" width="20%" align="center"><b>- <a href="scriptinfo.html" title="Script Info">SCRIPT INFO</a> -</b><td>
+</tr>
+</table><br>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>INSTALLATION:</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">Please read the following installation instructions carefully:</td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>REQUIREMENTS:</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">&#8226; A server running <span style="#000000">PHP v4.3</span> or higher. Some of the syntax will <b>NOT</b> work on earlier versions.<br>
+        &#8226; A MySQL database to hold the script tables.<br>
+        </td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>SETUP (AUTO INSTALL):</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">
+        <b>1</b> =&gt; Create a database to hold the script tables. If you are unsure of this procedure contact your web hosting company.<br><br>
+        <b>2</b> =&gt; Open up the <span style="#000000">'inc/db_connection.inc.php'</span> file in a text editor and edit it to point to the database you just created. <b>DO NOT</b> comment out the prefix function. If you don`t need to change it leave it as it is.<br><br>
+        <b>3</b> =&gt; Open up the <span style="#000000">'admin/inc/password.inc.php'</span> file in a text editor and set a username and password.<br><br>
+        <b>4</b> =&gt; Upload all the files/folders into a directory on your web server. Example: /search/<br><br>
+        <b>5</b> =&gt; Access the <span style="#000000">'install/index.php'</span> file in your browser and follow the set up instructions to complete installation.<br><br>
+        <b>6</b> =&gt; If the setup was successful log in to your admin area and select <span style="#000000">'Settings'</span> from the drop down menu. Update the settings to your own preferences.<br><br>
+        <b>7</b> =&gt; Add a search box (see script usage below) to a page on your site and update the search template if you want to.<br><br>
+        <b>8</b> =&gt; Thats it, all done. For script usage, see below.</td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>SETUP (MANUAL - USE ONLY IF AUTO INSTALL FAILS):</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">If the auto install has aborted, this is no problem, follow these instructions:<br><br>
+        <b>1</b> =&gt; Access your database using your MySQL admin program. PHPMYADMIN?. Click on the database you created for this script and delete any tables that have been created by this script. If you only have 1 database, be careful not to delete any other important tables.<br><br>
+        <b>2</b> =&gt; <span style="color:red;font-weight:bold">IMPORTANT!</span>: The .sql file in the script has the prefix of <span style="#000000">'me_'</span> before the table names. If you have specified a different prefix in the connection file then you need to change the prefix for the table names in the <span style="#000000">'docs/schematic/tables.sql'</span> file BEFORE you run it.<br><br>
+        <b>3</b> =&gt; When you are ready browse for and run the <span style="#000000">'docs/schematic/tables.sql'</span> file to set up the script tables.<br><br>
+        <b>4</b> =&gt; Log in to your admin area and select <span style="#000000">'Settings'</span> from the drop down menu. Update the settings to your own preferences.<br><br>
+        <b>5</b> =&gt; Add a search box (see script usage below) to a page on your site and update the search template if you want to.<br><br>
+        <b>6</b> =&gt; Thats it, all done. For script usage, see below.</td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>SCRIPT USAGE:</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">
+        <b>1</b> =&gt; Click the 'Add New Page' link in your admin area.<br><br>
+
+        <b>2</b> =&gt; Specify a title for your page, plus a description, url and some keywords.<br><br>
+
+        <b>3</b> =&gt; The search engine searches title, description and the keywords fields, so if you have used a word in your title
+        it is not necessary to specify it again in your keywords. The more additional keywords you specify the better chance
+        your visitors have of finding the correct pages. If you update your pages in the future, make sure you update your
+        keywords.<br><br>
+
+        <b>4</b> =&gt; Repeat the above procedure for as many pages as you want.<br><br>
+        
+        For quickness you can use the HTML import tool. Click the link above for more information.
+        </td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>ADDING A SEARCH BOX TO YOUR PAGES:</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">
+        To install the search box on your web pages, click 'HTML Code' in the admin area and copy and paste the code into
+        your own HTML code. If you know a little HTML you can edit the code. It is important that that search path is to
+        the 'search.php' file and that there is an hidden input field called 'cmd'. Example:<br><br>
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #68A7DA;background-color:#F0F6FF">
+        <tr>
+            <td align="left" style="padding:5px">&lt;form method="GET" action="http://www.yoursite.com/search/search.php"&gt;<br>
+        &lt;input type="hidden" name="cmd" value="search"&gt;<br>
+        &lt;input type="text" name="keywords"&gt;&lt;br&gt;<br>
+        &lt;input type="submit" value="Search"&gt;<br>
+        &lt;/form&gt;<br></td>
+        </tr>
+        </table><br>
+
+        The form method MUST be GET. POST will not work. Use the FULL url to your 'search.php' file.<br><br>
+        If you are using the form inside a frame, you will need to add a target frame attribute to the form tag:<br><br>
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #68A7DA;background-color:#F0F6FF">
+        <tr>
+            <td align="left" style="padding:5px">&lt;form target="body" method="GET" action="search.php"&gt;</td>
+        </tr>
+        </table><br>
+        Where 'body' is your frame name.
+        </td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="left" class="menutable" valign="top" colspan="2" style="padding:5px;border-bottom:1px solid #000000;">&raquo; <b>SEARCH ENGINE SKIP WORDS:</b></td>
+    </tr>
+    <tr>
+        <td align="left" valign="top" colspan="2" style="padding:10px;">
+        The search engine can skip common words for a more detailed search. You can add or remove these words in your admin
+        area. Click 'Settings', then enter the skipwords in the box provided.
+        </td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<div style="height:10px;"></div>
+<table width="760" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+    <td>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#FFFFFF;border:1px solid #000000;">
+    <tr>
+        <td align="right" valign="top" colspan="2" style="padding:10px;">
+        <span class="copyright">Powered by <a href="http://www.maianscriptworld.co.uk/scripts_search.html" target="_blank" title="Maian Search v1.1">Maian Search v1.1</a><br>&copy; 2005-<script type="text/javascript">var d = new Date(); document.write(d.getFullYear());</script> Maian Script World. All Rights Reserved</span></td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+</body>
+</html>

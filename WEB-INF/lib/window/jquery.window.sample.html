@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+	<head>
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />  -->
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<title>jQuery Window Plugin</title>
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<!-- Style Includes -->
+		<link id="jquery_ui_theme_loader" type="text/css" href="js/jquery/themes/black-tie/jquery-ui.css" rel="stylesheet" />
+		<link type="text/css" href="js/jquery/window/css/jquery.window.css" rel="stylesheet" />
+	</head>
+	<body>
+		<input type="button" onclick="createWindow();" value="Crefate a window"/>
+	</body>
+	<!-- jQuery Library -->
+	<script type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/jquery/window/jquery.window.js"></script>
+	<script type="text/javascript">
+		function createWindow() {
+			$.window({
+				showModal: true,
+				modalOpacity: 0.5,
+				icon: "http://www.google.com/favicon.ico",
+				title: "Hello World!",
+				content: "<h1>Hello World!</h1>",
+				footerContent: "<div style='color:gray;'>this is the footer</div>"
+			});
+		}
+	</script>
+</html>

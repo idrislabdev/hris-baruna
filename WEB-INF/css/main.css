@@ -1,0 +1,474 @@
+/* *******************************************************************************************************
+MODUL NAME 			: SIMKeu
+FILE NAME 			: main.css
+AUTHOR				: Ridwan Rismanto
+VERSION				: 1.0
+MODIFICATION DOC	:
+DESCRIPTION			: File CSS untuk menghandle desain dan tampilan keseluruhan layout
+******************************************************************************************************* */
+
+
+/****** STANDARD ******/
+html, body, table, tr, td {
+	scrollbar-face-color : #dce1f3;
+	scrollbar-arrow-color: #003e6f;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-shadow-color: #919191;
+	scrollbar-highlight-color: #cecece;
+	scrollbar-3dlight-color: #ffffff;
+	scrollbar-darkshadow-Color: #cbcbcb;
+	
+	font-family:'Century Gothic', Calibri, Helvetica, Arial, sans-serif; 
+	font-size: 12px;	/* 11px */
+	text-decoration: none;
+	line-height: 15px;	/* 17px */
+}
+
+img {
+	border: none;
+}
+
+/*input, select, option, textarea{
+	color: #333366;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	border: 1px solid #958CB7;
+	background-color: #ececf6;
+	vertical-align: middle;
+}
+
+input {
+	height: 17px;
+	vertical-align: middle;
+}*/
+
+input, select, option, textarea{
+	border: 1px solid #958CB7;
+	color: #333366;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+.disabled {
+	background-color: #AAAAAA;
+}
+
+iframe {
+	border: 2px solid #d0d7e7;
+	border-right: none;
+}
+
+th, .th_like {
+	padding-left: 5px;
+	padding-right: 5px;
+
+	background-color : #f1f7fe;
+	background-image : url(../images/bg_th_td.gif);
+	/*background-attachment: fixed;*/
+	background-repeat: repeat-x;
+	
+	background-position: center;
+}
+
+a
+{
+	text-decoration: underline;
+	color: #6633CC;
+}
+
+a:hover
+{
+	color: #FF2222;
+}
+
+
+h2
+{
+	font-size: 14px;
+}
+
+h3
+{
+	font-size: 12px;
+}
+
+
+
+ul li {
+	list-style-image:url(../images/list_image.gif);
+	vertical-align:middle;
+}
+
+ol li {
+	padding-top: 5px;
+}
+
+/****** EXTENDED ******/
+.date{
+	white-space: nowrap;
+}
+
+.highlight {
+	color: #CC6666;
+}
+
+.th_bg {
+	background-image: url(../images/bg_th_td.gif);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.tab_right {
+	padding-left: 20px;
+}
+
+.banner {
+	 /*background-color: #5F96ED; 
+	 background-color: #7082DC;*/
+	 background-color: #FFFFFF;
+	 background-image: url(../images/banner_simkeu-optima.gif);
+	 background-repeat: repeat-x;
+	 background-position: bottom;
+}
+
+.head_title {
+	font-size: 13px;
+	font-weight: bold;
+	color: #2639BF;
+}
+
+.menu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333366;
+	text-decoration: none;
+	/*line-height: 17px;*/
+	background-color : #ACC8EE;
+	background-image : url(../images/bg_menu_left.gif);
+	background-attachment: fixed;
+	background-repeat: repeat-y;
+	background-position: left;
+}
+
+.headmenu {
+	background-image: url(../images/head-tbl.gif);
+	background-repeat: repeat-x;
+	
+	background-position: top;
+}
+
+.footer {
+	background-image: url(../images/footer-tbl.gif);
+	background-repeat: repeat-x;
+	
+	background-position: bottom;
+}
+
+.head_link, .head_link:link {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+	font-size: 11px;
+	margin-left: 15px;
+}
+
+a.head_link:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FF2222;
+	text-decoration: none;
+}
+
+.head_link img {
+	position: relative;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+/************** LABEL LINK *************/
+.label_lock {
+	list-style-image:url(../images/label_lock.gif);
+	vertical-align:middle;
+}
+
+.label_linked {
+	list-style-image:url(../images/label_link.png);
+	vertical-align:middle;
+}
+
+/****** CONTROL OBJECTS ******/
+.checkbox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	height: 17px;
+	border: 1px solid #ADC1DC;
+	background-image: url(../images/bg_th_td.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.button, .flatbutton {
+	color: #7a7d83;
+	border: 1px solid #7a7d83;
+	font-size:11px;
+	font-weight: normal;
+	text-decoration: none;
+	
+	background-color: #ececf6;
+	background-image : url(../images/bg_button.gif);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.flatbutton {
+	padding: 2px 6px 1px 6px;
+	white-space: nowrap;
+}
+
+
+.button_icon {
+	background-color: transparent;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	border: 0px solid #BBBBBB;
+	height: 19px;
+}
+
+/****** PAGE TITLE ******/
+.pagetitle {
+	margin-bottom: 25px;
+	color: #FFFFFF;
+}
+
+.pagetitle td, .pagetitle .head_title {
+	color: #FFFFFF;
+}
+
+.pagetitle .head_title {
+	font-size: 11px;
+}
+
+/****** TABLE LIST ******/
+.table_list {
+	/*border: 1px solid #ADC1DC;*/
+	/*border: 1px solid #ADC1DC;*/
+	/*width: 100%;*/
+}
+
+.table_list td, .table_list th{
+	padding: 2px 2px 2px 2px;
+}
+
+.table_list th {
+	text-align: center;
+	/*color: #022D7B;*/
+	border: none;
+}
+
+.table_list td {
+	border-bottom: 1px dashed #ced6eb;
+}
+
+.table_list_bright td{
+	background-color: #edf0fb;
+	/*border-bottom: 1px dashed #ced6eb;*/
+}
+
+.table_list_dark td{
+	/*background-color: #ced6eb;
+	border-bottom: 1px dashed #ced6eb;*/
+}
+
+.solid_border .table_list_dark td, .solid_border .table_list_bright td {
+	border-bottom: none;
+}
+
+
+/****** TABLE FORM ******/
+.table_form {
+	border: 1px solid #ADC1DC; /*#B7ADDC*/
+	background-color: #f5f5fB; /* #E9F0FC*/
+	background-image:url(../images/bg_form.jpg);
+	background-position: top;	
+}
+
+.table_form th {
+	text-align: left;
+	color: #022D7B;
+	/*background-color: #D0DEF6; #D4D0F6  #BCD0ED */
+	background-color: #FFFFFF;
+	background-image: url(../images/form-tbl.jpg);
+	background-position: bottom;
+	background-repeat: repeat;
+	height: 22px;
+}
+
+
+/****** INPUT ******/
+.table_input_list tr, table_input_list td {	
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.input_dark {
+	width: 100%;
+	background: transparent;
+	border-top: 1px solid #BBBBBB;
+	border-bottom: 1px solid #999999;
+	border-left: none;
+	border-right: 1px dashed #BBBBBB;
+}
+
+.input_bright {
+	background-color: #DDDDDD;
+}
+
+
+/****** TABLE, TR, TD WITH 1px SOLID BORDER ******/
+
+.solid_border {
+	background-color: #ADC1DC;
+}
+
+.solid_border tr{
+	background-color: #FFFFFF;
+}
+
+.solid_border td, .solid_border th{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/****** LEFT AND RIGHT BORDER ONLY ******/
+
+.lr_border {
+	border: none;
+	border-left: 1px solid #B7ADDC;
+	border-right: 1px solid #B7ADDC;
+}
+
+/****** CURRENCY ******/
+.currency_debit {
+	color: #778800;
+	white-space:nowrap
+}
+
+.currency_kredit {
+	color: #CC6600;
+	white-space:nowrap
+}
+
+.currency_saldo {
+	color: #6600CC;
+	white-space:nowrap
+}
+
+
+/****** PAGING ******/
+.paging_nav {
+	background-color: #ADC1DC;
+}
+
+.paging_nav td {
+	background-color: #E9F0FC;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: center;
+	width: 15px;
+}
+
+.paging_disable {
+	color: #999999;
+}
+
+
+/****** TABLE WITH BGCOLOR ONLY ******/
+.table_bgcolor {
+	/*border: none;*/
+	
+	margin-left:20px;
+	margin-top:5px;
+}
+
+/*.table_bgcolor .item {*/
+.item {
+	padding-left: 20px;
+	border: 1px dashed #CCCCCC;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-image: url(../images/nolines_plus.gif);
+	background-repeat: no-repeat;
+	background-position: left 1px;
+}
+
+/****** TABLE WITH OUTER BORDER ONLY ******/
+.border_only {
+	border: 1px solid #ADC1DC;
+}
+
+.border_only th {
+	color: #022D7B;
+	/*background-color: #D0DEF6; #D4D0F6  #BCD0ED */
+	background-color: #FFFFFF;
+	background-image: url(../images/form-tbl.jpg);
+	background-position: bottom;
+	background-repeat: repeat;
+	height: 22px;
+}
+
+/****** TOOL ******/
+.tool {
+	padding: 2px 4px 2px 4px;
+	position: relative;
+	white-space: nowrap;
+}
+
+.tool a, .tool a:visited{
+	text-decoration: none;
+}
+
+.tool img {
+	position: relative;
+	vertical-align: middle;
+	margin-right: 5px;
+	border: none;
+}
+
+/******** PAGE HEADER *******/
+.page_header {
+	border: none;
+	height: 80px;
+	z-index: -1;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	right: 1px;
+	width: 102.7%;
+	background-color: #FFFFFF;
+	background-image:url(../images/bg_pagetitle.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.popup_header {
+	border: none;
+	height: 80px;
+	z-index: -1;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	right: 1px;
+	width: 100%;
+	background-color: #FFFFFF;
+	background-image: url(../images/bg_pagetitle.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+}

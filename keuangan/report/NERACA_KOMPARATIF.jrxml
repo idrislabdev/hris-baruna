@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f91c0d18-e23d-4a8f-81be-cd1698b96706">
+	<property name="ireport.zoom" value="1.9487171000000065"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="135"/>
+	<parameter name="BLN_BUKU_PARAM" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="THN_BUKU_PARAM" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PEJABAT_KIRI" class="java.lang.String"/>
+	<parameter name="PEJABAT_KANAN" class="java.lang.String"/>
+	<parameter name="TGL_BUKU_PARAM" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["O:\\keuangan\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT DECODE(STATUS_CLOSING,'O','OPEN','CLOSE') STATUS
+    FROM SIUK.KBBR_THN_BUKU_D
+    WHERE THN_BUKU = $P{THN_BUKU_PARAM}
+    AND   BLN_BUKU = $P{BLN_BUKU_PARAM}]]>
+	</queryString>
+	<field name="STATUS" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="124" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="176" height="22" uuid="370abf20-6cc0-4edc-8e16-311764859dc3"/>
+				<textElement markup="none">
+					<font fontName="SansSerif" size="10" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PT. PELINDO MARINE SERVICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="2" width="76" height="20" uuid="8c3ff36e-3ead-416a-8616-9638b3a9c322"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[BENTUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="574" y="22" width="76" height="20" uuid="b21385e8-72f9-4734-832c-ac21757e809b"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[TGL PROSES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="663" y="42" width="137" height="20" uuid="edf580aa-80f9-4944-8d37-15a9895dc3dd"/>
+				<textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="574" y="42" width="76" height="20" uuid="af8d5331-5b17-4ee8-86d5-8558a865b236"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="211" y="32" width="321" height="20" uuid="0aea9703-addf-4279-975a-d87f452ee1c5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{BLN_BUKU_PARAM} == 1 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'JANUARI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 2 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'FEBRUARI ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 3 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'MARET ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 4 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'APRIL ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 5 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'MEI ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 6 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'JUNI ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 7 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'JULI ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 8 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'AGUSTUS ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 9 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'SEPTEMBER ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 10 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'OKTOBER ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 11 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'NOVEMBER ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 12 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER ' + $P{THN_BUKU_PARAM}  :
+$P{BLN_BUKU_PARAM} == 13 ? 'PER ' + $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER AUDIT ' + $P{THN_BUKU_PARAM}  :
+'']]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="103" width="89" height="20" uuid="99f96264-f276-4962-aa50-9f51ef7b92eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BLN_BUKU_PARAM} == 1 ? $P{TGL_BUKU_PARAM} + ' ' + 'JANUARI ' + ($P{THN_BUKU_PARAM}-1) :
+$P{BLN_BUKU_PARAM} == 2 ? $P{TGL_BUKU_PARAM} + ' ' + 'FEBRUARI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 3 ? $P{TGL_BUKU_PARAM} + ' ' + 'MARET ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 4 ? $P{TGL_BUKU_PARAM} + ' ' + 'APRIL ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 5 ? $P{TGL_BUKU_PARAM} + ' ' + 'MEI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 6 ? $P{TGL_BUKU_PARAM} + ' ' + 'JUNI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 7 ? $P{TGL_BUKU_PARAM} + ' ' + 'JULI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 8 ? $P{TGL_BUKU_PARAM} + ' ' + 'AGUSTUS ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 9 ? $P{TGL_BUKU_PARAM} + ' ' + 'SEPTEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 10 ? $P{TGL_BUKU_PARAM} + ' ' + 'OKTOBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 11 ? $P{TGL_BUKU_PARAM} + ' ' + 'NOVEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 12 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 13 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER AUDIT ' + $P{THN_BUKU_PARAM}-1 :
+'']]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="211" y="10" width="321" height="22" uuid="46890080-757f-4c31-bdc6-a18c2cd70c4a"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[NERACA KOMPARATIF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="103" width="35" height="20" uuid="36d3feab-9958-4588-9561-6f99b1afd7bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NO REK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="103" width="189" height="20" uuid="a100a2a4-5f1d-4c66-a89d-e0588877212b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[POS - POS NERACA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="103" width="85" height="20" uuid="aa6a01f2-b8ae-459f-a633-ff151e5e6a23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BLN_BUKU_PARAM} == 1 ? $P{TGL_BUKU_PARAM} + ' ' + 'JANUARI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 2 ? $P{TGL_BUKU_PARAM} + ' ' + 'FEBRUARI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 3 ? $P{TGL_BUKU_PARAM} + ' ' + 'MARET ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 4 ? $P{TGL_BUKU_PARAM} + ' ' + 'APRIL ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 5 ? $P{TGL_BUKU_PARAM} + ' ' + 'MEI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 6 ? $P{TGL_BUKU_PARAM} + ' ' + 'JUNI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 7 ? $P{TGL_BUKU_PARAM} + ' ' + 'JULI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 8 ? $P{TGL_BUKU_PARAM} + ' ' + 'AGUSTUS ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 9 ? $P{TGL_BUKU_PARAM} + ' ' + 'SEPTEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 10 ? $P{TGL_BUKU_PARAM} + ' ' + 'OKTOBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 11 ? $P{TGL_BUKU_PARAM} + ' ' + 'NOVEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 12 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 13 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER AUDIT ' + $P{THN_BUKU_PARAM} :
+'']]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="713" y="103" width="85" height="20" uuid="667b50fa-3c44-4aa9-9bc8-aa47a6a11fe7"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BLN_BUKU_PARAM} == 1 ? $P{TGL_BUKU_PARAM} + ' ' + 'JANUARI ' + ($P{THN_BUKU_PARAM}-1) :
+$P{BLN_BUKU_PARAM} == 2 ? $P{TGL_BUKU_PARAM} + ' ' + 'FEBRUARI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 3 ? $P{TGL_BUKU_PARAM} + ' ' + 'MARET ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 4 ? $P{TGL_BUKU_PARAM} + ' ' + 'APRIL ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 5 ? $P{TGL_BUKU_PARAM} + ' ' + 'MEI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 6 ? $P{TGL_BUKU_PARAM} + ' ' + 'JUNI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 7 ? $P{TGL_BUKU_PARAM} + ' ' + 'JULI ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 8 ? $P{TGL_BUKU_PARAM} + ' ' + 'AGUSTUS ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 9 ? $P{TGL_BUKU_PARAM} + ' ' + 'SEPTEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 10 ? $P{TGL_BUKU_PARAM} + ' ' + 'OKTOBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 11 ? $P{TGL_BUKU_PARAM} + ' ' + 'NOVEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 12 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER ' + $P{THN_BUKU_PARAM}-1 :
+$P{BLN_BUKU_PARAM} == 13 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER AUDIT ' + $P{THN_BUKU_PARAM}-1 :
+'']]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="628" y="103" width="85" height="20" uuid="6f1e99b2-86af-4e0e-af9f-c994f6fbec89"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BLN_BUKU_PARAM} == 1 ? $P{TGL_BUKU_PARAM} + ' ' + 'JANUARI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 2 ? $P{TGL_BUKU_PARAM} + ' ' + 'FEBRUARI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 3 ? $P{TGL_BUKU_PARAM} + ' ' + 'MARET ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 4 ? $P{TGL_BUKU_PARAM} + ' ' + 'APRIL ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 5 ? $P{TGL_BUKU_PARAM} + ' ' + 'MEI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 6 ? $P{TGL_BUKU_PARAM} + ' ' + 'JUNI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 7 ? $P{TGL_BUKU_PARAM} + ' ' + 'JULI ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 8 ? $P{TGL_BUKU_PARAM} + ' ' + 'AGUSTUS ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 9 ? $P{TGL_BUKU_PARAM} + ' ' + 'SEPTEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 10 ? $P{TGL_BUKU_PARAM} + ' ' + 'OKTOBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 11 ? $P{TGL_BUKU_PARAM} + ' ' + 'NOVEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 12 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER ' + $P{THN_BUKU_PARAM} :
+$P{BLN_BUKU_PARAM} == 13 ? $P{TGL_BUKU_PARAM} + ' ' + 'DESEMBER AUDIT ' + $P{THN_BUKU_PARAM} :
+'']]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="436" y="103" width="192" height="20" uuid="3218259e-7ab3-4ec7-8832-fac5f5cc6d76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[POS - POS NERACA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="103" width="35" height="20" uuid="1ab20269-65f6-4df4-9cab-f54355d85a65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NO REK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="663" y="2" width="137" height="20" uuid="d02feb36-7c5a-4fe3-af83-0cbde3220bea"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<text><![CDATA[LB - 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="42" width="13" height="20" uuid="0ef760dc-326e-40a2-b61b-995f43c7bf2a"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="2" width="13" height="20" uuid="99579aa7-15d0-4f1c-8442-4ff99b483f28"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="650" y="22" width="13" height="20" uuid="a4feade8-b25a-4624-9311-d86643bebcc2"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="663" y="22" width="137" height="20" uuid="864aabc5-29fb-4c29-9807-28570c4a6b12"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="103" width="800" height="1" uuid="fd541168-f095-4e14-888e-9feb48345eec"/>
+			</line>
+			<line>
+				<reportElement x="0" y="123" width="800" height="1" uuid="63c5bcf8-983d-4a1e-b88e-6d960b6c8af4"/>
+			</line>
+			<line>
+				<reportElement x="399" y="103" width="1" height="20" uuid="e52c2f71-2b76-4d0a-9eb1-ed00d07fc3c1"/>
+			</line>
+			<line>
+				<reportElement x="309" y="103" width="1" height="20" uuid="9a041ac2-6347-4097-98d4-8c68c43bb663"/>
+			</line>
+			<line>
+				<reportElement x="224" y="103" width="1" height="20" uuid="71e94d0d-325a-4ea3-8385-aaf0fe6d71ee"/>
+			</line>
+			<line>
+				<reportElement x="0" y="103" width="1" height="20" uuid="618b5f79-93e1-482b-9e90-4eb03424474a"/>
+			</line>
+			<line>
+				<reportElement x="34" y="103" width="1" height="20" uuid="664819c7-da01-483e-afff-915ae296184c"/>
+			</line>
+			<line>
+				<reportElement x="435" y="104" width="1" height="20" uuid="4f99336e-4dfc-4b8c-84f4-8d0cfa916d01"/>
+			</line>
+			<line>
+				<reportElement x="627" y="103" width="1" height="20" uuid="3b1e6f34-6190-4079-8aee-5a3501e1d817"/>
+			</line>
+			<line>
+				<reportElement x="712" y="104" width="1" height="20" uuid="5279a837-2911-484e-b26b-1cbb24480511"/>
+			</line>
+			<line>
+				<reportElement x="799" y="104" width="1" height="20" uuid="aad3bd23-92d0-440d-b046-5865836dd7a6"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="400" height="100" uuid="5a0939d5-743b-4766-9d62-2c2ea30a1ee9"/>
+				<subreportParameter name="THN_BUKU_PARAM">
+					<subreportParameterExpression><![CDATA[$P{THN_BUKU_PARAM}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BLN_BUKU_PARAM">
+					<subreportParameterExpression><![CDATA[$P{BLN_BUKU_PARAM}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "NERACA_KOMPARATIF_SUB1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="400" y="0" width="400" height="100" uuid="1e7fc514-8685-4f08-8219-d8211c18b3c8"/>
+				<subreportParameter name="BLN_BUKU_PARAM">
+					<subreportParameterExpression><![CDATA[$P{BLN_BUKU_PARAM}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="THN_BUKU_PARAM">
+					<subreportParameterExpression><![CDATA[$P{THN_BUKU_PARAM}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "NERACA_KOMPARATIF_SUB2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="264" splitType="Stretch">
+			<staticText>
+				<reportElement x="218" y="16" width="153" height="20" uuid="d41be20b-4f7e-47eb-acc4-551bfab3a95b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DIREKTUR UTAMA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="145" width="153" height="20" uuid="7d02dd34-c695-493a-a7bc-30ffdbf0f315"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{PEJABAT_KIRI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="512" y="16" width="153" height="20" uuid="d74f311e-294f-439e-b015-80bd52a43688"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[MANAGER KEUANGAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="512" y="145" width="153" height="20" uuid="4c9b0de0-3d40-42d6-9135-7816e3128208"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{PEJABAT_KANAN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="214" width="139" height="20" uuid="9dd04d62-8bd1-4d97-9eba-614a0d657eea"/>
+				<text><![CDATA[SUMBER DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="234" width="139" height="20" uuid="d860a156-00d0-49de-82e1-e4da455900d1"/>
+				<text><![CDATA[TANGGAL / JAM PROSES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="214" width="17" height="20" uuid="558037f8-648a-45bd-90ad-9133a05b9ffb"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="234" width="17" height="20" uuid="12cc401c-8c8a-47b6-ac28-9d8b8bd719d6"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="214" width="212" height="20" uuid="570ed32c-4d46-4fb5-922f-ca6e40f29b3b"/>
+				<text><![CDATA[DATA AKUNTANSI BULANAN SIUK]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="176" y="234" width="212" height="20" uuid="fc6b71a3-a337-43c4-a093-406d8beed1b9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

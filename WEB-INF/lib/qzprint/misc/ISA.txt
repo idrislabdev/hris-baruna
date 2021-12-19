@@ -1,0 +1,344 @@
+                                                           
+                                                           
+                                          BENTUK           
+                                                           
+                                          TGL              
+                                          PROSES           
+                                          STATUS  OPEN     
+                                                           
+                   NERACA KOMPARATIF                       
+                                                           
+                                                           
+                                                           
+   I         AKTIVA LANCAR                                 
+                                                           
+                                                           
+                                                           
+   101       KAS-BANK                9158609093-22000000   
+                                     1                     
+   102       DEPOSITO                0         0           
+                                                           
+   103       ASET KEUANGAN           0         0           
+                                                           
+   104       PIUTANG USAHA           11176865080           
+                                     7                     
+   105       PENYISIHAN PIUTANG USAHA-1437868800           
+                                                           
+   106       UANG MUKA KONTRAKTOR    872030000 0           
+                                                           
+   107       PIUTANG LAIN-LAIN       71179835040           
+                                                           
+   108       PENYISIHAN PIUTANG      0         0           
+             LAIN-LAIN                                     
+   109       UANG MUKA BEBAN         234423400 22000000    
+                                                           
+   110       PERSEDIAAN              186435332 0           
+                                                           
+   111       PAJAK PENGHASILAN       0         0           
+             DIBAYAR DI MUKA                               
+   112       PPN MASUKAN             72286604  0           
+                                                           
+   113       BEBAN YANG DIBAYAR DI   355632547 0           
+             MUKA                                          
+   114       PENDAPATAN YANG MASIH   159517165 0           
+             AKAN DITERIMA                                 
+   115       ASET TETAP TERSEDIA     0         0           
+             UNTUK DIJUAL                                  
+   116       PIUTANG AFILIASI        22924290280           
+                                     5                     
+   117       PNYSHN PERSEDIAAN       0         0           
+                                                           
+   199       ASET LANCAR LAIN-LAIN   0         0           
+                                                           
+             Akumulasi Penyusutan    13454176790           
+                                     75                    
+             Jumlah Aktiva Lancar    1345417670            
+                                     75                    
+             INVESTASI                                     
+   II                                                      
+                                                           
+                                                           
+                                                           
+   201       INVESTASI DALAM SAHAM   0         0           
+                                                           
+   202       INVESTASI DALAM OBLIGASI0         0           
+                                                           
+   203       INVESTASI PERUSAHAAN    0         0           
+             ANAK / ASOSIASI                               
+   209       INVESTASI LAINNYA       0         0           
+                                                           
+   241       PROPERTI INVESTASI -    0         0           
+             TANAH                                         
+   242       PROPERTI INVESTASI -    0         0           
+             BANGUNAN                                      
+   291       AK. PENURUNAN NILAI     0         0           
+             PROPERTI INVESTASI -                          
+             TANAH                                         
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+
+
+                                                           
+                                                           
+                                          BENTUK           
+                                                           
+                                          TGL              
+                                          PROSES           
+                                          STATUS  OPEN     
+                                                           
+                   NERACA KOMPARATIF                       
+                                                           
+                                                           
+                                                           
+   292       AK. PENYUSUTAN PROPERTI 0         0           
+             INVESTASI - BANGUNAN                          
+   293       AK. PENURUNAN NILAI     0         0           
+             PROPERTI INVESTASI -                          
+             BANGUNA                                       
+             Akumulasi Penyusutan    0         0           
+                                                           
+             Jumlah Investasi        0        0            
+                                                           
+   III       AKTIVA TETAP                                  
+                                                           
+   211       BANGUNAN FASILITAS      75883871660           
+             PELABUHAN                                     
+   212       KAPAL                   63896990120           
+                                     6                     
+   213       ALAT-ALAT FASILITAS     0         0           
+                                                           
+   214       INSTALASI FASILITAS     228045551 0           
+                                                           
+   221       TANAH                   0         0           
+                                                           
+   222       JALAN DAN BANGUNAN      52683210610           
+                                                           
+   223       PERALATAN               971537408 0           
+                                                           
+                                                           
+   231       KENDARAAN               974466448 0           
+                                                           
+   232       EMPLASEMEN              0         0           
+                                                           
+                                                           
+                                                           
+   261       AKUM. PENYUSUTAN        -3107352400           
+             BANGUNAN FASPEL                               
+   262       AKUMULASI PENYUSUTAN    -7109529550           
+             KAPAL                   9                     
+   263       AKUMULASI PENYUSUTAN    0         0           
+             ALAT FASPEL                                   
+   264       AKUMULASI PENYUSUTAN    -66513275 0           
+             INSTALASI FASPEL                              
+   265       AK. PENURUNAN NILAI     0         0           
+             BANGUNAN FASPEL                               
+   266       AK. PENURUNAN NILAI     0         0           
+             KAPAL                                         
+   267       AK. PENURUNAN NILAI     0         0           
+             ALAT2 FASPEL                                  
+   268       AK. PENURUNAN NILAI     0         0           
+             INSTALASI FASPEL                              
+   271       AK. PENURUNAN NILAI     0         0           
+             TANAH                                         
+   272       AKUM. PENYUSUTAN JALAN  -1405608090           
+             DAN BANGUNAN                                  
+   273       AKUM. PENYUSUTAN        -92749216 0           
+             PERALATAN                                     
+   274       AK. PENURUNAN NILAI     0         0           
+             JALAN DAN BANGUNAN                            
+   275       AK. PENURUNAN NILAI     0         0           
+             PERALATAN                                     
+   281       AKUMULASI PENYUSUTAN    -6179151930           
+             KENDARAAN                                     
+   282       AKUMULASI PENYUSUTAN    0         0           
+             EMPLASEMEN                                    
+   283       AK. PENURUNAN NILAI     0         0           
+             KENDARAAN                                     
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+
+
+                                                           
+                                                           
+                                          BENTUK           
+                                                           
+                                          TGL              
+                                          PROSES           
+                                          STATUS  OPEN     
+                                                           
+                   NERACA KOMPARATIF                       
+                                                           
+                                                           
+                                                           
+   284       AK. PENURUNAN NILAI     0         0           
+             EMPLASEMEN                                    
+             Nilai Buku Aktiva Tetap 7058974440            
+                                     8                     
+   IV        AKTIVA     TETAP     DLM                      
+             KONSTRUKSI, AKTIVA TAK                        
+                                                           
+                                                           
+   301       ASET DALAM KONSTRUKSI   98962061770           
+                                                           
+   311       ASET TAK BERWUJUD       14560868340           
+                                                           
+   321       BEBAN YANG DITANGGUHKAN 0         0           
+                                                           
+   331       ASET TETAP SEWA GUNA    0         0           
+             USAHA                                         
+             Akumulasi Penyusutan                          
+                                     11352293010           
+                                     1                     
+                                                           
+                                                           
+   336       AKUM. AMORTISASI ASET   0         0           
+             SEWA GUNA USAHA                               
+                                     0         0           
+                                                           
+                                                           
+                                                           
+   337       AK. PENURUNAN NILAI ASET0         0           
+             TETAP SEWA GUNA USAHA                         
+                                                           
+             Akumulasi Penyusutan    0         0           
+                                                           
+             Jumlah Aktiva Tetap     1135229300            
+             Dalam Konstruksi        1                     
+   V         AKTIVA LAIN-LAIN                              
+                                                           
+                                                           
+                                                           
+   210       ASET PAJAK TANGGUHAN    407263193 0           
+                                                           
+   341       PIUTANG DALAM PROSES    0         0           
+             PENGHAPUSAN                                   
+   342       ASET TETAP BELUM        0         0           
+             DIMANFAATKAN                                  
+   343       ASET TETAP TIDAK        0         0           
+             BERFUNGSI                                     
+   344       PERSEDIAAN TIDAK        0         0           
+             BERFUNGSI                                     
+   345       UANG JAMINAN            0         0           
+                                                           
+   346       ASET TETAP PENUGASAN    0         0           
+                                                           
+   347       PIUTANG LAIN-LAIN JANGKA0         0           
+             PANJANG                                       
+   351       PENYISIHAN PIUTANG DALAM0         0           
+             PROSES PENGHAPUSAN                            
+   352       PENYISIHAN PIUTANG      0         0           
+             LAIN-LAIN JANGKA PANJANG                      
+                                                           
+   356       AKUM. PENYUST. ASET     0         0           
+             TETAP PENUGASAN                               
+   357       AK. PENURUNAN NILAI ASET0         0           
+             TETAP PENUGASAN                               
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+
+
+                                                           
+                                                           
+                                          BENTUK           
+                                                           
+                                          TGL              
+                                          PROSES           
+                                          STATUS  OPEN     
+                                                           
+                   NERACA KOMPARATIF                       
+                                                           
+                                                           
+                                                           
+   360       ASET LAINNYA            0         0           
+                                                           
+             Akumulasi Penyusutan    407263193 0           
+                                                           
+             Jumlah Aktiva Lain-Lain 4072631930            
+                                                           
+             TOTAL AKTIVA           21689106860            
+                                    47                     
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+
+

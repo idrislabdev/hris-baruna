@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ | $Header: setup/struts4php.xml
+ | $Revision: 1.0
+ | $Date: 2004.06.19
+ |
+ | ====================================================================
+ -->
+<configuration>
+	<path name="datasource">
+		<configValue name="default">valsix</configValue>
+		<path name="valsix">
+			<configValue name="driver">oci8</configValue>
+			<configValue name="server">10.0.0.98:1525</configValue>
+			<configValue name="database">dbupp</configValue>
+			<configValue name="username">AKUNTANSI</configValue>
+			<configValue name="password">AKUNTANSI58</configValue>
+		</path>
+	</path>
+</configuration>

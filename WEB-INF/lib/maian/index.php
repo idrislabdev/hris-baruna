@@ -1,0 +1,1 @@
+<form method="GET" action="search.php">\n<input type="hidden" name="cmd" value="search">\n<input type="text" name="keywords"><br><input type="submit" value="Search Website"></form>

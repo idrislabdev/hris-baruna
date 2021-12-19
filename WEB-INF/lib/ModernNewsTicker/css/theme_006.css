@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* Ticker */
+.modern-ticker {
+	color: #fafafa;
+	background-color: #404040;
+}
+	
+	/* Label */
+	.mt-label {
+		background-color: #0099ff;
+	}
+	
+	/* News */
+	.mt-news {
+		background-color: #858585;
+	}
+	.mt-preloader {
+		background: url("images/preloader.gif") no-repeat center;
+	}
+	.mt-news ul {
+		/* Preload */
+		background-image: url("images/bullet-over.png");
+	}
+	.mt-news a {
+		color: #ededed;
+		background-color: #858585;
+		background-image: url("images/bullet.png");
+	}
+	.mt-news a:hover {
+		color: #fafafa;
+		background-color: #0099ff;
+		border-color: #ff2200;
+		background-image: url("images/bullet-over.png");
+	}
+	.mt-news a:active {
+		background-color: #0077ff;
+	}
+	
+	/* Controls */
+	.mt-controls {
+		/* Preload */
+		background-image: url("images/pause.png");
+	}
+	.mt-prev, .mt-next {
+		background-color: #0099ff;
+	}
+	.mt-prev {
+		background-image: url("images/arrow-prev.png");
+	}
+	.mt-next {
+		background-image: url("images/arrow-next.png");
+	}
+	.mt-play {
+		background-color: #00bbff;
+		background-image: url("images/play.png");
+	}
+	.mt-pause {
+		background-image: url("images/pause.png");
+	}
+	.mt-play:hover, .mt-prev:hover, .mt-next:hover {
+		background-color: #ff2200;
+	}
+	.mt-play:active, .mt-prev:active, .mt-next:active {
+		background-color: #ff4400;
+	}

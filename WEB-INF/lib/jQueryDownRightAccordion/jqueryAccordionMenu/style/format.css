@@ -1,0 +1,74 @@
+/***********************************************************************************************************************
+DOCUMENT: style/format.css
+DEVELOPED BY: Ryan Stemkoski
+COMPANY: Zipline Interactive
+EMAIL: ryan@gozipline.com
+PHONE: 509-321-2849
+DATE: 2/26/2009
+DESCRIPTION: This document contains the structural formatting files for the accordion style menu.
+************************************************************************************************************************/
+#wrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.accordionButton {
+	width: 230px;
+	height:25px;
+	float: left;
+	background:#0075b6;
+	/*border-top:1px solid #49bed0;*/
+	border-bottom: 1px solid #015b8d;
+	color:#FFF;
+	font-weight:bold;
+	padding:0 10px;
+	
+	height:39px;
+	line-height:39px;
+	cursor: pointer;
+	clear:both;
+	}
+
+.accordionButton {
+	font-family: 'Raleway Light';
+	font-size: 12px;
+	display: block;
+	/*padding: 5px 25px;*/
+	font-weight: bold;
+	color: white;
+	/*background: url(expanded.gif) no-repeat 10px center;*/
+	cursor: default;
+	/*border-bottom: 1px solid #ddd;*/
+}
+	
+.accordionContent {	
+	width: 250px;
+	float: left;
+	background: #95B1CE;
+	display: none;
+	clear:both;
+	
+	position:relative;
+	/*z-index:99999;*/
+	/*margin-top:2px;
+	border-top:1px solid #dddddd;*/
+	}
+
+/*.accordionContent .ddsmoothmenu-v ul li a{
+	font-family: 'Raleway Light';
+	font-size: 14px;
+	text-transform:capitalize;
+	font-weight: normal;
+	line-height:27px;
+	cursor: pointer;
+}
+.accordionContent .ddsmoothmenu-v ul li a:hover{
+	color:#FFF;
+	background:#006666;
+}
+.accordionContent .ddsmoothmenu-v ul li a:active{
+	color:#FFF;
+	background:#006666;
+}
+*/

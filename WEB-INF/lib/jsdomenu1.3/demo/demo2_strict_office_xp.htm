@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Demo 2 (strict mode)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<link rel="stylesheet" type="text/css" href="../themes/office_xp/office_xp.css" title="Office XP" />
+<link rel="alternate stylesheet" type="text/css" href="../themes/classic/classic.css" title="Classic" />
+<script type="text/javascript" src="../jsdomenu.js"></script>
+<script type="text/javascript" src="demo2.inc.js"></script>
+</head>
+<body onload="initjsDOMenu()">
+<p>
+The main menu below has the Office XP theme applied to it. You can change the 
+theme of the menus easily <strong>without</strong> reloading the page (works in certain browsers only).
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+
+<p>
+To change to Classic theme (<strong>without</strong> reloading the page), 
+follow the following steps:
+</p>
+
+<p>
+Mozilla 1.x/Netscape 7.x users:
+</p>
+
+<ul>
+	<li>From the menu toolbar, click <b>View</b>.
+	</li>
+	<li>Go to <b>Use Style</b>.
+	</li>
+	<li>Select <b>Classic</b>.
+	</li>
+</ul>
+
+<p>
+Mozilla Firefox users:
+</p>
+
+<ul>
+	<li>From the menu toolbar, click <b>View</b>.
+	</li>
+	<li>Go to <b>Page Style</b>.
+	</li>
+	<li>Select <b>Classic</b>.
+	</li>
+</ul>
+
+<p>
+Opera users:
+</p>
+
+<ul>
+	<li>From the menu toolbar, click <b>View</b>.
+	</li>
+	<li>Go to <b>Style</b>.
+	</li>
+	<li>Select <b>Classic</b>.
+	</li>
+</ul>
+
+<p>
+Microsoft Internet Explorer/Others users:
+</p>
+
+<ul>
+	<li>Sorry, it does not work.
+	</li>
+	<li>However, you can still view this page in Classic theme by 
+	<a href="demo2_strict_classic.htm" title="">clicking here</a>. 
+	(Page will reload.)
+	</li>
+</ul>
+
+<p>
+Source code for creating menus in this page:
+</p>
+
+<pre><code>function createjsDOMenu() {
+  absoluteMenu1 = new jsDOMenu(120, "absolute", "", true);
+  with (absoluteMenu1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "item2", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "item5", "blank.htm"));
+    moveTo(10, 110);
+    show();
+  }
+  
+  absoluteMenu1_1 = new jsDOMenu(130, "absolute");
+  with (absoluteMenu1_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "item3", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  absoluteMenu1_2 = new jsDOMenu(120, "absolute");
+  with (absoluteMenu1_2) {
+    addMenuItem(new menuItem("Item 1", "item1", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "item3", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  absoluteMenu1_1_1 = new jsDOMenu(150, "absolute");
+  with (absoluteMenu1_1_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "", "blank.htm"));
+  }
+  
+  absoluteMenu1_2_1 = new jsDOMenu(140, "absolute");
+  with (absoluteMenu1_2_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  absoluteMenu1_2_2 = new jsDOMenu(150, "absolute");
+  with (absoluteMenu1_2_2) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "", "blank.htm"));
+  }
+  
+  absoluteMenu1.items.item2.setSubMenu(absoluteMenu1_1);
+  absoluteMenu1.items.item5.setSubMenu(absoluteMenu1_2);
+  absoluteMenu1_1.items.item3.setSubMenu(absoluteMenu1_1_1);
+  absoluteMenu1_2.items.item1.setSubMenu(absoluteMenu1_2_1);
+  absoluteMenu1_2.items.item3.setSubMenu(absoluteMenu1_2_2);
+}</code></pre>
+</body>
+
+</html>

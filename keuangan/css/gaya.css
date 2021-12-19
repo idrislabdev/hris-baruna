@@ -1,0 +1,271 @@
+@font-face{
+	font-family: myPMS;
+	src: url('../fonts/OpenSans-CondLight.ttf')
+		,url('../fonts/OpenSans-CondLight.ttf'); /* IE9 */
+}
+
+
+body{
+	font-family:myPMS;	
+	background-image:url(../images/bg.jpg);
+	background-attachment:fixed;
+	margin:0 0;
+	color: #333333;
+	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+}
+
+a{ font-style:italic;}
+
+#wrapper {
+	text-align: left;
+	margin: 0px auto;
+	padding: 0px;
+	border:0;
+	width: 980px;
+	background: url("../images/bkg.jpg") repeat;
+	
+}
+
+#header {
+	margin: 0 0 15px 0;
+	/*background: yellow;*/
+}
+
+#penuh {
+	float: left;
+	width: 970px;
+}
+
+#kiri {
+	float: left;
+	width: 680px;
+}
+
+#kanan {
+	float: right;
+	width: 300px;
+}
+
+/*#content { 
+	float: left;
+	width: 56%;
+}*/
+
+#footer {
+	clear: both;
+	padding:10px;
+	text-align:center;
+	background: #A2A2A2;
+}
+
+.shadow-kotak-bawah{ -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;}
+.border-gambar{ border:3px #FFF solid;}
+#garis-dash{ border-bottom:1px dotted #4c6072; margin:0 5px;}
+#judul-halaman{ margin-left:-5px; margin-bottom:5px;}
+
+/***************************************************************************/
+
+        /* menu */
+        #menu{ margin:0px; padding:0px; list-style:none; color:#fff; line-height:45px; display:inline-block; float:left; z-index:10000; min-width:927px; background-color:#7bb8e0;}
+        #menu a { color:#fff; text-decoration:none; }
+        #menu > li {background:#172322 none repeat scroll 0 0; cursor:pointer; float:left; position:relative;padding:0px 10px;}
+        #menu > li a:hover {color:#B0D730;}
+        #menu .logo {background:transparent none repeat scroll 0% 0%; padding:0px; background-color:Transparent;}
+		
+		#menu .kanan {background-color:#7bb8e0;}
+		#menu .home { background-image:url(../images/home.png); background-repeat:no-repeat; padding:0 15px 0 30px;  }
+		#menu .menu { background-image:url(../images/menu.png); background-repeat:no-repeat; padding:0 15px 0 30px;  }
+		#menu .logout { background-image:url(../images/logout.png); background-repeat:no-repeat; padding:0 15px 0 30px;  }
+		#menu .akun { background-image:url(../images/akun.png); background-repeat:no-repeat; padding:0 15px 0 30px; }
+		#menu .pesan { background-image:url(../images/pesan.png); background-repeat:no-repeat; padding:0 15px 0 30px;  }
+		#menu .pesan-masuk { background-image:url(../images/pesan-masuk.png); background-repeat:no-repeat; padding:0 15px 0 30px;  }
+		
+		
+        /* sub-menus*/
+        #menu ul { padding:0px; margin:0px; display:block; display:inline;}
+        #menu li ul { position:absolute; left:-10px; top:0px; margin-top:45px; width:150px; line-height:16px; background-color:#172322; color:#0395CC; /* for IE */ display:none; }
+        #menu li:hover ul { display:block;}
+        #menu li ul li{ display:block; margin:5px 20px; padding: 5px 0px;  border-top: dotted 1px #606060; list-style-type:none; }
+        #menu li ul li:first-child { border-top: none; }
+        #menu li ul li a { display:block; color:#0395CC; }
+        #menu li ul li a:hover { color:#7FCDFE; }
+        /* main submenu */
+        #menu #main { left:0px; top:-17px; padding-top:20px; background-color:#7cb7e3; color:#fff; z-index:999;}
+		#menu #help { z-index:999;}
+		#menu #search { z-index:999;}
+		
+        /* search */
+        .searchContainer div { background-color:#fff; display:inline; padding:5px;}
+        .searchContainer input[type="text"] {border:none;}
+        .searchContainer img { vertical-align:middle;}
+        /* corners*/
+        #menu .corner_inset_left { position:absolute; top:0px; left:-12px;}
+        #menu .corner_inset_right { position:absolute; top:0px; left:150px;}
+        #menu .last { background:transparent none repeat scroll 0% 0%; margin:0px; padding:0px; border:none; position:relative; border:none; height:0px;}
+        #menu .corner_left { position:absolute; left:0px; top:0px;}
+        #menu .corner_right { position:absolute; left:132px; top:0px;}
+        #menu .middle { position:absolute; left:18px; height: 20px; width: 115px; top:0px;}
+		
+/******** slide *************/
+slide{}
+
+/******** info terbaru *************/
+#konten{ padding:5px;}
+#konten-judul{ color:#862722; font-weight:bold; font-size:18px;}
+
+#sub-konten1{ width:50%; float:left; position:relative;}
+#sub-konten2{ width:48.6%; float:right; position:relative;}
+
+#konten-more{ color:#ad3f39; text-align:right; padding-right:30px; background-image:url(../images/r-arrow2.png); background-repeat:no-repeat; background-position:right; margin-bottom:10px; margin-right:5px;}
+
+blockquote.style1 {
+  font: 14px/20px;/* italic Times, serif;*/
+  padding: 10px;
+  text-align:justify;
+  
+  margin: 5px;
+  background-image: url(../images/openquote.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 33px;
+  color:#862722;
+  
+  /*-moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;*/
+  }
+  blockquote.style1 span {
+	 display:block;
+     background-image: url(../images/closequote.png);
+     background-repeat: no-repeat;
+     background-position: bottom right;
+	 padding-bottom:10px;
+	 font-style:italic;
+   }
+		
+		
+/******** info terbaru *************/
+.waktu{ color:#06F; font-size:14px; font-weight:normal;}
+.waktu-forum{ color:#06F; font-size:14px; font-weight:normal; float:left;}
+
+#info-terbaru{ padding:5px; background-color:#fddedc;}
+#info-terbaru-list{ border-bottom:1px dashed #4c6072; padding-bottom:5px;}
+#info-terbaru-judul{ font-size:16px; font-weight:bold; color:#4c6072;}
+#info-terbaru-by{ font-size:12px;}
+#info-terbaru-more{ text-align:right; padding-right:30px; background-image:url(../images/r-arrow.png); background-repeat:no-repeat; background-position:right;}
+
+#agenda-kegiatan{ padding:5px; background-color:#fff2e0;}
+#ip-address{ padding:5px; background-color:#d6f1fe}
+
+
+#hasil-rapat{ padding:5px; background-color:#f2fece;}
+#hasil-rapat-isi{ text-indent:10px;}
+
+
+#menu-intranet{ padding:5px; background-color:#e6f7fe; float:left}
+#menu-intranet-list{ float:left; position:relative; text-align:left; width:290px; border-bottom:1px dashed #cce9f4; padding-bottom:4px; padding-top:4px;}
+#menu-intranet-point{ width:26px; float:left; position:relative;}
+#menu-intranet-isi{ margin-left:8px; float:left; position:relative;}
+
+#header-kanan{ margin-top:20px;}
+
+/* forum */
+#forum-header{ float:left; position:relative; text-align:left;}
+#forum-kolom-topic{ width:340px;float:left;position:relative;height:35px;background-image:url(../images/bg-judul-kolom.jpg); padding:0 5px; font-size:18px;}
+#forum-kolom-post{ width:598px;float:left;position:relative;height:35px;background-image:url(../images/bg-judul-kolom.jpg); margin-left:2px; padding:0 5px; font-size:18px;}
+
+#forum-kolom-judul-topik{width:588px;float:left;position:relative;height:35px;background-image:url(../images/bg-judul-kolom.jpg); padding:0 5px; font-size:18px;}
+#forum-kolom-komentar-lihat{width:90px; margin-left:2px;float:left;position:relative;height:35px;background-image:url(../images/bg-judul-kolom.jpg); padding:0 5px; font-size:18px;}
+#forum-kolom-posting-terakhir{width:245px; margin-left:2px;float:left;position:relative;height:35px;background-image:url(../images/bg-judul-kolom.jpg); padding:0 5px; font-size:18px;}
+
+#forum-header-detil{ height:35px;background-image:url(../images/bg-judul-kolom.jpg);}
+#forum-header-waktu{ float:left; position:relative; margin-left:5px;}
+#forum-header-nomor{ float:right; margin-right:5px;}
+
+#forum-list{ border-bottom:1px solid #e6f7fe; padding-bottom:5px; float:left;}
+#forum-nama{ }
+#forum-nama a{ color:#31719b; font-size:20px; font-style:normal;}
+#forum-nama a:hover{ color:#49aced; text-decoration:underline;}
+#forum-by{ font-size:12px; float:left; position:relative; width:100%;}
+#forum-icon{ width:100px; height:85px; background-image:url(../images/icon_forum.png); float:left; position:relative;}
+#forum-jenis-icon{ width:20px; float:left; margin-top:3px;}
+#forum-ket{ width:240px; padding:0 5px;  float:left; position:relative;}
+#forum-ket2{ width:235px; padding:0 5px;  float:left; position:relative;}
+#forum-last-post{ width:598px; float:left; position:relative; margin-left:2px;padding:0 5px; text-align:left;}
+#forum-last-post a{color:#31719b; font-style:normal;}
+#forum-last-post a:hover{ color:#49aced; text-decoration:underline;}
+
+#forum-detil-list{ background-color:#F60; float:left; margin-bottom:0px;}
+#forum-isi-detil{  background-color:#e6f7fe; float:left; position:relative; text-align:left; width:960px;}
+#forum-isi-detil a{ font-style:normal;}
+#forum-detil-orang{ width:150px; padding:15px 5px; float:left;}
+#forum-detil-keterangan{ float:left; width:790px;}
+
+/* diskusi */
+#diskusi-judul{ font-weight:bold; font-size:16px;}
+#diskusi-oleh{ font-size:12px;}
+
+/* agenda bulan ini */
+#agenda-bulan-ini-list{ margin-top:5px; float:left}
+#agenda-bulan-ini-waktu{ width:150px; float:left; position:relative; text-align:left;}
+#agenda-bulan-ini-tgl{
+	width:45px; height:45px; float:left; position:relative;
+	color:#FFF;
+	text-align:center;
+	font-size:34px;
+	
+	-webkit-box-shadow: 8px 0 13px -6px #384857;
+	   -moz-box-shadow: 8px 0 13px -6px #384857;
+	        box-shadow: 8px 0 13px -6px #384857;	   	
+	 /* fallback */ 
+	 background-color: #4f6275; 
+	 background: url(images/linear_bg_2.png); 
+	 background-repeat: repeat-x; 
+	 
+	 /* Safari 4-5, Chrome 1-9 */ 
+	 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4f6275), to(#4d6174)); 
+	 
+	 /* Safari 5.1, Chrome 10+ */ 
+	 background: -webkit-linear-gradient(top, #4f6275, #4d6174); 
+	 
+	 /* Firefox 3.6+ */ 
+	 background: -moz-linear-gradient(top, #4f6275, #4d6174); 
+	 
+	 /* IE 10 */ 
+	 background: -ms-linear-gradient(top, #4f6275, #4d6174); 
+	 
+	 /* Opera 11.10+ */ 
+	 background: -o-linear-gradient(top, #4f6275, #4d6174);
+}
+#agenda-bulan-ini-blnthn{
+	float:left; background-color:#ffffcc; width:100px;
+	
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	
+	-moz-border-radius-bottomright: 7px;
+	-moz-border-radius-topright: 7px;
+	
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+
+
+}
+#agenda-bulan-ini-bln{ margin-left:15px; font-weight:bold; font-size:20px; }
+#agenda-bulan-ini-thn{ margin-left:15px; font-size:12px; text-align:right; margin-right:10px; }
+#agenda-bulan-ini-isi{ float:left; position:relative; width:500px;}
+
+/* pesan terbaru */
+#pesan-terbaru{ border-top:1px dotted #CCC; padding-top:5px;}
+#pesan-ket{ line-height:20px; color:#000;}
+#pesan-by{ color:#FFF; font-size:10px; line-height:normal;}
+
+/* breadcrumb */
+#nama-thread{ font-size:20px;  font-weight:bold; }
+#nama-thread a{ font-style:normal; color:#3ca7d9}
+#topik-field{ color:#2f7298;}
+
+/* halaman detil */
+#kembali{ text-align:right; padding-right:30px; background-image:url(../images/l-arrow.png); background-repeat:no-repeat; background-position:right; margin-bottom:20px;}

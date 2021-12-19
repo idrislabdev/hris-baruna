@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ | $Header: setup/struts4php.xml
+ | $Revision: 1.0
+ | $Date: 2004.06.19
+ |
+ | ====================================================================
+ -->
+<configuration>
+	<path name="datasource">
+		<configValue name="default">ppak</configValue>
+		<path name="ppak">
+			<configValue name="driver">mysql</configValue>
+			<configValue name="server">	localhost</configValue>
+			<configValue name="database">h90270_dbvalsix</configValue>
+			<configValue name="username">h90270_valsix</configValue>
+			<configValue name="password">webvalsix</configValue>
+		</path>
+	</path>
+</configuration>

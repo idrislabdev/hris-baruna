@@ -1,0 +1,719 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.1
+X-COMMENT: Main-Class will be added automatically by build
+Application-Name: PDF Plugin
+Class-Path: 
+Permissions: all-permissions
+Created-By: 1.7.0_09-b05 (Oracle Corporation)
+Caller-Allowable-Codebase: *
+Main-Class: com.sun.pdfview.PDFViewer
+Codebase: *
+
+Name: com/sun/pdfview/function/FunctionType4$27.class
+SHA-256-Digest: lds5jQPZhFZdMYE0Kq97l1qAY8lhsFGtBQ6uFkBDrs0=
+
+Name: com/sun/pdfview/PDFXrefEntry.class
+SHA-256-Digest: hUourSWHB3G7jg/b2Y2tnwhwNnKZSVv2dmUxb0mSHyE=
+
+Name: com/sun/pdfview/action/GoToAction.class
+SHA-256-Digest: 9hT0S4ow/jVryD6X+K0Is7bk98hvaUbUYWmS6QUAIbM=
+
+Name: com/sun/pdfview/function/FunctionType4$22.class
+SHA-256-Digest: o2rHmsvSKtiapc8QhJ9IOCa4H32qp2QasmPl06TWE9E=
+
+Name: com/sun/pdfview/font/BuiltinFont.class
+SHA-256-Digest: 2d4cp0AKBXizakJHdiRQTtUO8AIingJzmE3SL/io/eU=
+
+Name: com/sun/pdfview/colorspace/CMYKColorSpace.class
+SHA-256-Digest: QL6rnk0LntvdRSnctf6KfPYjH1CV5g/lAUuooDRHLLY=
+
+Name: com/sun/pdfview/PDFStrokePaintCmd.class
+SHA-256-Digest: bN/YdyhCTWVOKzFDnCXVc7aiH/6yafNod1GjiBCr4fI=
+
+Name: com/sun/pdfview/decrypt/EncryptionUnsupportedByPlatformException
+ .class
+SHA-256-Digest: nrVx7j4a/eteubzz0QI/ZJuBy0ioG32kryULAYQ2rIg=
+
+Name: com/sun/pdfview/function/FunctionType4$8.class
+SHA-256-Digest: Yba2Y2eO4FB9BPeeIsRs38yir2xIk7+nJRTpn7t6E3E=
+
+Name: com/sun/pdfview/decrypt/PDFPassword$PDFDocEncodingByteGenerator.
+ class
+SHA-256-Digest: xzgejdTc/qwApDoHtoJ+rgjkgC4jXetoPzxgjPJoleg=
+
+Name: com/sun/pdfview/font/res/n021004l.pfb
+SHA-256-Digest: 24zPIsDzDS9//fImp315oqbc4/5bCyduz+TayUNvEc0=
+
+Name: com/sun/pdfview/font/res/n022003l.pfb
+SHA-256-Digest: gKsAXc+N8x9FaDE1LAG5Ai6A7i9i+qEZMSXS+/RrQjw=
+
+Name: com/sun/pdfview/font/res/n019003l.pfb
+SHA-256-Digest: wpNLYWbW03q7YS8MCDDBrK7znXaTRZjhaIMorLe62E4=
+
+Name: test/FontToy$3.class
+SHA-256-Digest: CZ6lblEOXI/uWmOojDpGU0Dr0BU50PL2FLLpef5jMFE=
+
+Name: com/sun/pdfview/font/ttf/PostTable$PostMapFormat2.class
+SHA-256-Digest: KFyh0fbf5lhUSPRG5mnQLxD7JSg7pgdg/dkoM7hPNe4=
+
+Name: com/sun/pdfview/decode/Predictor.class
+SHA-256-Digest: yJSnwvwZl/WvvlBxVGVE/TePpZnX7cqlLUZw/o/LixI=
+
+Name: com/sun/pdfview/decrypt/UnsupportedEncryptionException.class
+SHA-256-Digest: w3vuz/yfqtP6gdLWklbeIACmWQbUX/e7ObEzFgT9gqE=
+
+Name: com/sun/pdfview/function/FunctionType4$17.class
+SHA-256-Digest: b30k95AXpiWeG67k0ghIn+sVJVr+fF+162aTzm5Vu1M=
+
+Name: com/sun/pdfview/font/res/n022023l.pfb
+SHA-256-Digest: bwnpSYxuzDTra3Puq7e6pYBbrrwwtJnw40xqgNO5XWk=
+
+Name: test/TestType1CFont$Range.class
+SHA-256-Digest: 6CndTLAmDNdSKt5IAyEmZgP3OEdre3wHJ7263USFubs=
+
+Name: com/sun/pdfview/font/ttf/HmtxTable.class
+SHA-256-Digest: zw706OdwLx3ZmfC2FWVIlb5Q9stZTNUOMT8j3NLUKtI=
+
+Name: com/sun/pdfview/font/FlPoint.class
+SHA-256-Digest: 1WINFrvWf+G+xQNGL7b2O3S85GXFFno+oRp1OYGKG8A=
+
+Name: com/sun/pdfview/font/ttf/NameTable.class
+SHA-256-Digest: Qu2q/gG9mdgG86SF2zLNeDddiRiEvugsPmXi7fB2EZI=
+
+Name: com/sun/pdfview/decrypt/StandardDecrypter.class
+SHA-256-Digest: f8D8vpQ2ZPXMBwSbLWVMoARHc2ILvciMr540rSlWnNM=
+
+Name: com/sun/pdfview/colorspace/IndexedColor.class
+SHA-256-Digest: jusbZC25waVwFga32y5w+98rKVEHYThZoqftYJXpGzw=
+
+Name: com/sun/pdfview/function/FunctionType4$40.class
+SHA-256-Digest: UFd0c1JyljneAfXEPvUne6bpxJPoSGNSNIeErJxFyX0=
+
+Name: com/sun/pdfview/function/FunctionType4$34.class
+SHA-256-Digest: OFBI8muqwu9DZjVwGBgXwnBEM4aGM3+5L+9TFyp5+KI=
+
+Name: test/TestType1CFont$GlyphData.class
+SHA-256-Digest: hVVZ+GSdzUe83S21oKIssSVWtHDa0VGwZGySkckkJJ8=
+
+Name: com/sun/pdfview/NameTree.class
+SHA-256-Digest: zVLA+EhUPMygydBVVSdujVIk1NcDZrL0a2r0si3GmQY=
+
+Name: test/TestType1CFont.class
+SHA-256-Digest: OqfbpKyA7y0Qi7NQl/EG410OmHRk/QNQA8mQuuhZHk0=
+
+Name: test/overview.html
+SHA-256-Digest: bqT42EAC9+FRfTySJJ5Y1Lf79BTyypj/ME6xUa7qtdE=
+
+Name: com/sun/pdfview/decode/ASCIIHexDecode.class
+SHA-256-Digest: 2wLEDyQb5SUndyH3QgfiRIy7LWOMId5I7tw64IIXIZw=
+
+Name: com/sun/pdfview/font/res/n021023l.pfb
+SHA-256-Digest: WZIzshmvEp+6OFHqkzMBkPesFq4pVCH8ljbJlJOEbwo=
+
+Name: com/sun/pdfview/function/FunctionType4$1.class
+SHA-256-Digest: ZeHOPCcZ7bafiXrLg6k2w724Z/KxWth7zCohUr4i0QE=
+
+Name: test/FontToy$7.class
+SHA-256-Digest: laIbkVwbICmp55iOUcwYMfATH665dEKXUt7LmvedhrM=
+
+Name: com/sun/pdfview/decrypt/PDFDecrypter.class
+SHA-256-Digest: ALHz/Q7xtLb/UXX4s7erMoZLz4MRFanqqegFnAEJVp0=
+
+Name: com/sun/pdfview/font/OutlineFont.class
+SHA-256-Digest: ORXqX5ohnVegR3RlXArgkNBgUAcR8k9xaO3NaMnMOUM=
+
+Name: com/sun/pdfview/decode/FlateDecode.class
+SHA-256-Digest: 676tRyPpcAI9+kh4xcDjixud9M0+a/jTLtCAbRv5lkY=
+
+Name: test/README
+SHA-256-Digest: /4DDADxnwpDXwbuQSW5lG2IPyrnJ73EFyjbUUO6g4/E=
+
+Name: com/sun/pdfview/pattern/PDFShader.class
+SHA-256-Digest: cso7Z5HPTXCs4Y8cuRjJolhLZv1wCYu5SXdTNT4r3EI=
+
+Name: com/sun/pdfview/font/res/n019004l.pfb
+SHA-256-Digest: F83oxkKCYShFk0lbkQAnzp70yJGk6Z9NTQDpfT5WX54=
+
+Name: com/sun/pdfview/PDFXrefEntry$Type.class
+SHA-256-Digest: sWvjq1higMYyuTcBEu7VBS4DpIbZv4e89jNZ4C0Wl/Q=
+
+Name: com/sun/pdfview/BaseWatchable$Gate.class
+SHA-256-Digest: 1UxKhsE4znWPwnrX6P7tIubpoH5UuDOT2DwJJI0zq/o=
+
+Name: com/sun/pdfview/font/Type1CFont.class
+SHA-256-Digest: nf8SVIjopMS3iQHLxpkU3zteW8JJ1/5OI0dy6W+n2+Y=
+
+Name: test/TestType1CFont$GlyphPoint.class
+SHA-256-Digest: abXFgIya4pEdhBlcgeYS9iWHeHGF1ksoeztXEyoP5CM=
+
+Name: com/sun/pdfview/PDFDestination.class
+SHA-256-Digest: sqHdW0BwYnm8fiK1Ot3osoN3W8eMqFwgmk9OCnh/udI=
+
+Name: com/sun/pdfview/function/FunctionType4$13.class
+SHA-256-Digest: c42CYfhpngKDh4Q7T6TMHN1bgDPGY1LnRxgJcENlEGI=
+
+Name: com/sun/pdfview/Cache$PageRecord.class
+SHA-256-Digest: q1cP1UAMB9sWQHw3XonXGsl1JCfTUfV4mgHVCuYegXM=
+
+Name: com/sun/pdfview/function/FunctionType4$24.class
+SHA-256-Digest: Xb7swCtQ6ey6r1H3yLRVd5jSAaEtwThJHNd+Idk9tUE=
+
+Name: test/TTFTest.class
+SHA-256-Digest: fKT3aQZMDPUbPY7ruhfpLfYC4gWJzE2qTVkRjG8muhc=
+
+Name: com/sun/pdfview/decode/PNGPredictor.class
+SHA-256-Digest: wdi6MXWbSwN4hZ/zJHC3p44pQK8zBH2BydB/Byoa2nQ=
+
+Name: com/sun/pdfview/decrypt/EncryptionUnsupportedByProductException.
+ class
+SHA-256-Digest: sixHzW88tcUYRAsiBXBWZ0FUfNTzJjnPE0C2Ucb9rAc=
+
+Name: com/sun/pdfview/Cache.class
+SHA-256-Digest: mqKgNqnLz3c/2W4K9u+me49Cc48xs/f+JTR6GA8eKqM=
+
+Name: com/sun/pdfview/ByteBufferInputStream.class
+SHA-256-Digest: PgUEMuaIoN7j/JVsS6JCdXplueSDpJdwinBo/GLuv8Q=
+
+Name: test/FontToy$5.class
+SHA-256-Digest: tlAwGnL3gVRDRZRwAh1jK561URvbFRoaSXkNCY00Hxo=
+
+Name: com/sun/pdfview/function/FunctionType4$23.class
+SHA-256-Digest: iyOay/Xg3Pqa/cNCof5rlULAkZUCKMEnZNU5ba9R6kE=
+
+Name: com/sun/pdfview/font/PDFFontDescriptor.class
+SHA-256-Digest: FyYGaquJppul6JjAu2/NI/z5ED0m9WUsOygJuRyQTFw=
+
+Name: com/sun/pdfview/font/Type1Font.class
+SHA-256-Digest: q3ynH7MrXJhemJBKm+AOUYjDurxuLOkHV544mHucY+I=
+
+Name: com/sun/pdfview/decrypt/PDFPassword$1.class
+SHA-256-Digest: E2rAekSJ5aqhKEzLgyOH5omtnEUHb49r+3oktBfMl2U=
+
+Name: com/sun/pdfview/font/ttf/PostTable$PostMap.class
+SHA-256-Digest: MfzZcz2NBuSs4Wg5mIuoR7iNPxLSOxt06oz7TLMHj6o=
+
+Name: com/sun/pdfview/PDFTextFormat.class
+SHA-256-Digest: J1ONjmne+cXyHRn5ElPNmven+g0GSQmhxbU0GqS2s20=
+
+Name: com/sun/pdfview/PDFRenderer.class
+SHA-256-Digest: 45ePR84E4KamqGh3jQIZz6nmF9l/lUJwbHIVlQUeM/U=
+
+Name: com/sun/pdfview/function/FunctionType4$11.class
+SHA-256-Digest: c7GoNuMbDZ+9FiP1yAwTQzy8uJdPGoO+WA8/RNrDF6o=
+
+Name: com/sun/pdfview/PDFFile$1.class
+SHA-256-Digest: 69KvpmcXRbHgqdQxdLyQb5q96rH+7o0qfrrrWnivRt8=
+
+Name: com/sun/pdfview/font/ttf/HeadTable.class
+SHA-256-Digest: v9SlGJP+NVPe/kPEgxjgOJIj3s3WqggcQsuj6XsSchA=
+
+Name: com/sun/pdfview/decode/MyTracker.class
+SHA-256-Digest: xnb1BQ9QisNzxrXltPARDk7ULw8vxOqYGQyNaVGRtSg=
+
+Name: com/sun/pdfview/font/FontSupport.class
+SHA-256-Digest: jwUpgCtl3qc3rP+93eZKmwERUxPuZgwAxLQn/Zo1AT4=
+
+Name: com/sun/pdfview/function/FunctionType4$21.class
+SHA-256-Digest: nyu84V9nBaqfsz+kFgbRr6hbcpWc+q1TPzjdQeMVYA4=
+
+Name: com/sun/pdfview/action/PDFAction.class
+SHA-256-Digest: ozovOQTFZEQiDdnZr76j9ANk5Zssh8iCHGfAE5032ig=
+
+Name: com/sun/pdfview/function/FunctionType4$31.class
+SHA-256-Digest: 8AfdkMpOh5qkDyTEeJl5+aSEGcx5bY3poLGWS7PoeK0=
+
+Name: com/sun/pdfview/function/FunctionType4$39.class
+SHA-256-Digest: oM69Lmc10TrJ4ExzXJxAWnc3DBPaNZlXP7xji6cDrtg=
+
+Name: com/sun/pdfview/function/FunctionType4$25.class
+SHA-256-Digest: rGY0/EGnlKK5ntXsnUKYzvX90x5mMl/kU2eqAJJoS4Q=
+
+Name: com/sun/pdfview/decode/TIFFPredictor.class
+SHA-256-Digest: 63ATyd8E0fYIr2X7RrJTH/bqa+mvuwcr5e8emfRIU4k=
+
+Name: com/sun/pdfview/pattern/PatternType1$1.class
+SHA-256-Digest: YeAyVgGXEo6sM8bzjlSWt8PODR841SQeT9TN6dJIh5U=
+
+Name: com/sun/pdfview/function/FunctionType4$36.class
+SHA-256-Digest: xFSjuvAojBRS/wXfwFoIofROTLFytRlKXLXObkIESYg=
+
+Name: com/sun/pdfview/font/PDFCMap.class
+SHA-256-Digest: QGdPQp/ao6DtKWERUCZa+flO/VCrpWz70Be1L4r/snk=
+
+Name: com/sun/pdfview/function/FunctionType4$41.class
+SHA-256-Digest: viPX0PIXDWM9NmdQkgq1yrR95JeoZ/kXNykJ37BERJQ=
+
+Name: com/sun/pdfview/font/Type1CFont$Range.class
+SHA-256-Digest: M4fSKaaoglR5GcY5MnoK2S9XottMi360KdTUTICExNI=
+
+Name: com/sun/pdfview/decode/RunLengthDecode.class
+SHA-256-Digest: qfeslkFQH9NNtL85NiEu3ikSjDwGa61OV3+G/mPQW1M=
+
+Name: com/sun/pdfview/font/ttf/MaxpTable.class
+SHA-256-Digest: 4jsA1Ng7h4mbUWRlPwTrQwiStKKk/PlIlg6jQ7vS95w=
+
+Name: com/sun/pdfview/colorspace/MaskColorSpace.class
+SHA-256-Digest: RgbONMrO/bdkcu9VljwQjskuD9Z6mIf7w9kvqeqxNb0=
+
+Name: com/sun/pdfview/font/PDFFontEncoding.class
+SHA-256-Digest: wMQNCFX5VYfNwtFLDDYIM/rdZlePstO9OOTbFrvhzls=
+
+Name: com/sun/pdfview/font/res/s050000l.pfb
+SHA-256-Digest: i/urheVaKY1Cwk9Ji0T0aP5qa2auqeXUfRP18nEdAAI=
+
+Name: com/sun/pdfview/PDFPushCmd.class
+SHA-256-Digest: PpfbQRwMexTHSASJxykD0uPJZ0Bu/JmrALaoMUWNDec=
+
+Name: com/sun/pdfview/font/ttf/PostTable$PostMapFormat0.class
+SHA-256-Digest: eT+CSw3jMedQanvq2Z6K5feiSgbnzndcfyz2n30lBis=
+
+Name: com/sun/pdfview/PDFPage.class
+SHA-256-Digest: YxTv3a2bYN24h9rohWvtIxzqd4m2/0yY3sP45yH6cCk=
+
+Name: com/sun/pdfview/font/PDFCMap$1.class
+SHA-256-Digest: vximMI25b4MxwIvhPHNtr60u5ipEt4/d+b7RJWE0Pkw=
+
+Name: com/sun/pdfview/PDFDocCharsetEncoder.class
+SHA-256-Digest: CrN3HwkI8/BGWi6OO4SPrcTb1bmHlAItQRS/ijkKdg0=
+
+Name: com/sun/pdfview/decode/CCITTCodes
+SHA-256-Digest: f5Gmx6pYxrAUyT6TNG3liw0/5T/LLVHqOb+eFx9X5uI=
+
+Name: com/sun/pdfview/function/FunctionType4$18.class
+SHA-256-Digest: 4unNczeaFrXHoSpVisoAPfzSEqUsYmMb/eo3rNKVgCo=
+
+Name: com/sun/pdfview/colorspace/YCCKColorSpace.class
+SHA-256-Digest: RSeEdcDlSNOhp1CYk7VYjREdh0rHQV6uuNJC9ybdCPs=
+
+Name: com/sun/pdfview/font/ttf/NameTable$NameRecord.class
+SHA-256-Digest: ese5ZQKpj2boEO9BiXJnUvsMvsutXvZazlXUZodBupg=
+
+Name: com/sun/pdfview/decrypt/PDFDecrypterFactory.class
+SHA-256-Digest: +m4lxMbcE4DDKRIgerMyfmspQlHgHYd44kVNmmh1oYw=
+
+Name: com/sun/pdfview/PDFXref.class
+SHA-256-Digest: vvd0nJSQyy4UpWfu5/jzwkk4vifxIlunAN335PkAD4I=
+
+Name: com/sun/pdfview/decrypt/StandardDecrypter$EncryptionAlgorithm.cl
+ ass
+SHA-256-Digest: U6ANVp/IFfaVE02oD4xb5+52IPtSPUOrpXynXC6+39o=
+
+Name: com/sun/pdfview/PDFParseException.class
+SHA-256-Digest: K+qsTW/Zcx9wycYBo0+hb78iJ7q8KljeiJ3DmF9DFGk=
+
+Name: com/sun/pdfview/PDFChangeStrokeCmd.class
+SHA-256-Digest: 1SllhxV5l9xntGTNwxeyirgqIRJ3POauwOOo0u81lLE=
+
+Name: com/sun/pdfview/font/ttf/CMapFormat6.class
+SHA-256-Digest: 6kYhWgTu8SPo685icsMqVxzYgdgGQzb99jmTvsYTqNc=
+
+Name: com/sun/pdfview/function/FunctionType4$12.class
+SHA-256-Digest: dFfaon3QwAIZ2ZPMPJuzTdTtcjvMhtcboz70LQLs83E=
+
+Name: com/sun/pdfview/function/FunctionType4$Expression.class
+SHA-256-Digest: XkYoWZbQUyFQXTk1wLNWvbV4OPcfFysc8W4ae44VgSE=
+
+Name: com/sun/pdfview/font/PDFGlyph.class
+SHA-256-Digest: 1yxbtq1slWdcxd9TFrkXFUezzjVMs0kE+D7Xztfu+lc=
+
+Name: com/sun/pdfview/font/res/n021003l.pfb
+SHA-256-Digest: CostR/xO3EJ7NbG9DMRyJgO1wl/tO8ExZZg4NEjh6bw=
+
+Name: com/sun/pdfview/font/res/n019024l.pfb
+SHA-256-Digest: +iU5QxBGSLaZlITeXgn1bd0JMPJAL00sj/BWmK8J5X4=
+
+Name: com/sun/pdfview/decode/CCITTFaxDecode.class
+SHA-256-Digest: /m3J5DiC9yhHtp4L7eOTgXuRWicW7phM1viKvSky1HY=
+
+Name: com/sun/pdfview/PDFShapeCmd.class
+SHA-256-Digest: +G2aOIhBxXTeLZ8fAKGDabF+IL08Tv/VUPfwltNsPYk=
+
+Name: com/sun/pdfview/font/ttf/CMapFormat4$Segment.class
+SHA-256-Digest: Ds6H6A4HTelelSHrTeCVJyJbE9BVpVNelHuGBoQG340=
+
+Name: com/sun/pdfview/decode/CCITTFaxDecoder.class
+SHA-256-Digest: vcjruNrymHUT0kgzNnIa7PupqjtazyGNdQoVzQ7ruBw=
+
+Name: com/sun/pdfview/PDFImage$1.class
+SHA-256-Digest: OqpPmvjXx0CyOPDa4GtjsZm0/HgbDukJCamuZBzA14c=
+
+Name: com/sun/pdfview/font/Type0Font.class
+SHA-256-Digest: fhdnSTw0VzewgLAZSAKsdfgsZHlN5bjF+xS3KVH/oZQ=
+
+Name: com/sun/pdfview/PDFFillPaintCmd.class
+SHA-256-Digest: W4frHieEOcUJyUCcrkNCelCBzor+MgTXsr2gqLTBO48=
+
+Name: com/sun/pdfview/function/PDFFunction.class
+SHA-256-Digest: NK45mThZKDPqKczc1KkESPfBRYkEBJ5zpteaH9aSVDY=
+
+Name: com/sun/pdfview/function/FunctionType4$10.class
+SHA-256-Digest: noYRanFkbikJg0O3VdJEp9/WhdroCBs8VLMDQHrKdGo=
+
+Name: com/sun/pdfview/PDFXrefEntry$1.class
+SHA-256-Digest: yefvQZX8dkXPA1r4C4qKxuE5eQKWbYKWsYeQS4sj2nw=
+
+Name: com/sun/pdfview/font/TTFFont$PointRec.class
+SHA-256-Digest: mEDbabkk7fiuPaXPpeETypdDyK/fAoOHyE5pZX+/QsQ=
+
+Name: com/sun/pdfview/function/FunctionType4$Operation.class
+SHA-256-Digest: cNJuJ+RppBdynmDE+3gKt0brejQL9URbqasVoVS6Xgg=
+
+Name: com/sun/pdfview/font/ttf/GlyfCompound$GlyfComponent.class
+SHA-256-Digest: aKw0pjM9YjqHrb6Na5FFmUvJens24NgqtB5eEVdRGQI=
+
+Name: test/Type1Decode.class
+SHA-256-Digest: mQjqA/N8gY9xtg7n2NHBgcBiw5XJbBtwhoAplaI6Umk=
+
+Name: com/sun/pdfview/PDFImage$DecodeComponentColorModel.class
+SHA-256-Digest: l5HABXXz/LKoRHVGBD8DnmJP3QLRuHpMKRiHLH9PsVM=
+
+Name: com/sun/pdfview/function/FunctionType4$28.class
+SHA-256-Digest: TbjGJDvSBjdcEzeMmtr3krQIG2Auk3hg72ab5BHOaRg=
+
+Name: com/sun/pdfview/PDFStrokeAlphaCmd.class
+SHA-256-Digest: LQdUZfPMJwwaJx3wUlo9HVn0c5FvgqUCp54klxonHBE=
+
+Name: com/sun/pdfview/PDFFillAlphaCmd.class
+SHA-256-Digest: uGSs7mxwC7bfV8hgBR5pPWRuF21iCRW7o2PKrfZnRRA=
+
+Name: com/sun/pdfview/font/ttf/resource/glyphlist.txt
+SHA-256-Digest: EhPQwY311QJQO0noJEZBWV36ZS4Pa+QGDt2eKht0zHM=
+
+Name: com/sun/pdfview/function/FunctionType4$37.class
+SHA-256-Digest: NqrXKxnM+2aXRa08B/Wcsl6qvPOjGf5c7gHsEVJ+BBU=
+
+Name: com/sun/pdfview/function/FunctionType4$38.class
+SHA-256-Digest: NS0s80gCTODBnILX6QsEaA/PMbP4T1fV4cIQnJzwE8s=
+
+Name: com/sun/pdfview/decode/LZWDecode.class
+SHA-256-Digest: KS/6UVkw9jaXIi6A9fzV2YrrIcmNX3+blEk6SiBdQG0=
+
+Name: com/sun/pdfview/HexDump.class
+SHA-256-Digest: MugfYQzGKtzWkP1HU1oqyhp+oRr3BJIKfV3Nii02H3w=
+
+Name: com/sun/pdfview/PDFPaint.class
+SHA-256-Digest: 3uIksW8/JzKwIo6fCbsFbQVb/C1CZi/mpX8YyXCqFZw=
+
+Name: test/FontToy$1.class
+SHA-256-Digest: 33cg/a1k2i9yBu+x5ULcSxVJKWzqNu3EegdF/Emgefo=
+
+Name: com/sun/pdfview/function/FunctionType4$20.class
+SHA-256-Digest: SBIMNxGO/5qqkhJY5W8kxQoYWHlrlN2aopEFBOqtvSE=
+
+Name: com/sun/pdfview/font/ttf/Glyf.class
+SHA-256-Digest: eaT/eTBzudjF5DjDE9UL0imGlGWWkNRXE7Bx/SITfAM=
+
+Name: com/sun/pdfview/font/ttf/HheaTable.class
+SHA-256-Digest: pvx1jvs/hdat6cDzs488pmFA9XC0agK+RyWaUrZhKYI=
+
+Name: test/FontToy.class
+SHA-256-Digest: OMZxGmqQ9THzyLm6Fbnv82/GoVR+R5oNc/K2qqZeitU=
+
+Name: com/sun/pdfview/font/Type1Font$PSParser.class
+SHA-256-Digest: UM8n59h9gemlDmYFzqEoZKFUzBnx1P/u2leaNxwx+h8=
+
+Name: com/sun/pdfview/function/FunctionType2.class
+SHA-256-Digest: kWCBixyFm/4XzpHMOOqxEcykPZYlUDPxVC4szgDKCJ8=
+
+Name: com/sun/pdfview/PdfSubByteSampleModel.class
+SHA-256-Digest: nPCh7Fxm87TIe+tXRiop5gN7+S+qG9MHccI7wv/ppnM=
+
+Name: com/sun/pdfview/function/FunctionType4$33.class
+SHA-256-Digest: 2Gm0FO8b9Oc+dYAi/+FiHzksZY3JJD0+IMXJ1NM6WQY=
+
+Name: com/sun/pdfview/function/FunctionType4$30.class
+SHA-256-Digest: T5l3BWx8H5q1Sir5h2bJg2gSpo6wokXeZ0FpL0CMJd0=
+
+Name: com/sun/pdfview/decrypt/PDFPassword$CharsetEncoderGenerator.clas
+ s
+SHA-256-Digest: loRb837tuVvj30FwZQQceWXFY0oyRw4L6PMFi/gfGOE=
+
+Name: com/sun/pdfview/font/ttf/CmapTable$CmapSubtable.class
+SHA-256-Digest: nUo65vFdy7rpQK07Q6zoawXy/OIIMKMW0E2POw0YJCk=
+
+Name: com/sun/pdfview/decrypt/IdentityDecrypter.class
+SHA-256-Digest: zwesIBQIOHaDFg2Ja7i1PhAqku2hmCXLvhM+okCIhb4=
+
+Name: com/sun/pdfview/font/ttf/CMapFormat0.class
+SHA-256-Digest: vRU0+o/f+XBk7JJvysqIrctyVeW7DJcxR6TNy4lxFxo=
+
+Name: com/sun/pdfview/function/FunctionType4$16.class
+SHA-256-Digest: 2h+VoBztl0OY4UlC0pjAS+nyURj5NYsACuPmAi+Ms54=
+
+Name: com/sun/pdfview/colorspace/PatternSpace.class
+SHA-256-Digest: p8dyF9ZYGIeWjFw/b+XfTDgRtNDXT0M9q8SL8qrGAN0=
+
+Name: com/sun/pdfview/colorspace/AlternateColorSpace.class
+SHA-256-Digest: dzbt0s+o+rhuD8sTa7MiNKiL8Wpnam+h5wzGpiyQoDg=
+
+Name: com/sun/pdfview/decode/ASCII85Decode.class
+SHA-256-Digest: VBPQyiRxSlezjHbkhjTDXsWEEyxJtGnKBTQl58dRkNI=
+
+Name: com/sun/pdfview/function/FunctionType0.class
+SHA-256-Digest: xzM19O3q8amDajy9VKRRnRjJKeTFnOn7RBRUbAhRMkQ=
+
+Name: com/sun/pdfview/ImageInfo.class
+SHA-256-Digest: 8SX5Dg0YbH1sUSRAZoBrIR4fQPdY/PahkiijMkQyKpU=
+
+Name: com/sun/pdfview/font/ttf/GlyfCompound.class
+SHA-256-Digest: nN5WQ+UahQQIP+ocCVSuRNdn0VPJAj+bQt5FhEGCWnU=
+
+Name: com/sun/pdfview/font/res/BaseFonts.properties
+SHA-256-Digest: jMRCI7K/1c1Tjs4c8DE0VmJ8+Fy7z9bcaZtpXupGXYE=
+
+Name: com/sun/pdfview/Watchable.class
+SHA-256-Digest: pmGpbj5TKuG8pkLx8/ZGPKw8SCKFAs6HbxnfeZNTdPQ=
+
+Name: com/sun/pdfview/function/FunctionType3.class
+SHA-256-Digest: 40VpprQcahLxt3QG1p6exJ8xEy2ldwhBh1wMV/nrSME=
+
+Name: com/sun/pdfview/colorspace/sGray.icc
+SHA-256-Digest: 5Hj8xWAgOPYJD2hMFruprTx1XWNx9plKwmfbmUEz2XM=
+
+Name: com/sun/pdfview/PDFPopCmd.class
+SHA-256-Digest: E2W2ms607reYbJqcVK0nxRjPdb4mbAwHw57KXDJFo2E=
+
+Name: com/sun/pdfview/font/TTFFont.class
+SHA-256-Digest: ZGp/v+u3U2ke2EjFiHWDXysw/HdP5Fz0UDXSHNVDLzM=
+
+Name: com/sun/pdfview/font/ttf/TrueTypeFont.class
+SHA-256-Digest: r5VJsP9J2efrLC4ax+fbzHXhEtnsjdOt3SHMytRW8zU=
+
+Name: com/sun/pdfview/PDFImage$PdfComponentColorModel.class
+SHA-256-Digest: 5ObSwssW/dczgfXZg+Sdy0vg5epVl+JrgCEtraUWlE0=
+
+Name: com/sun/pdfview/PDFParser$Tok.class
+SHA-256-Digest: 7xPfNmkzi5JgBf2ybg6gyaJ+X0e2y5VGOt0pGbWkcaA=
+
+Name: com/sun/pdfview/colorspace/CalGrayColor.class
+SHA-256-Digest: fGa4j67zevgPtmrEW6PyIrSJ9svDjkf6Hn4k0/RqJ4Y=
+
+Name: com/sun/pdfview/font/ttf/CMap.class
+SHA-256-Digest: KnNOlI0OCW3SpvUsAg4dOaS9EtwFlJULMN34uSLjVBQ=
+
+Name: com/sun/pdfview/decrypt/PDFAuthenticationFailureException.class
+SHA-256-Digest: yg7lZoywtDQ1M7aDWlhG2rIm6WFwasrcvFTEijZkNC8=
+
+Name: com/sun/pdfview/function/FunctionType4$2.class
+SHA-256-Digest: S1B3sn0iE0BSW8RVXy0pwd7YIEQQ7QPghaSUN++cllY=
+
+Name: com/sun/pdfview/font/TTFFont$RenderState.class
+SHA-256-Digest: +BUTv1NtSQP43/R1Z+kfn9jzIcOlXyyoqnJxuewLhDw=
+
+Name: com/sun/pdfview/colorspace/CalRGBColor.class
+SHA-256-Digest: dVr9DlhREd72Nb4Y8pk4GlRvLOObs15c4FSpyT8Qyt4=
+
+Name: com/sun/pdfview/PDFParser$ParserState.class
+SHA-256-Digest: IbMzSsCj3EkeKv7M5cYvupvQri/WSR9TFmPaejIQIb8=
+
+Name: com/sun/pdfview/function/FunctionType4$19.class
+SHA-256-Digest: VRbi5gq0fjGGegbDz+1VV/f19Kr85nV6ZPdeMl10ulw=
+
+Name: com/sun/pdfview/pattern/PatternType1$TilingPatternPaint.class
+SHA-256-Digest: zzDYk+b73UeJgsJmRoIRcT/oHk1qIMq1nnd2Z/SNGMI=
+
+Name: com/sun/pdfview/decrypt/PDFPassword.class
+SHA-256-Digest: NQOGOX2e2MYYyZz0XmPAw6XtiAGDdjVlgHsM/iutWVc=
+
+Name: com/sun/pdfview/function/FunctionType4$15.class
+SHA-256-Digest: 9CCKAGZwtAGAH4fX339JzMA5h/Gz1AWNchhux0hmIZg=
+
+Name: com/sun/pdfview/PDFImage.class
+SHA-256-Digest: X9YMm7mJhb6uSL8reOOd4O1g82SidmT0AIkdRqyc64A=
+
+Name: com/sun/pdfview/font/PDFFont$1.class
+SHA-256-Digest: 1zrzH7G9aLOROvxHzBHtqELA+03yxs+EAnbsAmxy/ZA=
+
+Name: com/sun/pdfview/RefImage.class
+SHA-256-Digest: OVU4VmM7ibY+ZNXr+jY+PuQNhPOXq9bsVRnPwzpZ08I=
+
+Name: com/sun/pdfview/decode/PDFDecoder$FilterSpec.class
+SHA-256-Digest: 4CzTRLIavm2wwuIZttT3zMgs6rDGM9l4JrleVVi++r0=
+
+Name: com/sun/pdfview/function/FunctionType4$32.class
+SHA-256-Digest: LFSFThUQ9SThrryR/Q+cCr06QLFSyEzWkNK3rpo1RP8=
+
+Name: com/sun/pdfview/font/ttf/AdobeGlyphList$1.class
+SHA-256-Digest: AXi4HmM9/DAKZvCkSanPXyglqXF5Uks08mNmO7+0E7E=
+
+Name: com/sun/pdfview/font/ttf/TrueTypeTable.class
+SHA-256-Digest: z2nta8JbNCbzI8RTfYVb5vI/mKJxacJeCREn0RkA4K4=
+
+Name: com/sun/pdfview/function/FunctionType4$35.class
+SHA-256-Digest: KHZFdmSIesJ5Oxo/eUTHetGi66/dLInDb69/zOvJibk=
+
+Name: com/sun/pdfview/font/res/d050000l.pfb
+SHA-256-Digest: HtcWVmaROZqu5CCwf7GM4K/72IMJGGLGgYSZeo1vGno=
+
+Name: com/sun/pdfview/decode/PDFDecoder.class
+SHA-256-Digest: kEUvJuEier5lIuYny3bFNeqsKGyAn3VoRIkgA0nFnhs=
+
+Name: com/sun/pdfview/function/FunctionType4$5.class
+SHA-256-Digest: UUZMWXIqZjgehe6AsS88RPRgVZXTySmlNFv2QveC1SM=
+
+Name: com/sun/pdfview/pattern/PDFPattern.class
+SHA-256-Digest: Jhg9zN00QeUKWaI/GVDE2gPtECvrMGOxT4nbwYhqGjg=
+
+Name: com/sun/pdfview/font/res/n022024l.pfb
+SHA-256-Digest: eHhM5mUfXkO9Lyn0OfOQkWi7EjajnPQmRAYHOn/6oZE=
+
+Name: com/sun/pdfview/BaseWatchable.class
+SHA-256-Digest: 0d/GeCk1ru/VktTlOxkQjXBlYa762ysy1V4VeM93ry4=
+
+Name: com/sun/pdfview/function/FunctionType4$29.class
+SHA-256-Digest: FPVOeROcTdpyii1Bn5ThROunPdLqCsfMEPVk1wmdN94=
+
+Name: com/sun/pdfview/function/FunctionType4$26.class
+SHA-256-Digest: 3uXBYfmKhj2hUC1FSbkTTewhV0gHTzhiKCYWR0jlmnU=
+
+Name: com/sun/pdfview/function/FunctionType4$14.class
+SHA-256-Digest: rFJDutpc/10iGSZiyv583SbC2+rFGJ/4n++CDKyWN+g=
+
+Name: com/sun/pdfview/PDFRenderer$GraphicsState.class
+SHA-256-Digest: lcE4Ev5+yJ1xJw7pQAfvA1YOscZM8cMz5zSrCcL4ftY=
+
+Name: com/sun/pdfview/decode/PDFDecoder$1.class
+SHA-256-Digest: NL5IKtce5P54A+XhDemuICrdImDnD5K5RxR+PP7GvGs=
+
+Name: com/sun/pdfview/decrypt/PDFPassword$PasswordByteGenerator.class
+SHA-256-Digest: H/xGqtRIPHKo8LcRaDmVoKDXWEfImR99nuf2YxXCBn8=
+
+Name: com/sun/pdfview/font/ttf/CMapFormat4.class
+SHA-256-Digest: PktL62Y9W+C6mCZ3W7ybjimmKhpVUVpeQyRMMg0gimo=
+
+Name: com/sun/pdfview/function/FunctionType4$4.class
+SHA-256-Digest: nSzlpI/hzzszKzAc/wUqvIqYtEOO6gdreuLlZqQnpOw=
+
+Name: com/sun/pdfview/colorspace/PDFColorSpace.class
+SHA-256-Digest: ZTFQVaDnUMclUZFyRGXjrcJIolO+YZ74jPszrDTvdEY=
+
+Name: com/sun/pdfview/font/ttf/GlyfSimple.class
+SHA-256-Digest: tF5uVpdGunCqkt/S7caG4YvpxVoNYRHT4/PqvSBhvn8=
+
+Name: test/FontToy$4.class
+SHA-256-Digest: 4qgfgq7UNqD79ViOane54GVcKq3apWLhhoncCuHBeSQ=
+
+Name: com/sun/pdfview/PDFXformCmd.class
+SHA-256-Digest: DlkHxSKNhoiU5peIUo/l1YZg9R1D9tXsvsGxbdKjhOk=
+
+Name: com/sun/pdfview/PDFObject.class
+SHA-256-Digest: yMMCvGB0VnBc5gucJ0QRnJ0s+EHZ68RJyVmRWl9jDrI=
+
+Name: com/sun/pdfview/function/FunctionType4$3.class
+SHA-256-Digest: vT7NkHopi04Gz0EQV2XOOz4oPFF4iKqTBfxJsNt8mVQ=
+
+Name: com/sun/pdfview/font/ttf/GlyfTable.class
+SHA-256-Digest: pVLquev24YCsAyFESm2pt/nd7XbjwiXnNgp3CdV/aWI=
+
+Name: com/sun/pdfview/font/ttf/LocaTable.class
+SHA-256-Digest: 2Gnd/ZnsDxf8lxU8hq9kDjrBhqspNAxVXIlWFzH2sf8=
+
+Name: com/sun/pdfview/pattern/PatternType1$Type1PaintContext.class
+SHA-256-Digest: ZaZJT4OtJik765hAocDshPGo5+Fl7SPcl9CY6itzvCE=
+
+Name: com/sun/pdfview/decode/DCTDecode.class
+SHA-256-Digest: rGWVn/r8iVVgqm7OeGgqsQo2OF1Jxa5FgYtZYhU70/I=
+
+Name: META-INF/INDEX.LIST
+SHA-256-Digest: KGsMniZrSyY7SX/rLWN5AJktTn0dcbCVV3odpvQ+Xzw=
+
+Name: com/sun/pdfview/font/res/n022004l.pfb
+SHA-256-Digest: Z+fv1H5IyjZ3ZnNCNAArhqVIiuanH9DuA7iHbdbb7pM=
+
+Name: com/sun/pdfview/font/CIDFontType2.class
+SHA-256-Digest: 3OzoL2l3RA9GurkhEfBlSriMEFUYaJhbbuZuMLxRcxM=
+
+Name: com/sun/pdfview/PDFImage$JpegDecoder.class
+SHA-256-Digest: Gr7bFDetnTtjcKO/geo4u/A99rCvtWsjXBd3OXVrFP0=
+
+Name: com/sun/pdfview/font/res/n021024l.pfb
+SHA-256-Digest: 05ZoA8EtmQEHt8zdwYYCjvDbjXTpNw8xB2CO/X4xYZs=
+
+Name: com/sun/pdfview/colorspace/LabColor.class
+SHA-256-Digest: fcrjE7AbLWXiFd9KTq1koEQBCpcCTU1uuAwyUWHIl8M=
+
+Name: com/sun/pdfview/pattern/ShaderType2$Type2PaintContext.class
+SHA-256-Digest: jMERkzzbA3mBDpHkeNEvoD22MTfi5qWml0lCPk5OjC4=
+
+Name: com/sun/pdfview/OutlineNode.class
+SHA-256-Digest: UCs01+kaFzikoSphqBsCrhLL6gShfbvs1FXAxinVD6w=
+
+Name: com/sun/pdfview/decrypt/CryptFilterDecrypter.class
+SHA-256-Digest: oOHOLMH50hoQPp9OCMy5Bb3c5mR4HXsu9hgKWhX/jQE=
+
+Name: com/sun/pdfview/pattern/PatternType1.class
+SHA-256-Digest: 8Oda5DMcxuFjIVRUI47j6zQhrChezrU44eG+gpDXKLM=
+
+Name: com/sun/pdfview/PDFCmd.class
+SHA-256-Digest: DhmpJ1GpZ7mofORG9LnfdrVOVUpRkD26OtocNB43ZTc=
+
+Name: com/sun/pdfview/font/res/n019023l.pfb
+SHA-256-Digest: rFubOJVn9tgqZj8bNr/Nq1OjAIrLzt8pxqXc99tv7tU=
+
+Name: test/TTFTest$1.class
+SHA-256-Digest: 2GQ8eClrtFwcqNlVqvpNYGrylygzRTtGfPjpit1fCFc=
+
+Name: com/sun/pdfview/pattern/ShaderType2$Type2Paint.class
+SHA-256-Digest: 4lI0QJo1IEwIS+krFmPvPyt+R0Q6pdJVC8ErB+mCg70=
+
+Name: com/sun/pdfview/PDFImageCmd.class
+SHA-256-Digest: caO/B/Mf6tUg9T6gBXEEadRulqaEeVaRQ0iyHXEzpu4=
+
+Name: com/sun/pdfview/font/NativeFont.class
+SHA-256-Digest: 9OVB3IAPwOt2NF01W2rSc7vwRFU7P+ISVvEbX4k3FlQ=
+
+Name: test/FontToy$6.class
+SHA-256-Digest: Dcy9q+HHGRf1dqrS2Yh63Sbyi1abOhh1KswTqH4Io2U=
+
+Name: test/FontToy$2.class
+SHA-256-Digest: XL8Ytpg52f8m/S0QEbnanEjbXiE3Dlr6KeIJ2EXt9g4=
+
+Name: com/sun/pdfview/pattern/ShaderType2.class
+SHA-256-Digest: 43vEKWC4Um3HEm2tfYERsQIFMK3uD1RN3F1nx2HW1hI=
+
+Name: com/sun/pdfview/function/FunctionType4.class
+SHA-256-Digest: A0vUNCL295PwuHRWVdqQpqq0QnTX/TLmmQK/7gpJOWs=
+
+Name: com/sun/pdfview/font/ttf/CmapTable.class
+SHA-256-Digest: DvRNmmoCfpn8wPcI7OxRYiLeBHcxmaroyGMefWZWYE8=
+
+Name: com/sun/pdfview/PDFFile.class
+SHA-256-Digest: irn1j6COttrIUOuTAOm+9TMVR5XyUn42KFOx/rc5XzA=
+
+Name: com/sun/pdfview/Cache$Record.class
+SHA-256-Digest: 1IAgmSNhsyrr/uxGCTrNApfn9truTj7M0o40iDDpgDg=
+
+Name: com/sun/pdfview/decrypt/PDFPassword$IdentityEncodingByteGenerato
+ r.class
+SHA-256-Digest: czZyAef2fZwYND3Trooa4CH8YmQfA6ODKZwgfQW3VB4=
+
+Name: com/sun/pdfview/font/ttf/PostTable.class
+SHA-256-Digest: ZqYocaXTa6PzWpumlrmo2U5g/wPJcc4GoyWMU+ewlo0=
+
+Name: com/sun/pdfview/PDFParser.class
+SHA-256-Digest: xEvqk7N9Rdq35jqO1yu0T2aHg+1JbP46COWthQr/ETs=
+
+Name: com/sun/pdfview/PDFStringUtil.class
+SHA-256-Digest: zFydefV5ik5nsLs60dh3dRLJAvvWImlqrn1YakeoVQ4=
+
+Name: com/sun/pdfview/Identity8BitCharsetEncoder.class
+SHA-256-Digest: bnLRG/F/ezOVBNTpS17wdqgNl1Pk9lqYgU1V94JAZQE=
+
+Name: com/sun/pdfview/function/FunctionType4$6.class
+SHA-256-Digest: K/LMQhxPSzItqRa8u2vW5W0wO3wDOquubl3NWxkXXXQ=
+
+Name: com/sun/pdfview/font/Type3Font.class
+SHA-256-Digest: XeRHZe4vpf9IGR9AyC22t2kqP7kvGqnBF471zQ8VaoI=
+
+Name: com/sun/pdfview/function/FunctionType4$9.class
+SHA-256-Digest: fPYMDR+vnOR6829M7VtEoFneJokuMdgXINchrgfzprg=
+
+Name: com/sun/pdfview/font/ttf/AdobeGlyphList.class
+SHA-256-Digest: l4Qex06nrjyEgLgsv8p/frAndqHLdJkaXrOU+7B6SZM=
+
+Name: com/sun/pdfview/function/FunctionType4$7.class
+SHA-256-Digest: twjXh/K6QEFQ3ExzddJnKq6lva/gROFbhMuc3Vafrmo=
+
+Name: com/sun/pdfview/font/PDFFont.class
+SHA-256-Digest: SvHaV/XnljVi91BLRqmP6X3rZYyzD7v/STUhX+2BSmQ=
+

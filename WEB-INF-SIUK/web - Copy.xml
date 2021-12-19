@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ | $Header: setup/struts4php.xml
+ | $Revision: 1.0
+ | $Date: 2004.06.19
+ |
+ | ====================================================================
+ -->
+<configuration>
+	<path name="datasource">
+		<configValue name="default">valsix</configValue>
+		<path name="valsix">
+			<configValue name="driver">oci8</configValue>
+			<configValue name="server">localhost</configValue>
+			<configValue name="database">orcl</configValue>
+			<configValue name="username">siuk</configValue>
+			<configValue name="password">siuk</configValue>
+			<!--<configValue name="pathreport">C:\\AppServ\\www\\html\\keuangan\\report\\</configValue>-->
+			<configValue name="pathreport">D:\\Project\\Webapps\\imasys-pmsbaru2\\keuangan\\report\\</configValue>
+			<configValue name="serverreport">SIUK</configValue>					
+		</path>
+	</path>
+</configuration>

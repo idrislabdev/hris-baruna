@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_subreport1" language="groovy" pageWidth="401" pageHeight="802" columnWidth="401" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a49fabbc-c17d-4c94-8917-0d8f2505d608">
+	<property name="ireport.zoom" value="4.177248169415663"/>
+	<property name="ireport.x" value="456"/>
+	<property name="ireport.y" value="5"/>
+	<parameter name="THN_BUKU_PARAM" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="BLN_BUKU_PARAM" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+KD_LEVEL1, NM_BUKU_BESAR, FG,
+   DECODE(KD_LEVEL1, '210', 5, MG) MG, SG, DECODE(KD_LEVEL1, '210', NULL, TH_G) TH_G,
+   PAWAL_S, SALDO_PLX, SALDO_PSX,
+   KD_LEVEL2
+   FROM
+   (
+SELECT  DECODE( SUBSTR(A.Kd_level1,1,3), '691', SUBSTR(A.Kd_level1, 1,6), SUBSTR(A.Kd_level1,1,3) )                 Kd_Level1
+        ,DECODE(SUBSTR(A.Kd_level1,1,3),'404','UANG TITIPAN',UPPER(NM_BUKU_BESAR)) NM_BUKU_BESAR
+        ,DECODE(A.COA_ID,'A',1,2)                                        FG
+       ,DECODE(SUBSTR(A.Kd_level1,1,2),10,1,11, 1,19,1,20,2,21,3,22,3,23,3,26,3
+       ,27,3,28,3,30,4,31,4,32,4,33,4,34,5,35,5,36,5,60,3,69,3,40,1,41,1,42,1,43,1,44,1,45,1
+       ,46,1,47,1,48,1,49,1,2)                                                     MG
+       ,DECODE(TO_NUMBER(SUBSTR(A.Kd_Level1,1,3)),211,1,212,1,213,1,214,1,221,1,222,1,223,1
+       ,231,1,232,1,336,3,691,3,606,4,2)                                                 SG
+       ,DECODE(SUBSTR(A.Kd_Level1,1,2),21,1,22,2,23,3,NULL)                                     TH_G
+       ,SUM(round( A.PAWAL_S ))                                                PAWAL_S
+--       ,C.PAWAL_L                                                    --PAWAL_L
+--       ,C.P_LALU                                                       --SALDO_PL
+       ,SUM(round( DECODE(A.COA_ID,'A',(NVL(C.P_LALU,0) + NVL(C.PAWAL_L,0)),(-NVL(C.P_LALU,0) - NVL(C.PAWAL_L,0))) ))                                         SALDO_PLx
+       ,SUM(round( DECODE(A.COA_ID,'A',(NVL(A.P_SEKARANG,0) + NVL(A.PAWAL_S,0)),(-NVL(A.P_SEKARANG,0) - NVL(A.PAWAL_S,0)))))                                SALDO_PSx
+       ,SUBSTR(A.KD_LEVEL1,1,3)                                                                                                                                                                      KD_LEVEL2
+FROM (
+       SELECT
+       DECODE( SUBSTR(A.GRUP_LEVEL1,1,3), '691',     A.KD_BUKU_BESAR, A.GRUP_LEVEL1)     KD_Level1,
+       SUBSTR(A.COA_ID,4,1)                                 COA_ID,
+                   (SUM(NVL(C.AWAL_DEBET,0)) - SUM(NVL(C.AWAL_KREDIT,0)))                                          PAWAL_S
+          ,DECODE ($P{BLN_BUKU_PARAM},1,(SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0)))
+       ,2,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0)))
+       ,3,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0)))
+       ,4,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0)))
+       ,5,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0)))
+       ,6,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0)))
+       ,7,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0)))
+       ,8,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0)))
+       ,9,           (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0)))
+       ,10,         (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+          (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0)))
+       ,11,         (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+          (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+          (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0)))
+       ,12,         (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+          (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+          (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+          (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0)))
+       ,13,         (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+          (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+          (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+          (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0))) +
+          (SUM(NVL(C.P13_DEBET,0)) - SUM(NVL(C.P13_KREDIT,0)))
+       ,14,         (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                      (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+             (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                  (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+          (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+          (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+          (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+          (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+          (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+          (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+          (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0))) +
+          (SUM(NVL(C.P13_DEBET,0)) - SUM(NVL(C.P13_KREDIT,0))) +
+          (SUM(NVL(C.P14_DEBET,0)) - SUM(NVL(C.P14_KREDIT,0))),10)         P_SEKARANG
+       FROM SIUK.KBBR_BUKU_BESAR A,
+          SIUK.KBBT_NERACA_SALDO C
+       WHERE ((TO_NUMBER(SUBSTR(A.KD_BUKU_BESAR,1,3)) BETWEEN 101 AND 699))
+       AND A.KD_BUKU_BESAR = C.KD_BUKU_BESAR (+)
+       AND C.KD_VALUTA (+)= 'IDR'
+       --AND DECODE(SUBSTR(A.KD_BUKU_BESAR,1,3),'404','H','D') = A.GRUP_DTL_KODE
+       AND C.THN_BUKU  (+)=  $P{THN_BUKU_PARAM}
+       GROUP BY DECODE( SUBSTR(A.GRUP_LEVEL1,1,3), '691',  A.KD_BUKU_BESAR, A.GRUP_LEVEL1), A.COA_ID
+         ) A,
+(        SELECT
+       DECODE( SUBSTR(A.GRUP_LEVEL1,1,3), '691',  A.KD_BUKU_BESAR, A.GRUP_LEVEL1)    KD_Level1,
+       SUBSTR(A.COA_ID,4,1)                                    COA_ID,
+                   (SUM(NVL(C.AWAL_DEBET,0)) - SUM(NVL(C.AWAL_KREDIT,0)))         PAWAL_L
+          ,DECODE ($P{BLN_BUKU_PARAM},1,(SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0)))
+        ,2,     (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0)))
+        ,3,     (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                   (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0)))
+        ,4,     (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                   (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                           (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0)))
+        ,5,     (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                   (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                            (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0)))
+        ,6,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                   (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                        (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+               (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+               (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0)))
+        ,7,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+               (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                  (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                             (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                 (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+                 (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                 (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0)))
+         ,8,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                 (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                    (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                          (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                 (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+                 (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                 (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+                 (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0)))
+         ,9,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                    (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                             (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                 (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+                 (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                 (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+                 (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+                 (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0)))
+       ,10,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                 (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                    (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                             (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                 (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+                 (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                 (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+                 (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+                 (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+                 (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0)))
+       ,11,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                 (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                    (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                             (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+                 (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+                 (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                 (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+                 (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+                 (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+                 (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+                 (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0)))
+       ,12,    (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+               (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+                  (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                           (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+               (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+               (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+                (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+          (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+                       (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+             (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+             (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+               (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0)))
+       ,13,       (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                    (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+           (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+        (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+        (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+        (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+        (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+        (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+        (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+        (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+        (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0))) +
+        (SUM(NVL(C.P13_DEBET,0)) - SUM(NVL(C.P13_KREDIT,0)))
+       ,14,       (SUM(NVL(C.P01_DEBET,0)) - SUM(NVL(C.P01_KREDIT,0))) +
+                    (SUM(NVL(C.P02_DEBET,0)) - SUM(NVL(C.P02_KREDIT,0))) +
+           (SUM(NVL(C.P03_DEBET,0)) - SUM(NVL(C.P03_KREDIT,0))) +
+                                (SUM(NVL(C.P04_DEBET,0)) - SUM(NVL(C.P04_KREDIT,0))) +
+        (SUM(NVL(C.P05_DEBET,0)) - SUM(NVL(C.P05_KREDIT,0))) +
+        (SUM(NVL(C.P06_DEBET,0)) - SUM(NVL(C.P06_KREDIT,0))) +
+        (SUM(NVL(C.P07_DEBET,0)) - SUM(NVL(C.P07_KREDIT,0))) +
+        (SUM(NVL(C.P08_DEBET,0)) - SUM(NVL(C.P08_KREDIT,0))) +
+        (SUM(NVL(C.P09_DEBET,0)) - SUM(NVL(C.P09_KREDIT,0))) +
+        (SUM(NVL(C.P10_DEBET,0)) - SUM(NVL(C.P10_KREDIT,0))) +
+        (SUM(NVL(C.P11_DEBET,0)) - SUM(NVL(C.P11_KREDIT,0))) +
+        (SUM(NVL(C.P12_DEBET,0)) - SUM(NVL(C.P12_KREDIT,0))) +
+        (SUM(NVL(C.P13_DEBET,0)) - SUM(NVL(C.P13_KREDIT,0))) +
+        (SUM(NVL(C.P14_DEBET,0)) - SUM(NVL(C.P14_KREDIT,0))), 10)         P_LALU
+       FROM SIUK.KBBR_BUKU_BESAR A,
+                  SIUK.KBBT_NERACA_SALDO C
+       WHERE ((TO_NUMBER(SUBSTR(A.KD_BUKU_BESAR,1,3)) BETWEEN 101 AND 699))
+       AND A.KD_BUKU_BESAR = C.KD_BUKU_BESAR (+)
+       AND C.KD_VALUTA (+)= 'IDR'
+       AND C.THN_BUKU  (+)=  TO_NUMBER($P{THN_BUKU_PARAM}) - 1
+       GROUP BY DECODE( SUBSTR(A.GRUP_LEVEL1,1,3), '691',  A.KD_BUKU_BESAR, A.GRUP_LEVEL1) , A.COA_ID) C,
+SIUK.KBBR_BUKU_BESAR B
+WHERE --SUBSTR(B.KD_BUKU_BESAR,5,5) = '00.00'
+ A.Kd_level1 = B.KD_BUKU_BESAR
+ AND A.COA_ID = C.COA_ID
+ AND A.KD_LEVEL1 = C.KD_LEVEL1(+)
+GROUP BY DECODE( SUBSTR(A.Kd_level1,1,3), '691', SUBSTR(A.Kd_level1, 1,6), SUBSTR(A.Kd_level1,1,3) )
+        ,DECODE(SUBSTR(A.Kd_level1,1,3),'404','UANG TITIPAN',UPPER(NM_BUKU_BESAR))
+        ,DECODE(A.COA_ID,'A',1,2)
+       ,DECODE(SUBSTR(A.Kd_level1,1,2),10,1,11, 1,19,1,20,2,21,3,22,3,23,3,26,3
+       ,27,3,28,3,30,4,31,4,32,4,33,4,34,5,35,5,36,5,60,3,69,3,40,1,41,1,42,1,43,1,44,1,45,1
+       ,46,1,47,1,48,1,49,1,2)
+       ,DECODE(TO_NUMBER(SUBSTR(A.Kd_Level1,1,3)),211,1,212,1,213,1,214,1,221,1,222,1,223,1
+       ,231,1,232,1,336,3,691,3,606,4,2)
+       ,DECODE(SUBSTR(A.Kd_Level1,1,2),21,1,22,2,23,3,NULL),SUBSTR(A.KD_LEVEL1,1,3)
+ORDER BY 3,4,1)  WHERE FG = 1  ORDER BY 3,4,1]]>
+	</queryString>
+	<field name="KD_LEVEL1" class="java.lang.String"/>
+	<field name="NM_BUKU_BESAR" class="java.lang.String"/>
+	<field name="FG" class="java.math.BigDecimal"/>
+	<field name="MG" class="java.math.BigDecimal"/>
+	<field name="SG" class="java.math.BigDecimal"/>
+	<field name="TH_G" class="java.lang.String"/>
+	<field name="PAWAL_S" class="java.math.BigDecimal"/>
+	<field name="SALDO_PLX" class="java.math.BigDecimal"/>
+	<field name="SALDO_PSX" class="java.math.BigDecimal"/>
+	<field name="KD_LEVEL2" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String"/>
+	<variable name="SALDO_PLX_1" class="java.math.BigDecimal" resetType="Group" resetGroup="SG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PSX_1" class="java.math.BigDecimal" resetType="Group" resetGroup="SG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PSX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PLX_2" class="java.math.BigDecimal" resetType="Group" resetGroup="MG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PSX_2" class="java.math.BigDecimal" resetType="Group" resetGroup="MG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PSX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PLX_3" class="java.math.BigDecimal" resetType="Group" resetGroup="MG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PSX_3" class="java.math.BigDecimal" resetType="Group" resetGroup="MG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PSX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PLX_4" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PSX_4" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PSX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PLX_5" class="java.math.BigDecimal" resetType="Group" resetGroup="MG" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PLX_6" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PLX}]]></variableExpression>
+	</variable>
+	<variable name="SALDO_PSX_5" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SALDO_PSX}]]></variableExpression>
+	</variable>
+	<group name="FG">
+		<groupExpression><![CDATA[$F{FG}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="MG">
+		<groupExpression><![CDATA[$F{MG}]]></groupExpression>
+		<groupHeader>
+			<band height="16">
+				<textField>
+					<reportElement x="0" y="1" width="33" height="15" uuid="7414acd5-889b-485f-8a5e-9bdcb3b8a1a9"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MG} == 1 ? 'I' :
+$F{MG} == 2 ? 'II' :
+$F{MG} == 3 ? 'III' :
+$F{MG} == 4 ? 'IV' :
+$F{MG} == 5 ? 'V' :
+'']]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="38" y="1" width="175" height="15" uuid="5703d360-6b4b-4f42-8725-43d9b3812f32"/>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MG} == 1 ? 'AKTIVA LANCAR' :
+$F{MG} == 2 ? 'INVESTASI' :
+$F{MG} == 3 ? 'AKTIVA TETAP' :
+$F{MG} == 4 ? 'AKTIVA TETAP DLM KONSTRUKSI, AKTIVA TAK BERWUJUD, BIAYA YANG DITANGGUHKAN DAN AKTIVA SEWA GUNA USAHA' :
+$F{MG} == 5 ? 'AKTIVA LAIN-LAIN' :
+'']]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="-1" width="1" height="17" uuid="4dc1b3c3-93e9-4c4f-a195-6ce2d962bec3"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="34" y="-1" width="1" height="17" uuid="6be8c398-35e4-453e-bc1a-8b90279a29c3"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="224" y="-1" width="1" height="17" uuid="51a6aec5-ecd6-42cb-adbf-1a78c05ab066"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="309" y="-1" width="1" height="17" uuid="4a48c4d6-ecd8-4b4e-b6b3-40f2ea29f4fe"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="399" y="-1" width="1" height="17" uuid="5ad4131a-f8c3-42f9-9649-8255720a0ba2"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="313" y="0" width="85" height="15" uuid="cdd95af2-f5cc-4f37-a498-5e63cedc1b92"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SALDO_PLX_3}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="225" y="0" width="82" height="15" uuid="21b8979a-0b05-4615-a30a-35609a517581"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SALDO_PSX_3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="38" y="0" width="186" height="15" uuid="8aff34f6-2a0a-472e-8845-0bfb3da4d215"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MG} == 1 ? 'Jumlah Aktiva Lancar' : $F{MG}  == 2 ? 'Jumlah Investasi' : $F{MG} == 3 ? 'Nilai Buku Aktiva Tetap' : $F{MG} == 4 ? 'Jumlah Aktiva Tetap Dalam Konstruksi' : $F{MG} == 5 ? 'Jumlah Aktiva Lain-Lain' : '']]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="15" uuid="f77dbc71-fe97-49b1-8fc4-6943de584198"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="34" y="0" width="1" height="15" uuid="c881d088-7b4e-446d-b432-f4bd9e26c179"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="1" height="15" uuid="a9b33545-78e1-46e7-a39e-005372db5ab5"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="309" y="0" width="1" height="15" uuid="dcf41d15-0e80-447e-8e29-ee4150cc578c"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="399" y="0" width="1" height="15" uuid="e2354691-9f05-4913-a3bf-9c6455f4a2ca"/>
+				</line>
+				<line>
+					<reportElement x="225" y="14" width="175" height="1" uuid="ab3b0c6e-6f1b-4ed1-9cd0-139d9dd6e76a"/>
+				</line>
+				<line>
+					<reportElement x="225" y="0" width="174" height="1" uuid="abbf55a1-f31a-4229-b2ce-c4e261690ec4"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="SG">
+		<groupExpression><![CDATA[$F{SG}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="15">
+				<printWhenExpression><![CDATA[new Boolean($F{MG} == 3 ? true : false)]]></printWhenExpression>
+				<textField>
+					<reportElement x="38" y="0" width="186" height="15" uuid="00b84ec9-3b9f-43a0-96d3-ba9252499edd"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SG} == 1 ? 'Jumlah Aktiva Tetap' : $F{SG} == 2 ? 'Akumulasi Penyusutan' : '']]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="225" y="0" width="82" height="15" uuid="0226343e-8d6e-4620-b5b7-5cd99e39eebb"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SALDO_PSX_1}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0;(#,##0)">
+					<reportElement x="313" y="0" width="85" height="15" uuid="7a90a75d-5e07-424b-81a5-3cfaa9f52958"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SALDO_PLX_1}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="15" uuid="4e479fc4-48f7-4f00-a7aa-53fcd0b333ee"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="34" y="0" width="1" height="15" uuid="0a50d778-1be3-4441-ba15-441bf9c2f274"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="1" height="15" uuid="ee2ffce6-1c0b-47f5-8073-ebe56638578a"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="309" y="0" width="1" height="15" uuid="df527d51-4d45-413b-ab09-030a665bab92"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="399" y="0" width="1" height="15" uuid="0c1c74a5-669b-470d-b3c2-254bb5f7a9f8"/>
+				</line>
+				<line>
+					<reportElement x="225" y="14" width="174" height="1" uuid="b55e3bc7-5642-45f3-8488-685e36e43aa1"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="TH_G">
+		<groupExpression><![CDATA[$F{TH_G}]]></groupExpression>
+		<groupHeader>
+			<band height="16">
+				<printWhenExpression><![CDATA[new Boolean($F{MG}==3 && $F{SG} == 1 && $F{TH_G}.equals('1') ? true :
+ $F{MG}==3 && $F{SG} == 1 && $F{TH_G}.equals('2') ? true :
+ $F{MG}==3 && $F{SG} == 1 && $F{TH_G}.equals('3') ? true :
+ false)]]></printWhenExpression>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="38" y="0" width="186" height="15" uuid="7b5a8ada-0db8-4d27-9252-5bef9bc6ef61"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TH_G}.equals('1') ? 'AKTIVA TETAP POKOK' :
+$F{TH_G}.equals('2') ? 'AKTIVA TETAP PENUNJANG' :
+$F{TH_G}.equals('3') ? 'AKTIVA TETAP PELENGKAP' :
+'']]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="16" uuid="4d8aa9b4-0f2e-4c71-9677-d5299533f601"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="34" y="0" width="1" height="16" uuid="6b8b86df-f807-44f9-9f9d-df046c736311"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="1" height="16" uuid="fe9ea0df-1721-49b3-8b91-db68d8f20087"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="309" y="0" width="1" height="16" uuid="f57887f8-c832-41e0-9036-78e3e1674d35"/>
+				</line>
+				<line>
+					<reportElement stretchType="RelativeToTallestObject" x="399" y="0" width="1" height="16" uuid="6cdf6b2c-2759-4c37-a3ea-f90aa039ba5b"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="1" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<printWhenExpression><![CDATA[new Boolean($F{MG} == 3 ? $F{SG} == 1 ? true : false : true)]]></printWhenExpression>
+			<textField>
+				<reportElement x="1" y="0" width="32" height="15" uuid="66b9c71a-942e-468f-8952-46abd6645bd4"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KD_LEVEL1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="225" y="0" width="82" height="14" uuid="e98499c4-4326-4b7d-bd38-56c1151b84d0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALDO_PSX}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="313" y="1" width="85" height="13" uuid="b98efd94-8a40-4d05-af62-f6419a516749"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALDO_PLX}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="38" y="0" width="186" height="15" uuid="0dd79d45-8deb-43ba-bc32-92c6f35d96b2"/>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NM_BUKU_BESAR}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="15" uuid="913786cf-825a-45a1-b0a2-ced6be94b174"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="34" y="0" width="1" height="15" uuid="585e621e-e2be-43d5-b3e9-af8feaf7f9bf"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="1" height="15" uuid="aeec4654-ac33-4965-957a-02d989f4e8ae"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="309" y="0" width="1" height="15" uuid="a2cde88c-85bc-45af-be86-e702b95ab10d"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="399" y="0" width="1" height="15" uuid="535bb794-228d-4116-8ce4-67aa39030f29"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="0" width="186" height="15" uuid="2a4ba5ab-6585-4667-bfae-4124c1840abc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL AKTIVA]]></text>
+			</staticText>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="225" y="0" width="82" height="15" uuid="762ad3dd-c1db-478e-a68a-baa57eb38759"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SALDO_PSX_5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0;(#,##0)">
+				<reportElement x="313" y="0" width="85" height="15" uuid="f4aef7cc-caa2-4c97-b7e6-8a6136265c8c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SALDO_PLX_6}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="15" uuid="0d5c346a-e289-4aa4-85de-8b8b5054696c"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="34" y="0" width="1" height="15" uuid="0e077322-628a-491a-9922-d1133ec7d219"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="224" y="0" width="1" height="15" uuid="89baa492-dc57-426e-9b4d-c3a5053ef0cf"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="309" y="0" width="1" height="15" uuid="a764c368-4daa-4ebf-b5c8-0697b44f08e3"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="399" y="0" width="1" height="15" uuid="17c9456c-04c0-4193-b947-bebffd05c7f3"/>
+			</line>
+			<line>
+				<reportElement x="1" y="14" width="398" height="1" uuid="62a94b60-11e9-4379-8efd-06d0e735d39b"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="398" height="1" uuid="7869bb6a-fe50-4234-873f-b34156b61429"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

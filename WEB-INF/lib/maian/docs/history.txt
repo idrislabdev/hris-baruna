@@ -1,0 +1,17 @@
+/*-----------------------
+*      MAIAN SEARCH     *
+*     Script History    *
+------------------------*/
+
+
+8/7/06 - Version 1.1 Released
+
+- New interface
+- Fixed minor coding errors
+- Added HTML search import tool
+
+
+-----------------------------------------
+
+
+15/03/05 - Version 1.0 Released

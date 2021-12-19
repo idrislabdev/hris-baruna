@@ -1,0 +1,54 @@
+@page 
+{
+	size: auto;   /* auto is the current printer page size */	
+	margin: 5mm 5mm;  /* this affects the margin in the printer settings */
+}
+
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	
+	margin:0 0;
+}
+
+thead, tbody, tfoot {
+	border: 3px solid black;
+}
+table.myTable { 
+	
+	width:100%;
+	border-collapse: collapse; 
+}
+table.myTable td, 
+table.myTable th { 
+	border: 1px solid black;
+	padding: 5px; 
+	font-size:10px;
+	
+}
+
+/****/
+.area-tombol-cetak{
+	background:#2d77be;
+	border-bottom:4px solid #7eb3e7;
+	
+	height:40px;
+	line-height:40px;
+}
+button.cetak{
+	
+		margin-top:4px !important;
+		margin-left:10px;
+}
+
+@media print {	
+	.kop{
+		border:1px solid red !important;
+		display:none !important;
+	}
+}
+
+
+.konten-cetak{
+	padding: 10px;
+}

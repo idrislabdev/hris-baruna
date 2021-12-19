@@ -1,0 +1,96 @@
+/***********************************************************************************************************************
+DOCUMENT: style/format.css
+DEVELOPED BY: Ryan Stemkoski
+COMPANY: Zipline Interactive
+EMAIL: ryan@gozipline.com
+PHONE: 509-321-2849
+DATE: 2/26/2009
+DESCRIPTION: This document contains the structural formatting files for the accordion style menu.
+************************************************************************************************************************/
+#wrapper-accordion-menu {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	height: -moz-calc(100% - 70px);
+    height: -webkit-calc(100% - 70px);
+    height: -o-calc(100% - 70px);
+    height: calc(100% - 70px);
+	
+	
+	
+	}
+	
+
+.accordionButton {	
+	width: 260px;
+	padding-left:20px;
+	padding-right:20px;
+	height:39px;
+	line-height:39px;
+	float: left;
+	background: #f1f3f5;
+	color:#77726f;
+	font-size:14px;
+	border-bottom: 1px solid #dbdee3;
+	cursor: pointer;
+	}
+.accordionButton a{
+	color:#77726f;
+	text-decoration:none;
+}
+.accordionButton img{	
+	vertical-align:middle;
+	margin-right:5px;
+}
+.accordionContent {	
+	width: 260px;
+	padding:10px 20px;
+	float: left;
+	background: #e9ebec;
+	display: none;
+	/*min-height:calc(100% - 470px);*/
+	
+	height: -moz-calc(100% - 400px);
+    height: -webkit-calc(100% - 400px);
+    height: -o-calc(100% - 400px);
+    height: calc(100% - 400px);
+	
+	overflow:auto;
+	}
+
+/***/
+#wrapper-app-accordion-menu{
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	height: -moz-calc(100% - 70px);
+    height: -webkit-calc(100% - 70px);
+    height: -o-calc(100% - 70px);
+    height: calc(100% - 70px);
+	
+	
+	
+	}
+.app-accordionButton {	
+	width: 210px;
+	padding-left:20px;
+	padding-right:20px;
+	height:39px;
+	line-height:39px;
+	float: left;
+	background: #f1f3f5;
+	color:#77726f;
+	font-size:14px;
+	border-bottom: 1px solid #dbdee3;
+	cursor: pointer;
+	}
+.app-accordionButton a{
+	color:#77726f;
+	text-decoration:none;
+}
+.app-accordionButton img{	
+	vertical-align:middle;
+	margin-right:5px;
+}

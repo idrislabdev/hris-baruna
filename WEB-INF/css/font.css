@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'HelveticaNeueUltraLight';
+	src: url('../fonts/HelveticaNeue/HelveticaNeue-UltraLight.eot');
+	src: url('../fonts/HelveticaNeue/HelveticaNeue-UltraLight.woff') format('woff'), 
+		 url('../fonts/HelveticaNeue/HelveticaNeue-UltraLight.ttf') format('truetype');
+}
+
+
+/* TTF type */
+@font-face {
+  font-family: 'Raleway Regular';
+  src: url('../fonts/cour.ttf');
+}
+@font-face {
+  font-family: 'Raleway ExtraLight';
+  src: url('../fonts/cour.ttf');
+}
+@font-face {
+  font-family: 'Raleway Light';
+  src: url('../fonts/cour.ttf');
+}
+@font-face {
+  font-family: 'Raleway Medium';
+  src: url('../fonts/cour.ttf');
+}
+@font-face {
+  font-family: 'Raleway Bold';
+  src: url('../fonts/cour.ttf');
+}
+
+/****/
+
+@font-face {
+    /* This declaration targets Internet Explorer */
+    font-family: 'SegoeWPLight';
+    src: url('../fonts/segeo-wp-light-webfont.eot');
+}
+
+@font-face {
+    /* This declaration targets everything else */
+    font-family: 'SegoeWPLight';
+    src:	url(//:) format('no404'), 
+			url('../fonts/segeo-wp-light-webfont.woff') format('woff'), 
+			url('../fonts/segeo-wp-light-webfont.ttf') format('truetype'), 
+			url('../fonts/segeo-wp-light-webfont.svgz#SegoeWPLight') format('svg'), 
+			url('../fonts/segeo-wp-light-webfont.svg#SegoeWPLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

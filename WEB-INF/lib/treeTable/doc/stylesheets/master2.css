@@ -1,0 +1,42 @@
+pre.listing {
+  background: #eee;
+  border: 1px solid #ccc;
+  margin: .3em auto;
+  padding: .1em .3em;
+  width: 100%;
+}
+
+pre.listing b {
+  color: #f00;
+}
+
+/*
+ * ========================================================================= */
+.example {
+  border: 1px solid #888;
+  border-collapse: collapse;
+  line-height: 1;
+  margin: 1em auto;
+  width: 98%;
+}
+
+/* Caption
+ * ------------------------------------------------------------------------- */
+.example caption {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Header
+ * ------------------------------------------------------------------------- */
+.example thead {
+  background: #edf0fb url(../images/bg-table-thead.png) repeat-x top left;
+  font-size: 12px;
+}
+
+.example thead tr th {
+  border: 1px solid #888;
+  font-weight: normal;
+  padding: .3em 1.67em .1em 1.67em;
+  text-align: center;
+}

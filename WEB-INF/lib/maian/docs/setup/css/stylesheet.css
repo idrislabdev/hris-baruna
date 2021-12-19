@@ -1,0 +1,71 @@
+body         {
+              background-color: #F0F6FF;
+              background-image: url('../images/body_bg.gif');
+              margin: 5px;
+}
+a:link       {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              color: #000000;
+              text-decoration: underline;
+}
+a:visited    {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              color: #000000;
+              text-decoration: underline;
+}
+a:active     {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              color: #000000;
+              text-decoration: underline;
+}
+a:hover      {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              color: #000000;
+              text-decoration: underline;
+}
+td           {
+              font-family: Verdana, Arial, Helvetica, sans-serif;
+              font-size: 11px;
+              color: #000000;
+}
+.headingtablebg { 
+                 background-color: #F0F6FF;
+                 padding:7px;
+                 border-width: 1px;
+                 border-color: #000000;
+                 border-style: solid;
+}
+.logotablebg {
+                 background-color: #F0F6FF;
+                 border-width: 1px;
+                 border-color: #000000;
+                 border-style: solid;
+}
+.copyright,
+.copyright a:link,
+.copyright a:visited,
+.copyright a:active,
+.copyright a:hover         
+                {
+                 font-family: Verdana, Arial, Helvetica, sans-serif;
+                 font-size: 11px;
+                 color: #000000;
+}
+.menutable      {
+                 font-family: Verdana, Arial, Helvetica, sans-serif;
+	         font-size: 11px;
+	         color: #FFFFFF;
+	         background-color: #68A7DA;
+}
+.menu {
+                 background-color: #9999FF;
+                 padding:7px;
+                 color: #F0F6FF;
+                 border-width: 1px;
+                 border-color: #000000;
+                 border-style: solid;
+}

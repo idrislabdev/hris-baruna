@@ -1,0 +1,67 @@
+div.sdmenu {
+	width:250px;
+	color:#77726f;
+	height:1px;
+	
+	
+}
+div.sdmenu div {
+	/*background: url(title.png) repeat-x;*/
+	overflow: hidden;
+	
+	width: 250px;
+	/*padding-left:20px;
+	padding-right:20px;*/
+	/*height:39px;*/
+	line-height:39px;
+	/*float: left;*/
+	background: #f1f3f5;
+	color:#77726f;
+	/*font-size:15px;*/
+	border-bottom: 1px solid #dbdee3;
+	cursor: pointer;
+}
+div.sdmenu div:first-child {
+	/*background: url(toptitle.gif) no-repeat;*/
+	/*background: url(title.png) repeat-x;*/
+}
+div.sdmenu div.collapsed {
+	/*height: 25px;*/
+	height:39px;
+}
+div.sdmenu div span {
+	display: block;
+	padding-left:25px;
+	padding-right:25px;
+	/*padding: 5px 25px;*/
+	/*font-weight: bold;*/
+	/*color: white;*/
+	color:#77726f;
+	background: url(expanded.gif) no-repeat 10px center;
+	cursor: default;
+	border-bottom: 1px solid #dbdee3;
+	font-size: 12px;
+}
+div.sdmenu div.collapsed span {
+	background-image: url(collapsed.gif);
+}
+div.sdmenu div a {
+	/*padding: 5px 10px;*/
+	padding-left:25px;
+	padding-right:25px;
+	background: #e9ebec;
+	display: block;
+	border-bottom: 1px solid #dbdee3;
+	color:#77726f;
+	text-decoration:none;
+	font-size: 12px;
+}
+div.sdmenu div a.current {
+	background : #ccc;
+}
+div.sdmenu div a:hover {
+	/*background : #066 url(linkarrow.gif) no-repeat right center;*/
+	background:#77726f;
+	color: #fff;
+	text-decoration: none;
+}

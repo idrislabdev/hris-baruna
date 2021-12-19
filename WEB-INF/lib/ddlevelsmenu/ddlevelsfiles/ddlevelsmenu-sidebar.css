@@ -1,0 +1,83 @@
+/* ######### Marker List Vertical Menu ######### */
+
+.markermenu{
+/*width: 175px;*/ /*width of side bar menu*/
+width: 275px;
+clear: left;
+position: relative; /*Preserve this for "right" arrow images (added by script) to be positioned correctly*/
+
+	
+	/*padding-top:20px;*/
+
+}
+
+.markermenu ul{
+list-style-type: none;
+margin: 5px 0;
+padding: 0;
+/*border: 1px solid #9A9A9A;*/
+	
+	/*background-color: #a2a2a2; 
+	background-repeat: repeat-y;
+	background: -webkit-gradient(linear, left top, right top, from(#a2a2a2), to(#e1e1e1)); 
+	background: -webkit-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -moz-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -ms-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -o-linear-gradient(left, #a2a2a2, #e1e1e1);*/
+	
+}
+
+.markermenu ul li a{
+/*background: #F2F2F2*/ /*url(bulletlist.gif) no-repeat 3px center*/; /*light gray background*/
+/*font: bold 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;*/
+/*color: #00014e;*/
+display: block;
+width: auto;
+padding: 10px 0;
+padding-left: 20px;
+text-decoration: none;
+border-bottom: 1px solid #FFF;
+	
+	/*margin-top:1px;*/
+	color:/*#a2a2a2*/ #333333;
+	font-size:14px;
+	background:url(../../../images/bg-sidebar-menu.png);
+	
+	
+}
+
+* html .markermenu ul li a{ /*IE6 hack*/
+width: auto /*155px*/;
+}
+
+.markermenu ul li a:visited, .markermenu ul li a:active{
+color: #00014e;
+}
+
+.markermenu ul li a:hover, .markermenu ul li a.selected{
+/*color: white;*/
+/*background-color: black;*/
+	
+	/*background-color: #cacaca; 
+	background-repeat: repeat-y;
+	background: -webkit-gradient(linear, left top, right top, from(#cacaca), to(#dedede)); 
+	background: -webkit-linear-gradient(left, #cacaca, #dedede); 
+	background: -moz-linear-gradient(left, #cacaca, #dedede); 
+	background: -ms-linear-gradient(left, #cacaca, #dedede); 
+	background: -o-linear-gradient(left, #cacaca, #dedede);*/
+	
+	background:#f7e0c8;
+	color: #333333;
+	text-shadow:1px 1px 3px #FFF;
+}
+
+/* ######### Customized Drop Down ULs CSS (inherits from ddlevelsmenu-base.css) ######### */
+
+.blackwhite li a{
+background: white;
+}
+
+.blackwhite li a:hover{
+background: black;
+color: white;
+}

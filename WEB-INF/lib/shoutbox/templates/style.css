@@ -1,0 +1,54 @@
+#shoutbox { font-family: arial, verdana; font-size: 11px; line-height: 1.1;}
+#shoutbox #sb_content { margin: 0px; }
+#shoutbox a:link { color: #0066CC; }
+#shoutbox a:visited { color: #003366; }
+#shoutbox a:hover { text-decoration: none; }
+#shoutbox a:active { color: #9DCC00; }
+#shoutbox a img { border: 1px solid #555; }
+#shoutbox a.special, #shoutbox a.special:visited { color: #06c; text-decoration: underline; }
+#shoutbox form { margin: 1px 0 0 0; padding: 1px 0 0 0; }
+#shoutbox p { padding: 0px; }
+#shoutbox h1 { margin: 0; padding: 0; font-family: arial, verdana; font-size: 1.25em;}
+#shoutbox h2 { font-family: arial, verdana; font-size: 1.35em; line-height: 1.0; font-weight: bold; margin: 0 0 4px 0; border-bottom: 1px solid #aaa; }
+#shoutbox h3 { font-family: arial, tahoma, verdana; font-size: 1.1em; line-height: 1.0; font-weight: bold; margin: 10px 0 4px 0; border: 0 }
+#shoutbox ul { margin: 0; margin-left: 0px; }
+#shoutbox input, #shoutbox textarea, #shoutbox select { font-family: arial, verdana; font-size: 1.0em; }
+#shoutbox input.check_box { margin: 3px 2px 1px 0; }
+#shoutbox input.check_box2 { margin: 0 2px 0 0; }
+#shoutbox span.blockquote { margin: 6px; padding: 3px 2px 3px 2px; display: block; background-color: #ffffdd; border: 1px dotted #ccc; }
+#shoutbox .spacer { clear: both; font-size: 1px; }
+
+#shoutbox #sb_form { margin-top: 10px; padding: 1px; }
+
+#shoutbox .shout .name { font-weight: bold; display: block; }
+#shoutbox .shout .time { color: #aaa; display: block; font-size: 0.9em; margin-top: -2px }
+#shoutbox .shout .message { margin: 0; padding: 1px 1px 1px 4px; border-bottom: 1px dashed #CCCCDD; }
+#shoutbox .shout .poster { margin: 0; padding: 0 1px 0 1px; }
+#shoutbox .shout .poster_odd { background-color: #f0f0f0; }
+#shoutbox .shout .poster_odd .time { color: #555 }
+#shoutbox .shout .poster_even { background-color: #f5f5f5 }
+
+#shoutbox div.nav { padding: 1px 2px 1px 2px; color: #777; background-color: #fafafa; border-bottom: 1px solid #f0f0f0; font-size: 1.0em; }
+#shoutbox div.nav .left { width: 40%; float: left; text-align: left;  }
+#shoutbox div.nav .right { width: 60%; float: right; text-align: right;  }
+#shoutbox div.nav .right a, #shoutbox div.nav .right a:visited  { text-decoration: none; }
+
+#shoutbox ul.admin_menu { list-style: square outside; color: #aaa; margin: 10px 0 0 20px; }
+#shoutbox ul.admin_menu li { margin: 5px 0 0 0; font-family: "Trebucet MS", arial; font-size: 1.0em; }
+#shoutbox ul.text li { margin-top: 5px }
+
+#shoutbox span.private { color: #FF33CC; }
+
+#shoutbox table.rowlines td { border-bottom: 1px solid #f0f0f0;  padding: 3px 0 3px 0; }
+#shoutbox table.rowlines tr.header { background-color: #f0f0f0; font-weight: bold; color: #606060; }
+#shoutbox table.rowlines tr.header td { border-bottom: 1px solid #E0E0E0; line-height: 0.9em; padding: 5px 0 3px 0; }
+
+#shoutbox .sb_post_error { border: 1px solid #FFCC66; background-color: #ffffcc; padding: 3px 5px 3px 5px; margin: 5px 0 0 0; }
+#shoutbox .sb_post_error ul { margin: 5px 0 5px 20px; padding: 0; list-style: disc; color: #ee0022; }
+#shoutbox .sb_post_error li { margin: 0 }
+#shoutbox .sb_post_error p { margin: 0; padding: 0 }
+
+#shoutbox .menu1 { padding: 5px; background-color: #ffffda }
+#shoutbox .menu1 input { text-align: center; }
+#shoutbox .menu1 .left { float: left; width: 60%; margin: 0; padding: 0 }
+#shoutbox .menu1 .right { float: right; width: 40%; text-align: right; margin: 0; padding: 0 }

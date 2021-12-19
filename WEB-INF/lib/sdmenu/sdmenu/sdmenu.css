@@ -1,0 +1,92 @@
+div.sdmenu {
+	width: 258px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	/*background: url(bottom.gif) no-repeat  right bottom;*/
+	
+	color: #fff;
+}
+div.sdmenu div {
+	/*background: url(title.gif) repeat-x;*/
+	background:#517994;
+	
+	overflow: hidden;
+}
+div.sdmenu div:first-child {
+	background:#517994;
+	/*background: url(toptitle.gif) no-repeat;*/
+	/*-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;*/
+	
+	/*background-color: #63788c; background: url(images/linear_bg_2.png); background-repeat: repeat-x; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#63788c), to(#4d6174)); 
+	background: -webkit-linear-gradient(top, #63788c, #4d6174); 
+	background: -moz-linear-gradient(top, #63788c, #4d6174); 
+	background: -ms-linear-gradient(top, #63788c, #4d6174); 
+	background: -o-linear-gradient(top, #63788c, #4d6174);*/
+}
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span.sdmenu-induk {
+	display: block;
+	padding: 5px 25px 4px;
+	font-weight: bold;
+	color: white;
+	background: url(expanded.gif) no-repeat 10px center;
+	cursor: default;
+	border-bottom: 1px solid #ddd;
+}
+div.sdmenu div.collapsed span.sdmenu-induk {
+	background-image: url(collapsed.gif);
+}
+
+div.sdmenu div span.sdmenu-induk a{
+	background:#517994;
+
+	/*display: block;*/
+	padding: 0px 0px 1px;
+	font-weight: bold;
+	color: white;
+	/*background: url(expanded.gif) no-repeat 10px center;*/
+	/*cursor: default;*/
+	border-bottom: 0px solid #FF0;
+}
+div.sdmenu div.collapsed span.sdmenu-induk a{
+	/*background-image: url(collapsed.gif);*/
+}
+
+div.sdmenu div a {
+	padding: 5px 10px;
+	
+	display: block;
+	border-bottom: 1px solid #ddd;
+	color: #4d6174;
+	background:#acc6d8;
+	font-style:normal;
+		
+	/*background-color: #dbeaf9; background: url(images/linear_bg_2.png); background-repeat: repeat-x; 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dbeaf9), to(#eef6fe)); 
+	background: -webkit-linear-gradient(top, #dbeaf9, #eef6fe); 
+	background: -moz-linear-gradient(top, #dbeaf9, #eef6fe); 
+	background: -ms-linear-gradient(top, #dbeaf9, #eef6fe); 
+	background: -o-linear-gradient(top, #dbeaf9, #eef6fe);*/
+}
+div.sdmenu div a.current {
+	background : #ccc;
+}
+div.sdmenu div a:hover {
+	background : #9dbbcf url(linkarrow.gif) no-repeat right center;
+	color: #fff;
+	text-decoration: none;
+}
+
+/*#sdmenu-main a{
+	background:#517994;
+	border-bottom:none;
+}*/

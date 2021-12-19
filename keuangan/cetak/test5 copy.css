@@ -1,0 +1,396 @@
+
+
+            @page 
+            {
+                size: auto;   /* auto is the current printer page size */
+                /*margin: 0mm;*/  /* this affects the margin in the printer settings */
+				margin:3mm 5mm 5mm 2mm;
+            }
+     
+            body 
+            {
+                /*background-color:#FFFFFF; 
+                border: solid 1px black ;
+                margin: 0px;*/  /* the margin on the content before printing */
+           }
+
+
+
+#header {
+  display: table-header-group;
+  
+}
+
+#main {
+  display: table-row-group;
+  /*min-height:500px;*/
+  /*page-break-inside:avoid;*/
+  
+}
+
+#footer-line {
+	display:block;
+	width: -moz-calc(100% - 2px);
+    width: -webkit-calc(100% - 2px);
+    width: -o-calc(100% - 2px);
+    width: calc(100% - 2px);
+	display: table-footer-group; /*PER HALAMAN*/
+  /*display:inline-table; *//*HALAMAN TERAKHIR, POSISI DIBAWAH KONTEN*/
+  /*position:relative; *//*HALAMAN TERAKHIR, POSISI DIBAWAH KONTEN*/
+  /*bottom:0;
+  */
+}
+#footer {
+  /*display: table-footer-group;*/ /*PER HALAMAN*/
+  display:inline-table; /*HALAMAN TERAKHIR, POSISI DIBAWAH KONTEN*/
+  position:relative; /*HALAMAN TERAKHIR, POSISI DIBAWAH KONTEN*/
+  bottom:0;
+
+}
+
+/***/
+
+/* TTF type */
+/*@font-face {
+  font-family: 'CourierNew';
+  src:url('CourierNew.ttf');
+}*/
+
+/*@font-face {
+  font-family: 'consolaz_0';
+  src: url('consolaz_0.ttf');
+}
+*/
+
+/*@font-face {
+  font-family: 'CONSOLA';
+  src: url('font/CONSOLA.TTF');
+}
+*/
+
+@font-face {
+  font-family: 'LETTERGOTHICSTD';
+  src: url('LETTERGOTHICSTD.OTF');
+}
+
+/*@font-face {
+	font-family: 'saxmono';
+	src:url('saxmono.ttf');
+}*/
+
+*{
+	/*font-family: 'saxmono';*/
+	font-family: 'LETTERGOTHICSTD';
+	font-size:15px;
+
+}
+/*div{
+	
+	page-break-inside:avoid;
+}*/
+span{
+	padding:2px 10px 2.5px 10px;
+	display:block;
+}
+
+#laporan-isi-area{
+	
+}
+#laporan-isi-judul{
+	text-align:center;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#tabel div:nth-child(1){
+	
+	width:50px;
+}
+#tabel div:nth-child(2){
+	
+	width:300px;
+}
+#tabel div:nth-child(3){
+	
+	width:50px;
+}
+#tabel div:nth-child(4){
+	
+	width:200px;
+}
+#tabel div:nth-child(5){
+	
+	width:200px;
+}
+
+/***/
+
+#laporan-wrapper{
+	/*width:24.13cm;*/ /* ORIGINAL */
+	width:21.7cm;
+	/*height:27.94cm;
+	float:left;
+	
+	margin-bottom:50px;
+	position:relative;*/
+	padding-bottom:2px;
+}
+#laporan-header{
+	float:left;
+	width:100%;
+	position:relative;
+}
+#laporan-header-atas{
+	float:left;
+	width:100%;
+	position:relative;
+	margin-bottom:10px;
+}
+#laporan-header-kiri{
+	float:left;
+	width:260px;
+}
+#laporan-header-tengah{
+	float:left;
+	text-align:center;
+	
+	width: -moz-calc(100% - 520px);
+    width: -webkit-calc(100% - 520px);
+    width: -o-calc(100% - 520px);
+    width: calc(100% - 520px);
+}
+
+#laporan-header-kanan{
+	float:right;
+	width:260px;
+	height:91px;
+	text-align:right;
+	position:relative;
+	
+	
+	
+}
+
+#laporan-pojok-row{
+	float:left;
+	width:100%;
+}
+#laporan-pojok-row div:nth-child(1){
+	float:left;
+	width:160px;
+	
+}
+#laporan-pojok-row div:nth-child(2){
+	float:left;
+	width:20px;
+	
+}
+#laporan-pojok-row div:nth-child(3){
+	float:left;
+	width:80px;
+	
+}
+
+
+/***/
+
+#laporan-uraian{
+	float:left;
+	/*width:100%;*/
+	width: -moz-calc(100% - 2px);
+    width: -webkit-calc(100% - 2px);
+    width: -o-calc(100% - 2px);
+    width: calc(100% - 2px);
+
+	margin-top:2px;
+}
+#laporan-uraian-row{
+	float:left;
+	width:100%;
+	
+	/*border-bottom:1px solid #F63;*/
+}
+#laporan-uraian-row div:nth-child(1){
+	width:230px;
+	float:left;
+	
+}
+#laporan-uraian-row div:nth-child(2){
+	width:20px;
+	float:left;
+	
+}
+#laporan-uraian-row div:nth-child(3){
+	width: -moz-calc(100% - 250px);
+    width: -webkit-calc(100% - 250px);
+    width: -o-calc(100% - 250px);
+    width: calc(100% - 250px);
+
+	float:left;
+	
+}
+
+/***/
+
+
+#laporan-kodenama{
+	float:left;
+	width:100%;
+}
+#laporan-kodenama-judul{
+	float:left;
+	width:100%;
+}
+
+#laporan-kodenama-row,
+#laporan-kodenama-rowjumlah{
+	float:left;
+	width:100%;
+}
+#laporan-kodenama-row div:nth-child(1),
+#laporan-kodenama-rowjumlah div:nth-child(1){
+	width:80px;
+	float:left;
+	
+}
+#laporan-kodenama-row div:nth-child(2),
+#laporan-kodenama-rowjumlah div:nth-child(2){
+	width:320px;
+	float:left;
+	
+}
+#laporan-kodenama-row div:nth-child(3),
+#laporan-kodenama-rowjumlah div:nth-child(3){
+	width:50px;
+	float:left;
+	
+}
+#laporan-kodenama-row div:nth-child(4),
+#laporan-kodenama-rowjumlah div:nth-child(4){
+	width:200px;
+	float:left;
+	
+}
+#laporan-kodenama-row div:nth-child(5),
+#laporan-kodenama-rowjumlah div:nth-child(5){
+	width: -moz-calc(100% - 650px);
+    width: -webkit-calc(100% - 650px);
+    width: -o-calc(100% - 650px);
+    width: calc(100% - 650px);
+	
+	float:left;
+	
+}
+
+#laporan-kodenama-rowjumlah div:nth-child(2){
+	text-align:right;
+}
+
+/***/
+
+.dash-atas{
+	border-top:1px dashed #000;
+}
+.dash-bawah{
+	border-bottom:1px dashed #000;
+}
+
+.dash-kiri{
+	border-left:1px dashed #000;
+}
+.dash-kanan{
+	border-right:1px dashed #000;
+}
+.dash-keliling{
+	border:1px dashed #000;
+	border-width:1px 1px 1px 1px;
+}
+
+/***/
+
+#laporan-periksa{
+	float:left;
+	/*width:100%;*/
+	
+	width: -moz-calc(100% - 2px);
+    width: -webkit-calc(100% - 2px);
+    width: -o-calc(100% - 2px);
+    width: calc(100% - 2px);
+}
+#laporan-periksa-kiri{
+	float:left;
+	width:50%;
+}
+#laporan-periksa-kanan{
+	float:right;
+	width:50%;
+	
+
+	text-align:center;
+}
+
+/***/
+
+#laporan-diperiksa-row{
+	float:left;
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#laporan-diperiksa-row div:nth-child(1){
+	float:left;
+	width:200px;
+}
+#laporan-diperiksa-row div:nth-child(2){
+	float:left;
+	width:100px;
+}
+#laporan-diperiksa-row div:nth-child(3){
+	float:left;
+	width:100px;
+}
+
+/***/
+
+#laporan-periksa-manager{
+	float:left;
+	width:100%;
+	/*height:176px;*/
+}
+#laporan-periksa-penerima{
+	float:left;
+	width:100%;
+}
+
+/***/
+
+#laporan-keterangan{
+	float:left;
+	
+	width:100%;
+	width: -moz-calc(100% - 2px);
+    width: -webkit-calc(100% - 2px);
+    width: -o-calc(100% - 2px);
+    width: calc(100% - 2px);
+}
+#laporan-keterangan-judul{
+	float:left;
+	width:100%;
+	text-align:center;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+#laporan-keterangan-kiri{
+	float:left;
+	width:70%;
+}
+#laporan-keterangan-kanan{
+	float:right;
+	width:30%;
+}
+
+/***/

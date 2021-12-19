@@ -1,0 +1,49 @@
+
+.ticker {
+	/*width: 100%;
+	height: 40px;*/
+	
+	
+	overflow: hidden;
+	/*border: 1px solid #DDD;*/
+	margin: 0 auto 0;
+	padding: 0 0;
+	list-style: none;
+	/*border-radius: 5px;
+	box-shadow: 0px 0px 5px #DDD;*/
+	
+	/*background:#9CC;*/
+	
+	/*height: -moz-calc(100% - 20px);
+    height: -webkit-calc(100% - 20px);
+    height: -o-calc(100% - 20px);
+    height: calc(100% - 20px);*/
+	
+	
+}
+
+#ticker_02 {
+	/*height: 320px;*/
+	height:100%;
+	
+	
+	
+	/*height: -moz-calc(100% - 20px);
+    height: -webkit-calc(100% - 20px);
+    height: -o-calc(100% - 20px);
+    height: calc(100% - 20px);*/
+	
+	/*background:#3CC;*/
+	margin-top:10px;
+	
+}
+
+.ticker li {
+	height: auto;
+	/*border-bottom: 1px dotted #DDD;*/
+	border-bottom:1px solid #3891c2;
+	padding: 5px;
+	margin: 0px 5px;
+}
+
+

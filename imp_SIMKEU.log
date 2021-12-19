@@ -1,0 +1,15 @@
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+Export file created by EXPORT:V10.02.01 via conventional path
+import done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+. . importing table              "AGING_ROLL_RATE"
+                                                          308 rows imported
+. . importing table     "AGING_ROLL_RATE_AFILIASI"
+                                                          156 rows imported
+. . importing table                "KPTT_NOTA_LAP"
+                                                            0 rows imported
+. . importing table            "KPTT_NOTA_LAP_DTL"
+                                                            0 rows imported
+Import terminated successfully without warnings.

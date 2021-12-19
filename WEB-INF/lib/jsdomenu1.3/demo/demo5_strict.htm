@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Demo 5 (strict mode)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<link rel="stylesheet" type="text/css" href="../themes/classic/classic.css" />
+<script type="text/javascript" src="../jsdomenu.js"></script>
+<script type="text/javascript" src="demo5.inc.js"></script>
+<script type="text/javascript" src="mousepos.js"></script>
+</head>
+<body onload="initjsDOMenu()">
+<p>
+Unlike absolute menus, the position of static menus "flows" with the document structure. For example, 
+suppose you place a static menu after a paragraph, when you resize the browser, the height of the 
+paragraph changes, but the static menu will still be after the paragraph.
+</p>
+
+<p>
+A static menu (using &lt;div id="staticMenu"&gt;&lt;/div&gt;) has been placed after the following 
+paragraph. Resizing the browser does not change the relative position of the menu. It will 
+still be positioned after the paragraph.
+</p>
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet tortor ac nunc. Nulla 
+risus nulla, suscipit eget, rhoncus et, nonummy sed, tortor. Aliquam erat volutpat. Etiam 
+consequat imperdiet lorem. Nullam aliquet volutpat wisi. Cum sociis natoque penatibus et 
+magnis dis parturient montes, nascetur ridiculus mus. Sed dolor pede, tempus non, volutpat 
+dignissim, cursus non, mauris. In tristique. Integer blandit, lorem eget tincidunt posuere, 
+quam wisi fermentum elit, quis aliquam ante enim at nibh. Sed faucibus sem et mi. Donec iaculis 
+nulla nec urna. Phasellus ultricies est et urna. Praesent congue sagittis elit. Nullam 
+sagittis tortor ut dui. Praesent tristique feugiat ligula. Quisque congue ante vel augue 
+facilisis nonummy. Nulla auctor, purus id ullamcorper ultrices, justo metus venenatis odio, 
+eu nonummy pede urna pretium tortor. Aliquam erat volutpat. Nullam ante. Aenean feugiat. 
+Etiam lacinia dolor sagittis nunc. Maecenas nibh risus, suscipit vel, elementum vitae, posuere 
+et, purus. Vivamus ipsum nunc, mattis non, gravida ut, tempor et, magna. Lorem ipsum dolor sit 
+amet, consectetuer adipiscing elit. Sed sem. Integer accumsan mi sed metus porta volutpat. Duis 
+sollicitudin enim at diam. Donec ultrices sem aliquam ante ullamcorper placerat. Cum sociis 
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor 
+sit amet, consectetuer adipiscing elit. Nam tristique arcu vitae dui. Ut tempus wisi eget urna. 
+Nullam laoreet scelerisque felis. Aliquam turpis libero, iaculis nec, porta nec, condimentum sit 
+amet, dolor. Proin cursus orci eu purus. In quam. Pellentesque habitant morbi tristique senectus 
+et netus et malesuada fames ac turpis egestas. Phasellus accumsan, augue vitae vehicula viverra, 
+risus velit consequat nunc, ut molestie erat risus non dui. Morbi placerat leo. Maecenas iaculis 
+elit at eros. Cras sem. Phasellus augue. Integer molestie eros et urna. Aenean egestas lectus 
+ac mi. Etiam semper lectus at ipsum. Nunc cursus wisi eget urna. Donec pretium tristique sapien. 
+Integer ligula nunc, malesuada gravida, posuere luctus, semper sit amet, nunc. Cras sagittis 
+blandit urna. Nunc eu arcu sed magna vestibulum dictum. Fusce pretium interdum risus. Praesent 
+bibendum lacinia sem. Aliquam erat volutpat. Nunc arcu. Ut faucibus purus in risus. Morbi sem. 
+Nunc consequat, sem a suscipit scelerisque, leo tortor sollicitudin nibh, quis vehicula turpis 
+nibh et lorem. Fusce facilisis semper felis. Cras quis magna. In hac habitasse platea dictumst. 
+Etiam quam nisl, bibendum et, tincidunt vel, tristique sed, eros. Cras laoreet. Etiam nisl eros, 
+luctus nec, eleifend vitae, aliquam id, sapien.
+</p>
+
+<div id="staticMenu"></div>
+
+<p>
+Source code for creating menus in this page:
+</p>
+
+<pre><code>function createjsDOMenu() {
+  staticMenu1 = new jsDOMenu(120, "static", "staticMenu", true);
+  with (staticMenu1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "item2", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "item5", "blank.htm"));
+    show();
+  }
+  
+  staticMenu1_1 = new jsDOMenu(130, "absolute");
+  with (staticMenu1_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "item3", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  staticMenu1_2 = new jsDOMenu(120, "absolute");
+  with (staticMenu1_2) {
+    addMenuItem(new menuItem("Item 1", "item1", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "item3", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  staticMenu1_1_1 = new jsDOMenu(150, "absolute");
+  with (staticMenu1_1_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "", "blank.htm"));
+  }
+  
+  staticMenu1_2_1 = new jsDOMenu(140, "absolute");
+  with (staticMenu1_2_1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+  }
+  
+  staticMenu1_2_2 = new jsDOMenu(150, "absolute");
+  with (staticMenu1_2_2) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 5", "", "blank.htm"));
+  }
+  
+  staticMenu1.items.item2.setSubMenu(staticMenu1_1);
+  staticMenu1.items.item5.setSubMenu(staticMenu1_2);
+  staticMenu1_1.items.item3.setSubMenu(staticMenu1_1_1);
+  staticMenu1_2.items.item1.setSubMenu(staticMenu1_2_1);
+  staticMenu1_2.items.item3.setSubMenu(staticMenu1_2_2);
+}</code></pre>
+</body>
+</html>

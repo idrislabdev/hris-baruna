@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Demo 4 (quirks mode)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<link rel="stylesheet" type="text/css" href="../themes/classic/classic.css" />
+<style type="text/css">
+div#showupregion {
+	background-color: #CCFFCC;
+	border: 1px dashed;
+	height: 100px;
+	padding: 5px;
+}
+</style>
+<script type="text/javascript" src="../jsdomenu.js"></script>
+<script type="text/javascript" src="demo4.inc.js"></script>
+</head>
+<body onload="initjsDOMenu()">
+<p>
+
+You can make use of the setAllExceptFilter() method and setNoneExceptFilter() method to control 
+where the pop-up menu can show up.
+</p>
+
+<div id="showupregion">
+This div has an id = "showupregion". The pop-up menu will show up only if you left click inside 
+this region. Clicking inside other regions will have no effect.
+</div>
+
+<p>
+Now, click the link below to change the filter such that the menu will show up in all regions except
+the above region.
+</p>
+
+<p>
+<a href="javascript:cursorMenu1.setAllExceptFilter(new Array('DIV.showupregion'));" title="Change filter">
+Change filter</a>
+</p>
+
+<p>
+Source code for creating menus in this page:
+</p>
+<pre><code>function createjsDOMenu() {
+  cursorMenu1 = new jsDOMenu(120);
+  with (cursorMenu1) {
+    addMenuItem(new menuItem("Item 1", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 2", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 3", "", "blank.htm"));
+    addMenuItem(new menuItem("Item 4", "", "blank.htm"));
+    addMenuItem(new menuItem("-"));
+    addMenuItem(new menuItem("Item 5", "", "blank.htm"));
+    setNoneExceptFilter(new Array("DIV.showupregion"));
+  }
+  setPopUpMenu(cursorMenu1);
+  activatePopUpMenuBy(0, 0);
+}</code></pre>
+</body>
+</html>

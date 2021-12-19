@@ -1,0 +1,163 @@
+/* ------------------
+ styling for the tables 
+   ------------------   */
+
+/*********************************************************************************/
+
+#sisi-kiri{
+	width:260px;
+	/*margin-top:-70px;*/
+	min-height: calc(100% - 0px);
+	max-height: calc(100% - 0px);
+	
+	float:left;
+	overflow:auto;
+	
+	-webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+#sisi-kiri.hidden{
+	width:0px;
+}
+
+#sisi-kanan {
+	max-height: calc(100% - 100px);
+	min-height: calc(100% - 100px);
+	/*background: #DDD ;*/
+	
+	/*background:#09F;*/
+	background-image: url(../images/bg-main-top.png), url(../images/bg-home.png);
+	background-position: top left, bottom left;
+	background-repeat: repeat-x, no-repeat;
+	
+	/*background: url(images/bg-main-top.png) top left repeat-x, url(images/bg-home.png) bottom left no-repeat;*/ 
+	/*border-left: 2px solid #666;
+	border-right: 2px solid #666;*/
+	width: calc(100% - 260px);
+	/*margin-left:230px;*/
+	/*margin: 0 auto;*/
+	float:right;
+	overflow:auto;
+
+	-webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+	
+}
+
+#sisi-kanan.hidden {
+	width: calc(100% - 0px);
+}
+button.sidebar{
+	background: url(../../../main/images/left-right-arrow.png);
+	width:40px;
+	height:20px;
+	border:none;
+	margin-top:4px;
+	margin-right:10px;
+}
+
+#hukum-header{
+	/*float: left;*/
+	width:calc(100% - 20px);
+	padding:10px 10px;
+	text-align:right;
+	height:30px;
+	
+	/*-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px; */
+	
+	background:#cecece;
+	border-bottom:1px solid #FFF;
+	color:#FFF;
+
+}
+#hukum-header select{
+	background:#FFF;
+	border:1px solid #b0b0b0;
+	padding:3px;
+}
+
+
+#gradient-style
+{
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;*/
+	/*margin: 45px;*/
+	/*margin-left:5px;*/
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#gradient-style a{
+	
+	font-style:normal;
+}
+#gradient-style a:hover{
+	color:#FFF;
+	font-style:normal;
+}
+#gradient-style th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background:#7bb8e0;
+	/*background: /*#b9c9fe url(../../../main/images/bg-judul-kolom.jpg) repeat-x;*/
+	/*border-top: 2px solid #d3ddff;*/
+	border-bottom: 1px solid #fff;
+	color: #FFF;
+	height:35px;
+	text-wrap:none;
+}
+#gradient-style td
+{
+	padding: 8px; 
+	border-bottom: 1px solid #fff;
+	
+	border-top: 1px solid #fff;
+	background:#E0E0E0;
+	/*background: #e8edff url('table-images/gradback.png') repeat-x;*/
+	
+		/* fallback */ 
+	/*background-color: #dfeff9; background: url(images/linear_bg_2.png); background-repeat: repeat-x; */
+	
+	/* Safari 4-5, Chrome 1-9 */ 
+	/*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dfeff9), to(#f1f9ff)); */
+	
+	/* Safari 5.1, Chrome 10+ */ 
+	/*background: -webkit-linear-gradient(top, #dfeff9, #f1f9ff); */
+	
+	/* Firefox 3.6+ */ 
+	/*background: -moz-linear-gradient(top, #dfeff9, #f1f9ff); */
+	
+	/* IE 10 */ 
+	/*background: -ms-linear-gradient(top, #dfeff9, #f1f9ff); */
+	
+	/* Opera 11.10+ */ 
+	/*background: -o-linear-gradient(top, #dfeff9, #f1f9ff);*/
+}
+#gradient-style td{
+	vertical-align:top;
+	
+}
+#gradient-style tfoot tr td
+{
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+#gradient-style tbody tr:hover td
+{
+	background: #cdcdcd /*url('table-images/gradhover.png') repeat-x*/;
+	color: #FFF;
+}

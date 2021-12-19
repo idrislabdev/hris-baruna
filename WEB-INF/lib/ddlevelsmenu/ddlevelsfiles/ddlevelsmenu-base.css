@@ -1,0 +1,119 @@
+/* ######### Drop Down DIVs CSS ######### */
+
+
+.ddsubmenustyle, .ddsubmenustyle div{ /*topmost and sub DIVs, respectively*/
+/*font: normal 13px Verdana;*/
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+/*background: white;*/
+/*border: 1px solid black;*/
+border-bottom-width: 0;
+visibility: hidden;
+z-index: 100;
+
+	/*background-color: #a2a2a2; 
+	background-repeat: repeat-y;
+	background: -webkit-gradient(linear, left top, right top, from(#a2a2a2), to(#e1e1e1)); 
+	background: -webkit-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -moz-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -ms-linear-gradient(left, #a2a2a2, #e1e1e1); 
+	background: -o-linear-gradient(left, #a2a2a2, #e1e1e1);*/
+	
+	/*margin-top:-1px;*/
+
+}
+
+.ddsubmenustyle ul{
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+border: 0px none;
+}
+
+.ddsubmenustyle li a{
+display: block;
+/*width: 170px*/; /*width of menu (not including side paddings)*/
+/*color: black;*/
+/*background-color: lightyellow;*/
+text-decoration: none;
+/*padding: 4px 5px;*/
+border-bottom: 1px solid #FFF;
+
+	min-width:170px;
+	padding:10px 10px 10px 15px;
+	/*margin-top:1px;*/
+	font-size:14px;
+	/*color:#FFF;*/
+	
+	background-color: #4e6274; 
+	background-repeat: repeat-y;
+	background: -webkit-gradient(linear, left top, right top, from(#4e6274), to(#5a6c7d)); 
+	background: -webkit-linear-gradient(left, #4e6274, #5a6c7d); 
+	background: -moz-linear-gradient(left, #4e6274, #5a6c7d); 
+	background: -ms-linear-gradient(left, #4e6274, #5a6c7d); 
+	background: -o-linear-gradient(left, #4e6274, #5a6c7d);
+	/*background:#8a4f2a;*/
+	color: #FFF;
+	text-shadow:1px 1px 3px #000;
+	
+	
+}
+
+* html .ddsubmenustyle li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 170px; /*width of menu (include side paddings of LI A*/
+}
+
+.ddsubmenustyle li a:hover{
+background-color: black;
+color: white;
+
+	min-width:170px;
+	padding:10px 10px 10px 15px;
+	/*margin-top:1px;*/
+	
+	/*background-color: #b4b4b4; 
+	background-repeat: repeat-y;
+	background: -webkit-gradient(linear, left top, right top, from(#b4b4b4), to(#dedede)); 
+	background: -webkit-linear-gradient(left, #b4b4b4, #dedede); 
+	background: -moz-linear-gradient(left, #b4b4b4, #dedede); 
+	background: -ms-linear-gradient(left, #b4b4b4, #dedede); 
+	background: -o-linear-gradient(left, #b4b4b4, #dedede);
+	
+	text-shadow:1px 1px 3px #6b6b6b;*/
+	background:#debf9f;
+	color: #333333;
+	text-shadow:1px 1px 3px #FFF;
+
+}
+
+/* ######### Neutral CSS  ######### */
+
+.downarrowpointer{ /*CSS for "down" arrow image added to top menu items*/
+padding-left: 4px;
+border: 0;
+}
+
+.rightarrowpointer{ /*CSS for "right" arrow image added to drop down menu items*/
+position: absolute;
+padding-top: 3px;
+left: 100px;
+border: 0;
+}
+
+.ddiframeshim{
+position: absolute;
+z-index: 500;
+background: transparent;
+border-width: 0;
+width: 0;
+height: 0;
+display: block;
+}

@@ -1,0 +1,26 @@
+
+body{
+	font-family: Arial;
+}
+td{
+	*display : flex;
+	overflow: hidden;
+	position: relative;
+	padding: 4px 10px;
+}
+td span{
+	display: inline-block;
+	*border: 1px solid red;
+	width: 100%;
+	max-width: 100%;
+	/*flex: 1;
+	border-bottom: 1px dotted black;
+	height: 0.6em;*/
+}
+td span:after{
+	position: absolute;
+	max-width: 100%;
+	*border: 1px solid cyan;
+	overflow: hidden;
+	content: "............................................................................................................................................................................................................................";
+}

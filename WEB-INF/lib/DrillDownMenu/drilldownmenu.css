@@ -1,0 +1,98 @@
+/*#drillmenu1{
+	height:1px;
+}*/
+.drillmenu{ /* main DIV container of menu */
+/*border: 2px solid black;*/
+width: 265px; /*width of menu*/
+/*height: 190px;*/ /*Height of DIV for those with JavaScript disabled*/
+overflow-y: scroll; /*Scrollable DIV for those with JavaScript disabled*/
+/*background: lightyellow;*/ /*background of menu.*/
+
+}
+
+
+.drillmenu ul{ /*menu ULs*/
+height:645px;
+/*height:auto;*/
+/*font: normal 13px Verdana;*/
+margin: 0;
+padding: 0;
+list-style-type: none;
+/*background: lightyellow;*/ /*background of menu*/
+}
+
+.drillmenu li a{ /*menu links*/
+display: block;
+color: black;
+text-decoration: none;
+padding: 5px;
+
+/* STYLE UNTUK UKURAN TILE */
+cursor: pointer; float:left; width: 115px; height: 125px; display: block; margin-right:8px; margin-bottom:4px; margin-top:5px; font-size:14px; text-align:center; font-style:normal; line-height:16px;
+}
+
+.drillmenu li a img.menu-tile{
+
+	width:100px;
+	margin-top:-7px;
+	/*margin-left:10px;*/
+
+}
+
+* html .drillmenu li{ /*IE6 CSS hack*/
+display: inline-block;
+}
+
+.drillmenu li a:hover{
+/*background-color: #4A2500;*/
+color: white;
+}
+
+li.backcontroltitle{ /*style of top level menu title*/
+/*background: black;*/
+background: #4e6274;
+height:42px;
+color: white;
+padding: 4px;
+}
+
+li.backcontrol{ /*style of back button control that gets added to the top of each sub UL*/
+/*background: black;*/
+background: #4e6274;
+height:42px;
+color: #FFF;
+margin-top:-50px;
+padding: 4px;
+cursor: hand;
+cursor: pointer;
+}
+
+#drillcrumb{ /*custom, user defined DIV that contains breadcrumb trail*/
+/*margin-bottom: 5px;*/
+font-size:16px;
+
+/*font: bold 13px Verdana;*/
+
+z-index:1;
+position:relative;
+}
+
+#drillcrumb a{ /*custom element*/
+/*color: darkred;*/
+background:#58d0cf;
+padding:0 10px;
+color:#FFF;
+}
+
+#drillcrumb a:hover{ 
+
+background:#aefefd;
+padding:0 10px;
+color:#58d0cf;
+text-decoration:none;
+}
+
+ul li a.laporan{
+	height:50px;
+}
+

@@ -1,0 +1,223 @@
+
+Connected to: Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - Production
+With the Partitioning, OLAP and Data Mining options
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+
+About to export specified users ...
+. exporting pre-schema procedural objects and actions
+. exporting foreign function library names for user PPI_SIUK 
+. exporting PUBLIC type synonyms
+. exporting private type synonyms
+. exporting object type definitions for user PPI_SIUK 
+About to export PPI_SIUK's objects ...
+. exporting database links
+. exporting sequence numbers
+. exporting cluster definitions
+. about to export PPI_SIUK's tables via Conventional Path ...
+. . exporting table                    CETAK_BANTU
+                                                           20 rows exported
+. . exporting table                         IMPORT
+                                                            0 rows exported
+. . exporting table                IMPORT_ANGGARAN
+                                                            0 rows exported
+. . exporting table                     IMPORT_COA
+                                                            0 rows exported
+. . exporting table                  IMPORT_JURNAL
+                                                            0 rows exported
+. . exporting table                 IMPORT_JURNAL2
+                                                            0 rows exported
+. . exporting table                 IMPORT_JURNALP
+                                                            0 rows exported
+. . exporting table                  IMPORT_MASTER
+                                                            0 rows exported
+. . exporting table                KBBR_BUKU_BESAR
+.
+                                                         1054 rows exported
+. . exporting table            KBBR_BUKU_BESAR_BAK
+.
+                                                         1683 rows exported
+. . exporting table                KBBR_BUKU_PUSAT
+                                                          187 rows exported
+. . exporting table            KBBR_COA_KUST_KLIEN
+                                                           10 rows exported
+. . exporting table               KBBR_GENERAL_REF
+                                                           33 rows exported
+. . exporting table             KBBR_GENERAL_REF_D
+                                                          156 rows exported
+. . exporting table                 KBBR_GROUP_REK
+                                                            5 rows exported
+. . exporting table               KBBR_KARTU_REKAP
+                                                            1 rows exported
+. . exporting table              KBBR_KARTU_TAMBAH
+.........
+                                                         9284 rows exported
+. . exporting table                 KBBR_KEY_TABEL
+                                                            8 rows exported
+. . exporting table               KBBR_LAPORAN_LB4
+................................
+                                                        32481 rows exported
+. . exporting table           KBBR_LAPORAN_LB4_NEW
+                                                          109 rows exported
+. . exporting table          KBBR_LAPORAN_LB4_NEW2
+..
+                                                         2658 rows exported
+. . exporting table              KBBR_NOTA_SUSPEND
+                                                            0 rows exported
+. . exporting table                   KBBR_NO_NOTA
+                                                           20 rows exported
+. . exporting table                 KBBR_PARAM_REK
+                                                           12 rows exported
+. . exporting table              KBBR_PROSEN_PAJAK
+                                                           13 rows exported
+. . exporting table                KBBR_RULE_MODUL
+                                                           41 rows exported
+. . exporting table                  KBBR_THN_BUKU
+                                                            2 rows exported
+. . exporting table                KBBR_THN_BUKU_D
+                                                           14 rows exported
+. . exporting table              KBBR_TIPE_LAPORAN
+                                                            4 rows exported
+. . exporting table            KBBR_TIPE_LAPORAN_D
+                                                          100 rows exported
+. . exporting table                KBBR_TIPE_TRANS
+                                                           83 rows exported
+. . exporting table              KBBR_TIPE_TRANS_D
+                                                          127 rows exported
+. . exporting table            KBBR_TIPE_TRANS_DEP
+                                                            0 rows exported
+. . exporting table                      KBBT_ARUS
+                                                            0 rows exported
+. . exporting table                  KBBT_ARUS_KAS
+                                                          494 rows exported
+. . exporting table             KBBT_GAJI_JNSPST_D
+                                                            0 rows exported
+. . exporting table             KBBT_GAJI_TEMPLATE
+                                                            0 rows exported
+. . exporting table           KBBT_IKHTISAR_JURNAL
+                                                            0 rows exported
+. . exporting table                   KBBT_JUR_AJT
+                                                            0 rows exported
+. . exporting table                    KBBT_JUR_BB
+                                                            8 rows exported
+. . exporting table                KBBT_JUR_BB_BAK
+....
+                                                         4483 rows exported
+. . exporting table                  KBBT_JUR_BB_D
+                                                           69 rows exported
+. . exporting table             KBBT_JUR_BB_D_AWAL
+                                                            0 rows exported
+. . exporting table           KBBT_JUR_BB_D_IMPORT
+                                                            9 rows exported
+. . exporting table              KBBT_JUR_BB_D_TMP
+...........................
+                                                        27505 rows exported
+. . exporting table             KBBT_JUR_BB_IMPORT
+                                                            7 rows exported
+. . exporting table                KBBT_JUR_BB_TMP
+.......
+                                                         7480 rows exported
+. . exporting table             KBBT_KELOMPOK_ARUS
+                                                            0 rows exported
+. . exporting table               KBBT_NERACA_ANGG
+.
+                                                         1334 rows exported
+. . exporting table          KBBT_NERACA_ANGG_PNTP
+                                                            0 rows exported
+. . exporting table              KBBT_NERACA_SALDO
+                                                           28 rows exported
+. . exporting table           KBBT_NERACA_SALDO_12
+                                                          402 rows exported
+. . exporting table          KBBT_NERACA_SALDO_BAK
+........
+                                                         8193 rows exported
+. . exporting table          KBBT_NERACA_SALDO_SRV
+...
+                                                         3087 rows exported
+. . exporting table            KBBT_NERSAL_SUMMARY
+.
+                                                         1498 rows exported
+. . exporting table               KBBT_SALDO_VALAS
+                                                            0 rows exported
+. . exporting table              KBBT_SELISIH_KURS
+                                                            0 rows exported
+. . exporting table             KBBT_TEMPL_LRBIAYA
+                                                           26 rows exported
+. . exporting table             KBBT_TEMPL_LRPUSAT
+                                                           27 rows exported
+. . exporting table               KBBT_VALUASI_REK
+                                                           46 rows exported
+. . exporting table              KPTT_FAKTUR_PAJAK
+                                                          100 rows exported
+. . exporting table                      KPTT_NOTA
+                                                            7 rows exported
+. . exporting table                    KPTT_NOTA_D
+                                                           60 rows exported
+. . exporting table           KPTT_NOTA_NON_JURNAL
+                                                            1 rows exported
+. . exporting table         KPTT_NOTA_NON_JURNAL_D
+                                                            1 rows exported
+. . exporting table            KPTT_NOTA_PELUNASAN
+                                                            8 rows exported
+. . exporting table              KPTT_SBPP_RINCIAN
+                                                            7 rows exported
+. . exporting table                    KUTT_FAKTUR
+                                                            0 rows exported
+. . exporting table                  KUTT_FAKTUR_D
+                                                            0 rows exported
+. . exporting table                      SAFM_BANK
+                                                            4 rows exported
+. . exporting table              SAFM_BANK_NASABAH
+                                                            0 rows exported
+. . exporting table                 SAFM_PELANGGAN
+.........
+                                                         9288 rows exported
+. . exporting table                    SAFR_CABANG
+                                                           32 rows exported
+. . exporting table        SAFR_GENERAL_REF_DETAIL
+                                                          730 rows exported
+. . exporting table                  SAFR_SYSPARAM
+                                                           55 rows exported
+. . exporting table                    SAFR_VALUTA
+                                                            4 rows exported
+. . exporting table               SAFR_VALUTA_KURS
+                                                           79 rows exported
+. . exporting table         SAFR_VALUTA_KURS_PAJAK
+                                                            8 rows exported
+. . exporting table            TMP_AGING_ROLL_RATE
+                                                          624 rows exported
+. . exporting table   TMP_AGING_ROLL_RATE_AFILIASI
+                                                          156 rows exported
+. . exporting table         TMP_CONTROLDATA_FOXPRO
+.
+                                                         1195 rows exported
+. . exporting table               TMP_MASTERS_MACH
+                                                            4 rows exported
+. . exporting table              TMP_MASTER_FOXPRO
+.............
+                                                        13816 rows exported
+. . exporting table             TMP_PIUTANG_MASTER
+                                                          253 rows exported
+. . exporting table                  TMP_ROLL_RATE
+                                                            0 rows exported
+. . exporting table               TMP_TRANB_FOXPRO
+..
+                                                         2920 rows exported
+. . exporting table                     UPKM_KAPAL
+                                                            0 rows exported
+. exporting synonyms
+. exporting views
+. exporting stored procedures
+. exporting operators
+. exporting referential integrity constraints
+. exporting triggers
+. exporting indextypes
+. exporting bitmap, functional and extensible indexes
+. exporting posttables actions
+. exporting materialized views
+. exporting snapshot logs
+. exporting job queues
+. exporting refresh groups and children
+. exporting dimensions
+. exporting post-schema procedural objects and actions
+. exporting statistics
+Export terminated successfully without warnings.

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple ComboGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+	function setText(input)
+	{
+		var id = input.id;
+		id = id.replace("req", "reqText");	
+		$("#"+id).val(input.value);
+	}
+	</script>
+</head>
+<body>
+	<h2>Multiple ComboGrid</h2>
+	<p>Click the right arrow button to show the DataGrid and select items.</p>
+	<div style="margin:20px 0"></div>
+	<select id="cc" class="easyui-combogrid" style="width:250px" data-options="
+			panelWidth: 500,
+			multiple: true,
+			idField: 'itemid',
+			url: 'datagrid_data1.json?reqIndex=0&reqDAU=2000&reqPAK=5000',
+			method: 'get',
+			columns: [[
+				{field:'itemid',title:'Item ID',width:80},
+				{field:'productname',title:'Product',width:120}
+			]],
+			fitColumns: true
+		">
+	</select>
+    <input type="text" id="reqText0-0">
+    <input type="text" id="reqText0-1">
+    <input type="text" id="reqText0-2">
+    <input type="text" id="reqText0-3">
+    
+	<select id="cc" class="easyui-combogrid" style="width:250px" data-options="
+			panelWidth: 500,
+			multiple: true,
+			idField: 'itemid',
+			url: 'datagrid_data1.json?reqIndex=1&reqDAU=2000&reqPAK=5000',
+			method: 'get',
+			columns: [[
+				{field:'itemid',title:'Item ID',width:80},
+				{field:'productname',title:'Product',width:120}
+			]],
+			fitColumns: true
+		">
+	</select>
+    <input type="text" id="reqText1-0">
+    <input type="text" id="reqText1-1">
+    <input type="text" id="reqText1-2">
+    <input type="text" id="reqText1-3">
+    
+</body>
+</html>
