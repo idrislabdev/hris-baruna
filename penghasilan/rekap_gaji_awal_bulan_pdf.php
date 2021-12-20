@@ -60,7 +60,7 @@ $stylesheet = file_get_contents('../WEB-INF/css/laporan-pdf.css');
 $mpdf->WriteHTML($stylesheet,1);	// The parameter 1 tells that this is css/style only and no body/html/text
 
 
-$html .= file_get_contents("http://localhost/baruna/penghasilan/rekap_gaji_awal_bulan_excel.php?reqExcel=".$reqExcel."&reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemen=".$reqDepartemen."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."&reqPegawaiId=".$reqPegawaiId."");
+$html .= file_get_contents("penghasilan/rekap_gaji_awal_bulan_excel.php?reqExcel=".$reqExcel."&reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemen=".$reqDepartemen."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."&reqPegawaiId=".$reqPegawaiId."");
 
 // echo $html->query;exit();
 /*

@@ -67,10 +67,10 @@ $gaji_awal_bulan_count = $gaji_awal_bulan->getCountByParamsSlipGaji(array(), $st
 
 
 if($gaji_awal_bulan_count == 1)
-	$html .= file_get_contents("http://localhost/baruna/penghasilan/slip_kso_excel.php?reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemenId=".$reqDepartemenId."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."&reqPegawaiId=".$reqPegawaiId."");
+	$html .= file_get_contents("penghasilan/slip_kso_excel.php?reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemenId=".$reqDepartemenId."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."&reqPegawaiId=".$reqPegawaiId."");
 else
 {
-	$html .= file_get_contents("http://localhost/baruna/penghasilan/slip_kso_excel.php?reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemenId=".$reqDepartemenId."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."");
+	$html .= file_get_contents("penghasilan/slip_kso_excel.php?reqJenisPegawaiId=".$reqJenisPegawaiId."&reqDepartemenId=".$reqDepartemenId."&reqPeriode=".$reqPeriode."&reqJenisPegawai=".$jenisPegawai."");
 }
 
 /*

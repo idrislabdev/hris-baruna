@@ -39,7 +39,7 @@ $stylesheet = file_get_contents('gaya-laporan.css');
 $mpdf->WriteHTML($stylesheet,1);	// The parameter 1 tells that this is css/style only and no body/html/text
 
 
-$html = file_get_contents("http://localhost/baruna/pembayaran/invoice_titipan.php/?reqId=".$reqNoBukti);
+$html = file_get_contents("pembayaran/invoice_titipan.php/?reqId=".$reqNoBukti);
 
 
 $mpdf->WriteHTML($html,2);

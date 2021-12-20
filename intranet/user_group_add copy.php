@@ -133,7 +133,7 @@ else
 					//return $(this).form('validate');
 					$.ajax({
 					  type: "POST",
-					  url: 'http://<?php echo $_SERVER['SERVER_NAME']; ?>/baruna/json-intranet/user_group_add.php',
+					  url: '../json-intranet/user_group_add.php',
 					  data: formku.serialize(),
 					  success: function(data){
 					  	$.messager.alert('Info', data, 'info');
