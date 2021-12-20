@@ -33,7 +33,7 @@ $arr_json[$i]['id'] = "JAB".$reqDepartemenId;
 $arr_json[$i]['text'] = $reqDepartemen;
 
 $j=0;
-$jabatan->selectByParams(array("DEPARTEMEN_ID" => $reqDepartemenId));
+$jabatan->selectByParams(array("B.DEPARTEMEN_ID" => $reqDepartemenId));
 while($jabatan->nextRow())
 {
 	$arr_parent[$j]['id'] = $jabatan->getField("JABATAN_ID");
