@@ -84,12 +84,8 @@ $user_group->selectByParams();
 			  });														
 		  
 			  /* RIGHT CLICK EVENT */
-			  var anSelectedData = '';
-			  var anSelectedId = '';
-			  var anSelectedPosition = '';
-			  var anSelectedPass = '';	
-			  			  
-			  function fnGetSelected( oTableLocal )
+			 /* RIGHT CLICK EVENT */
+			 function fnGetSelected( oTableLocal )
 			  {
 				  var aReturn = new Array();
 				  var aTrs = oTableLocal.fnGetNodes();
@@ -98,23 +94,28 @@ $user_group->selectByParams();
 					  if ( $(aTrs[i]).hasClass('selected') )
 					  {
 						  aReturn.push( aTrs[i] );
-						  anSelectedPosition = i;
 					  }
 				  }
 				  return aReturn;
 			  }
 		  
-			  $("#example tbody").click(function(event) {
-					  $(oTable.fnSettings().aoData).each(function (){
-						  $(this.nTr).removeClass('row_selected');
-					  });
-					  $(event.target.parentNode).addClass('row_selected');
-					  //
-					  var anSelected = fnGetSelected(oTable);													
-					  anSelectedData = String(oTable.fnGetData(anSelected[0]));
-					  var element = anSelectedData.split(','); 
-					  anSelectedId = element[0];
-					  anSelectedPass = element[4];
+			  var anSelectedData = '';
+			  var anSelectedId = '';
+			  var anSelectedPosition = '';
+			  var anSelectedPass = '';	
+			  $('#example tbody').on( 'click', 'tr', function () {
+					if ( $(this).hasClass('selected') ) {
+						$(this).removeClass('selected');
+					}
+					else {
+						oTable.$('tr.selected').removeClass('selected');
+						$(this).addClass('selected');
+					}
+					
+					var anSelected = fnGetSelected(oTable);													
+					anSelectedData = String(oTable.fnGetData(anSelected[0]));
+					var element = anSelectedData.split(','); 
+					anSelectedId = element[0];
 			  });
 			  
 			  $('#btnEdit').on('click', function () {

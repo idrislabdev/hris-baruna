@@ -30,6 +30,8 @@ else
 	$tempPegawaiId =  $user_login->getField("PEGAWAI_ID");	
 	if($tempDepartemen == "")
 		$tempDepartemen = "NULL";
+
+	
 }
 
 $user_group->selectByParams();
@@ -73,6 +75,7 @@ $user_group->selectByParams();
 			});
 		});
 		function OptionSet(id, nrp,nama, jabatan, email, telepon){
+			console.log(email)
 			document.getElementById('reqNama').value = nama;
 			document.getElementById('reqJabatan').value = jabatan;
 			document.getElementById('reqEmail').value = email;
