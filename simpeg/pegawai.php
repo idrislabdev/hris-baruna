@@ -398,7 +398,9 @@ $status_pegawai->selectByParams();
 				  /*if(anSelectedData == "")
 					  return false;	*/			
 				  
-				  newWindow = window.open('pegawai_data_excel.php?reqDepartemen=<?=$reqDepartemen?>&reqKelompok=' + $("#reqKelompok").val() + '&reqJenisPegawai='+ $("#reqJenisPegawai").val() + '&reqStatusPegawai='+ $("#reqStatusPegawai").val(), 'Cetak');
+				//   newWindow = window.open('pegawai_data_excel.php?reqDepartemen=<?=$reqDepartemen?>&reqKelompok=' + $("#reqKelompok").val() + '&reqJenisPegawai='+ $("#reqJenisPegawai").val() + '&reqStatusPegawai='+ $("#reqStatusPegawai").val(), 'Cetak');
+				  newWindow = window.open('pegawai_data_excel.php', 'Cetak');
+
 				  newWindow.focus();
 				  
 			  });
@@ -596,7 +598,8 @@ $status_pegawai->selectByParams();
         <ul>
             <li>
             <a href="#" id="btnAdd" onClick="window.parent.OpenDHTML('pegawai_add.php', 'Office Management - Aplikasi Kepegawaian', '880', '495');" title="Tambah">Tambah</a>
-            <a href="#" id="btnEdit" title="Edit">Ubah</a> </li>
+            <a href="#" id="btnEdit" title="Edit">Ubah</a>
+			<a href="#" title="Eksport Excel" id="btnEkspor">&nbsp;Export Excel</a>
             <li>
             <?php /*?><a href="#" title="Proses" id="btnProses" data-flexmenu="flexmenu1">&nbsp;Proses</a>
             </li>
