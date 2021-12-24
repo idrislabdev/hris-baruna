@@ -188,7 +188,7 @@ $uang_line->set_top(1);
 $uang_line->set_bottom(1);
 
 //$worksheet->insert_bitmap('B1', 'images/logo_cetak.bmp', 5, 5);
-$worksheet->write(1, 1, "DATA PEGAWAI PT PELINDO MARINE SERVICE", $text_format);
+$worksheet->write(1, 1, "Yayasan Barunawati Biru Surabaya", $text_format);
 
 $worksheet->write(3, 1, "NRP", $text_format_line_bold);
 //$worksheet->write(3, 2, "NIPP", $text_format_line_bold);
