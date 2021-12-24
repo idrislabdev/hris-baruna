@@ -296,8 +296,8 @@ $status_keluarga->selectByParams();
             <td>NRP / NIPP</td>
             <td colspan="3">
             	<input type="hidden" name="reqNRPTemp" id="reqNRPTemp" value="<?=$tempNRP?>" >
-                <input name="reqNRP" id="reqNRP" class="easyui-validatebox" data-options="validType:'minLength[7]'" validType="existNRP['#reqNRPTemp']" maxlength="9" required size="20" type="text" value="<?=$tempNRP?>" />
-                <input name="reqNPP" id="reqNPP" class="easyui-validatebox" data-options="validType:'minLength[7]'" maxlength="11" onkeydown="return format_nipp(event,'reqNPP');" size="20" type="text" value="<?=$tempNPP?>" />
+                <input name="reqNRP" id="reqNRP" class="easyui-validatebox" data-options="validType:'minLength[7]'" validType="existNRP['#reqNRPTemp']" maxlength="12" required size="20" type="text" value="<?=$tempNRP?>" />
+                <input name="reqNPP" id="reqNPP" class="easyui-validatebox" data-options="validType:'minLength[7]'" maxlength="12" onkeydown="return format_nipp(event,'reqNPP');" size="20" type="text" value="<?=$tempNPP?>" />
             </td>
         </tr>
         <tr>
