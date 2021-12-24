@@ -72,9 +72,24 @@ $menu->selectByParamsMenuSub($reqMenuId, $userLogin->userAksesIntranet, $reqMenu
                                     <ul>
                                     <?
                                     foreach($sub1['sub'] as $sub2) {
-                                        ?>
-                                        <li><a href="<?=$sub2['link']?>" target="mainFrame"><?=$sub2['nama']?></a></li>
-                                        <?
+                                        if ($sub2['sub']) {
+                                            ?>
+                                            <li><a href='#' target="mainFrame"><?=$sub2['nama']?></a>
+                                            <ul>
+                                            <?
+                                            foreach($sub2['sub'] as $sub3) {
+                                                ?>
+                                                <li><a href="<?=$sub3['link']?>" target="mainFrame"><?=$sub3['nama']?></a></li>
+                                                <?
+                                            }
+                                            ?>
+                                            </ul>
+                                            <?
+                                        } else {
+                                            ?>
+                                            <li><a href="<?=$sub2['link']?>" target="mainFrame"><?=$sub2['nama']?></a></li>
+                                            <?
+                                        }
                                     }
                                     ?>
                                     </ul>
