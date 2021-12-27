@@ -71,6 +71,13 @@ else
 	$tempBeratBadan= $pegawai->getField('BERAT_BADAN');
 	$tempHomeBase = $pegawai->getField('LOKASI_ID');
 	
+	$tempBidang_studi = $pegawai->getField("BIDANG_STUDI");
+	$tempLineritas = $pegawai->getField("LINERITAS");
+	$tempSpesifikasi_prestasi_karya = $pegawai->getField("SPESIFIKASI_PRESTASI_KARYA");
+	$tempTugas_pembimbingan = $pegawai->getField("TUGAS_PEMBIMBINGAN");
+
+
+
 	if($tempDepartemen == "")
 		$tempDepartemen = "NULL";
 }
@@ -522,7 +529,32 @@ $status_keluarga->selectByParams();
             <td colspan="3">
 				<input name="reqFingerId" class="easyui-validatebox" size="5" type="text" value="<?=$tempFingerId?>" />  
             </td>
+        </tr>   
+		<tr>
+            <td>Bidang studi</td>
+            <td colspan="3">
+				<input name="reqBidang_studi" class="easyui-validatebox" size="50" type="text" value="<?=$tempBidang_studi?>" />  
+            </td>
+        </tr>   
+		<tr>
+            <td>Lineritas</td>
+            <td colspan="3">
+				<input name="reqLineritas" class="easyui-validatebox" size="50" type="text" value="<?=$tempLineritas?>" />  
+            </td>
+        </tr>     
+		<tr>
+            <td>Spesifikasi/prestasi/karya</td>
+            <td colspan="3">
+				<input name="reqSpesifikasi_prestasi_karya" class="easyui-validatebox" size="100" type="text" value="<?=$tempSpesifikasi_prestasi_karya?>" />  
+            </td>
         </tr>    
+		<tr>
+            <td>Tugas_pembimbingan</td>
+            <td colspan="3">
+				<input name="reqTugas_pembimbingan" class="easyui-validatebox" size="100" type="text" value="<?=$tempTugas_pembimbingan?>" />  
+            </td>
+        </tr>    
+		   
     </table>
         <div>
             <input type="hidden" name="reqId" value="<?=$reqId?>">
