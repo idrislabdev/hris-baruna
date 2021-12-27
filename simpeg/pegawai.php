@@ -197,14 +197,16 @@ $status_pegawai->selectByParams();
 			  $('#btnEdit').on('click', function () {
 				  if(anSelectedData == "")
 					  return false;
-					if(anSelectedNissKadet == "")
-					{
-				  		window.parent.OpenDHTML('pegawai_add.php?reqId='+anSelectedId, 'Office Management - Aplikasi Kepegawaian', '880', '495');
-					}
-					else
-					{
-						window.parent.OpenDHTML('pegawai_kadet_add.php?reqId='+anSelectedId, 'Office Management - Aplikasi Kepegawaian', '880', '495');
-					}
+					  window.parent.OpenDHTML('pegawai_add.php?reqId='+anSelectedId, 'Office Management - Aplikasi Kepegawaian', '880', '495');
+
+					// if(anSelectedNissKadet == "")
+					// {
+				  	// 	window.parent.OpenDHTML('pegawai_add.php?reqId='+anSelectedId, 'Office Management - Aplikasi Kepegawaian', '880', '495');
+					// }
+					// else
+					// {
+					// 	window.parent.OpenDHTML('pegawai_kadet_add.php?reqId='+anSelectedId, 'Office Management - Aplikasi Kepegawaian', '880', '495');
+					// }
 			  });
 			  
 			  $('#btnMutasi').on('click', function () {

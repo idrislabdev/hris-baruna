@@ -55,6 +55,11 @@ $reqJamsostek = httpFilterPost("reqJamsostek");
 $reqJamsostekTanggal = httpFilterPost("reqJamsostekTanggal");
 $reqHomeBase = httpFilterPost("reqHomeBase");
 
+$reqBidang_studi= httpFilterPost("reqBidang_studi");
+$reqLineritas= httpFilterPost("reqLineritas");
+$reqSpesifikasi_prestasi_karya= httpFilterPost("reqSpesifikasi_prestasi_karya");
+$reqTugas_pembimbingan= httpFilterPost("reqTugas_pembimbingan");
+
 if($reqDepartemen == 0)
 	$reqDepartemen = "NULL";
 else
@@ -92,6 +97,10 @@ $pegawai->setField('TANGGAL_NPWP', dateToDBCheck($reqTanggalNpwp));
 $pegawai->setField('TINGGI', $reqTinggi);
 $pegawai->setField('BERAT_BADAN', $reqBeratBadan);
 $pegawai->setField('KTP_NO', $reqKtpNo);
+$pegawai->setField('BIDANG_STUDI', $reqBidang_studi);
+$pegawai->setField('LINERITAS', $reqLineritas);
+$pegawai->setField('SPESIFIKASI_PRESTASI_KARYA', $reqSpesifikasi_prestasi_karya);
+$pegawai->setField('TUGAS_PEMBIMBINGAN', $reqTugas_pembimbingan);
 
 
 		if($reqStatusPegawai == 1)
