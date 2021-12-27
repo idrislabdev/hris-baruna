@@ -84,6 +84,11 @@ $worksheet->set_column(32, 32, 15.00);
 $worksheet->set_column(33, 33, 15.00);
 $worksheet->set_column(34, 34, 15.00);
 
+$worksheet->set_column(35, 35, 15.00);
+$worksheet->set_column(36, 36, 15.00);
+$worksheet->set_column(37, 37, 15.00);
+$worksheet->set_column(38, 38, 15.00);
+
 //$worksheet->set_column(14, 14, 38.00);
 //$worksheet->set_column(15, 15, 18.00);
 //$worksheet->set_column(16, 16, 22.00);
@@ -226,6 +231,10 @@ $worksheet->write(3, 32, "TANGGAL MASUK", $text_format_line_bold);
 $worksheet->write(3, 33, "TANGGAL PENSIUN", $text_format_line_bold);
 $worksheet->write(3, 34, "TANGGAL MUTASI KELUAR", $text_format_line_bold);
 $worksheet->write(3, 35, "TANGGAL WAFAT", $text_format_line_bold);
+$worksheet->write(3, 36, "BIDANG STUDI", $text_format_line_bold);
+$worksheet->write(3, 37, "LINERITAS", $text_format_line_bold);
+$worksheet->write(3, 38, "SPESIFIKASI PRESTASI KARYA", $text_format_line_bold);
+$worksheet->write(3, 39, "TUGAS PEMBIMBINGAN", $text_format_line_bold);
 
 
 
@@ -264,7 +273,7 @@ while($pegawai->nextRow())
 	$worksheet->write($row, 21, $pegawai->getField("ALAMAT"), $text_format_line);
 	$worksheet->write($row, 22, $pegawai->getField("TELEPON"), $text_format_line);
 	$worksheet->write($row, 23, $pegawai->getField("EMAIL"), $text_format_line);
-	$worksheet->write($row, 24, $pegawai->getField("BANK_NAMA"), $text_format_line);
+	$worksheet->write($row, 24, $pegawai->getField("NAMA_BANK"), $text_format_line);
 	$worksheet->write($row, 25, $pegawai->getField("REKENING_NAMA"), $text_format_line);
 	$worksheet->write($row, 26, $pegawai->getField("REKENING_NO"), $text_format_line);
 	$worksheet->write($row, 27, $pegawai->getField("NPWP"), $text_format_line);
@@ -276,6 +285,10 @@ while($pegawai->nextRow())
 	$worksheet->write($row, 33,dateToPageCheck($pegawai->getField("TANGGAL_PENSIUN")), $text_format_line);
 	$worksheet->write($row, 34,dateToPageCheck($pegawai->getField("TANGGAL_MUTASI_KELUAR")), $text_format_line);
 	$worksheet->write($row, 35,dateToPageCheck($pegawai->getField("TANGGAL_WAFAT")), $text_format_line);
+	$worksheet->write($row, 36, $pegawai->getField("BIDANG_STUDI"), $text_format_line);
+	$worksheet->write($row, 37, $pegawai->getField("LINERITAS"), $text_format_line);
+	$worksheet->write($row, 38, $pegawai->getField("SPESIFIKASI_PRESTASI_KARYA"), $text_format_line);
+	$worksheet->write($row, 39, $pegawai->getField("TUGAS_PEMBIMBINGAN"), $text_format_line);
 
 
 
