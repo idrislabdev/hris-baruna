@@ -113,7 +113,7 @@ padding: 5px;
         <tr>           
              <td>Kelas</td>
 			 <td>
-				<input name="reqKelas" class="easyui-validatebox" required style="width:50px" type="text" value="<?=$tempKelas?>" />
+				<input name="reqKelas" class="easyui-validatebox"   style="width:50px" type="text" value="<?=$tempKelas?>" />
 			</td>			
         </tr>
         <!-- <tr>           
