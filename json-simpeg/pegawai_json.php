@@ -184,9 +184,7 @@ if(substr($reqDepartemen, 0, 3) == "CAB"){}
 else
 	$statement = " AND F.DEPARTEMEN_ID LIKE '".$reqDepartemen."%'";
 
-if($reqStatusPegawai == '')
-	$statement .= 'AND F.STATUS_PEGAWAI_ID = 1';
-else
+if($reqStatusPegawai != '')
 	$statement .= 'AND F.STATUS_PEGAWAI_ID = '.$reqStatusPegawai;
 
 if($reqJenisPegawai == "")

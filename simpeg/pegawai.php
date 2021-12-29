@@ -673,6 +673,7 @@ $status_pegawai->selectByParams();
     <div style="position: relative; z-index:10">
     <div class="bar-status">
     	Status : <select name="reqStatusPegawai" id="reqStatusPegawai">
+						<option value="">Semua</option>
         				<?
                         while($status_pegawai->nextRow())
 						{
