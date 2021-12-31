@@ -514,9 +514,9 @@ $status_keluarga->selectByParams();
             </td>
         </tr>  
         <tr>
-            <td>Hobby</td>
+            <td>Usia Pensiun</td>
             <td colspan="3">
-    			<input name="reqHobby" class="easyui-validatebox" size="100" type="text" value="<?=$tempHobby?>" />
+    			<input type="number" name="reqHobby" required class="easyui-validatebox" size="5"   value="<?=$tempHobby?>" />
             </td>              
         </tr>               
         <?php /*?><tr> 

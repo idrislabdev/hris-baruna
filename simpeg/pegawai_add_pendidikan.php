@@ -170,11 +170,11 @@ $pendidikan->selectByParams(array(),-1,-1,"", "ORDER BY NAMA");
         <tr>
         	<td>Nama Sekolah</td>
             <td colspan="3">
-                <input name="reqNama" id="reqNama" class="easyui-validatebox" required size="80" type="text" value="<?=$tempNama?>" />
+                <input name="reqNama" id="reqNama" class="easyui-validatebox" required size="40" type="text" value="<?=$tempNama?>" />
             </td>
         </tr>
         <tr>
-        	<td>Kota Sekolah</td>
+        	<td>Jurusan Pendidikan</td>
             <td>
                 <input name="reqKota" id="reqKota" class="easyui-validatebox" size="30" type="text" value="<?=$tempKota?>" />
             </td>
