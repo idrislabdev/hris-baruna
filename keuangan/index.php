@@ -985,7 +985,7 @@ ddsmoothmenu.init({
 							"nama" => "PPH 23",
 							"link" => "pph_23.php"
 					//	),
-						//array(
+						//array( 
 						//	"nama" => "PPH Penjualan",
 						//	"link" => "ppn.php	"
 						)
