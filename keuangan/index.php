@@ -973,10 +973,10 @@ ddsmoothmenu.init({
 							"nama" => "PPH 4 Ayat 2",
 							"link" => "pph_4_ayat_2.php"
 						),
-						array(
-							"nama" => "PPH 15",
-							"link" => "pph_15.php"
-						),
+						//array(
+						//	"nama" => "PPH 15",
+						//	"link" => "pph_15.php"
+						//),
 						array(
 							"nama" => "PPH 21",
 							"link" => "pph_21.php"
@@ -984,10 +984,10 @@ ddsmoothmenu.init({
 						array(
 							"nama" => "PPH 23",
 							"link" => "pph_23.php"
-						),
-						array(
-							"nama" => "PPH Penjualan",
-							"link" => "ppn.php	"
+					//	),
+						//array(
+						//	"nama" => "PPH Penjualan",
+						//	"link" => "ppn.php	"
 						)
 			),
 			array(
