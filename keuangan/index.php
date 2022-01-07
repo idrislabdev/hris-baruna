@@ -307,19 +307,19 @@ ddsmoothmenu.init({
 							array(
 								"nama" => "Master Bank",
 								"link" => "bank.php"
-							),
-							array(
-								"nama" => "Tabel Kurs Valas",
-								"link" => "kurs.php"
-							),
-							array(
-								"nama" => "Tabel Pajak",
-								"link" => "kurs_pajak.php"
-							),
-							array(
-								"nama" => "Tabel Faktur Pajak",
-								"link" => "faktur_pajak.php"
-							)
+							)//,
+							//array(
+							//	"nama" => "Tabel Kurs Valas",
+							//	"link" => "kurs.php"
+							//),
+							//array(
+							//	"nama" => "Tabel Pajak",
+							//	"link" => "kurs_pajak.php"
+							//),
+							//array(
+							//	"nama" => "Tabel Faktur Pajak",
+							//	"link" => "faktur_pajak.php"
+							//)
 					  )
 					)
 				)
@@ -522,15 +522,15 @@ ddsmoothmenu.init({
 							array(
 								"nama" => "Register Bukti JKM/JKK",
 								"link" => "transaksi_kasir_register_bukti_jurnal.php"
-							),
-							array(
-								"nama" => "Entry Kurs Baru",
-								"link" => "kurs.php"
-							),
-							array(
-								"nama" => "Entry Kurs Pajak",
-								"link" => "kurs_pajak.php"
-							)
+							)//,
+							//array(
+							//	"nama" => "Entry Kurs Baru",
+							//	"link" => "kurs.php"
+							//),
+							//array(
+							//	"nama" => "Entry Kurs Pajak",
+							//	"link" => "kurs_pajak.php"
+							//)
 						)
 					)
 				)
@@ -973,10 +973,10 @@ ddsmoothmenu.init({
 							"nama" => "PPH 4 Ayat 2",
 							"link" => "pph_4_ayat_2.php"
 						),
-						array(
-							"nama" => "PPH 15",
-							"link" => "pph_15.php"
-						),
+						//array(
+						//	"nama" => "PPH 15",
+						//	"link" => "pph_15.php"
+						//),
 						array(
 							"nama" => "PPH 21",
 							"link" => "pph_21.php"
@@ -984,10 +984,10 @@ ddsmoothmenu.init({
 						array(
 							"nama" => "PPH 23",
 							"link" => "pph_23.php"
-						),
-						array(
-							"nama" => "PPH Penjualan",
-							"link" => "ppn.php	"
+					//	),
+						//array( 
+						//	"nama" => "PPH Penjualan",
+						//	"link" => "ppn.php	"
 						)
 			),
 			array(

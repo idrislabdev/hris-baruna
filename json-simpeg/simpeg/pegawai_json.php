@@ -350,6 +350,11 @@ class pegawai_json extends CI_Controller {
 		$reqJamsostek = httpFilterPost("reqJamsostek");
 		$reqJamsostekTanggal = httpFilterPost("reqJamsostekTanggal");
 
+		$reqBidang_studi = httpFilterPost("reqBidang_studi");
+		$reqLineritas = httpFilterPost("reqLineritas");
+		$reqSpesifikasi_prestasi_karya = httpFilterPost("reqSpesifikasi_prestasi_karya");
+		$reqTugas_pembimbingan = httpFilterPost("reqTugas_pembimbingan");
+
 		if($reqDepartemen == 0)
 			$reqDepartemen = "NULL";
 		else
@@ -381,6 +386,12 @@ class pegawai_json extends CI_Controller {
 		$pegawai->setField('HOBBY', $reqHobby);
 		$pegawai->setField('FINGER_ID', $reqFingerId);
 		$pegawai->setField('TANGGAL_NPWP', dateToDBCheck($reqTanggalNpwp));
+
+		$pegawai->setField('BIDANG_STUDI', $reqBidang_studi);
+		$pegawai->setField('LINERITAS', $reqLineritas);
+		$pegawai->setField('SPESIFIKASI_PRESTASI_KARYA', $reqSpesifikasi_prestasi_karya);
+		$pegawai->setField('TUGAS_PEMBIMBINGAN', $reqTugas_pembimbingan);
+
 
 				if($reqStatusPegawai == 1)
 				{

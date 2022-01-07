@@ -219,18 +219,18 @@ ddsmoothmenu.init({
 							"nama" => "Jabatan",
 							"link" => "jabatan.php"
 						),
-						array(
-							"nama" => "Pangkat",
-							"link" => "pangkat.php"
-						),
-						array(
-							"nama" => "Pangkat Kode",
-							"link" => "pangkat_kode.php"
-						),
-						array(
-							"nama" => "Pangkat Perubahan",
-							"link" => "pangkat_perubahan_kode.php"
-						),
+						//array(
+						//	"nama" => "Pangkat",
+						//	"link" => "pangkat.php"
+						//),
+						//array(
+						//	"nama" => "Pangkat Kode",
+						//	"link" => "pangkat_kode.php"
+						//),
+						//array(
+						//	"nama" => "Pangkat Perubahan",
+						//	"link" => "pangkat_perubahan_kode.php"
+						//),
 						array(
 							"nama" => "Pejabat Penetap",
 							"link" => "pejabat_penetap.php"
