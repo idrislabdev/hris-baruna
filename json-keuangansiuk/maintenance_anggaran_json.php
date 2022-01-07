@@ -19,9 +19,9 @@ ini_set("memory_limit","500M");
 ini_set('max_execution_time', 520);
 
 $aColumns = array("KD_BUKU_BESAR", "KD_SUB_BANTU", "KD_BUKU_PUSAT", "ANGG_TAHUNAN", 
-                 "JUMLAH_MUTASI", "D_K", "REALISASI");
+                 "P01_ANGG", "P02_ANGG", "P03_ANGG",  "P04_ANGG", "P05_ANGG", "P07_ANGG",  "P07_ANGG", "P08_ANGG", "P09_ANGG",  "P10_ANGG", "P11_ANGG", "P12_ANGG");
 $aColumnsAlias = array("KD_BUKU_BESAR", "KD_SUB_BANTU", "KD_BUKU_PUSAT", "ANGG_TAHUNAN", 
-                 "JUMLAH_MUTASI", "D_K", "REALISASI");
+				"P01_ANGG", "P02_ANGG", "P03_ANGG",  "P04_ANGG", "P05_ANGG", "P07_ANGG",  "P07_ANGG", "P08_ANGG", "P09_ANGG",  "P10_ANGG", "P11_ANGG", "P12_ANGG");
 				 
 /*$aColumnsAlias = array("KD_BUKU_BESAR", "KD_SUB_BANTU", "KD_BUKU_PUSAT", "ANGG_TAHUNAN", 
                  "JUMLAH_MUTASI", "D_K", "REALISASI");*/
@@ -174,7 +174,7 @@ if($reqTahunBuku == "" || $reqTahunBuku == "0"){}
 else
 $statement= " AND THN_BUKU = '".$reqTahunBuku."'";
 
-$search_json= " AND ((UPPER(KD_BUKU_PUSAT) LIKE '%".strtoupper($_GET['sSearch'])."%') OR (UPPER(KD_SUB_BANTU) LIKE '%".strtoupper($_GET['sSearch'])."%') OR (UPPER(KD_BUKU_BESAR) LIKE '%".strtoupper($_GET['sSearch'])."%'))";
+$search_json= " AND ((UPPER(KD_BUKU_PUSAT) LIKE '%".strtoupper($_GET['sSearch'])."%') OR (UPPER(KD_SUB_BANTU) LIKE '%".strtoupper($_GET['sSearch'])."%') OR (UPPER(A.KD_BUKU_BESAR) LIKE '%".strtoupper($_GET['sSearch'])."%'))";
 //$search_json= "";
 
 $allRecord = $kbbt_neraca_angg->getCountByParamsMaintenanceAnggaran(array(), $statement);
@@ -183,7 +183,7 @@ if($_GET['sSearch'] == "")
 else	
 	$allRecordFilter = $kbbt_neraca_angg->getCountByParamsMaintenanceAnggaran(array(), $statement.$search_json);
 
-$kbbt_neraca_angg->selectByParamsMaintenanceAnggaran(array(), $dsplyRange, $dsplyStart, $statement.$search_json, $sOrder);
+$kbbt_neraca_angg->selectByParams(array(), $dsplyRange, $dsplyStart, $statement.$search_json, $sOrder);
 
 //echo $kbbt_neraca_angg->query;
 

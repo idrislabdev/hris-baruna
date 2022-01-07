@@ -77,7 +77,16 @@ if($reqTahunBuku == "")
 							 null,
 							 null,
 							 null,
-							 null												 								 
+							 null,
+							 null,
+							 null,
+							 null,
+							 null,
+							 null,
+							 null,
+							 null,
+							 null,
+							 null							 								 
 						],
 			  "bSort":true,
 			  "bProcessing": true,
@@ -271,13 +280,22 @@ if($reqTahunBuku == "")
     <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
     <thead>
         <tr>
-            <th width="100px">Buku&nbsp;Besar</th>  
+		<th width="100px">Buku&nbsp;Besar</th>  
             <th width="100px">Kartu</th>  
             <th width="100px">Pusat&nbsp;Biaya</th>
             <th width="100px">Jumlah&nbsp;Anggaran</th>
-            <th width="100px">Saldo&nbsp;Mutasi</th>
-            <th width="50px">D/K</th>
-            <th width="100px">Realisasi</th>
+            <th width="100px">Juli</th>
+            <th width="100px">Agustus</th>
+            <th width="100px">September</th>
+			<th width="100px">Oktober</th>
+			<th width="100px">November</th>
+			<th width="100px">Desember</th>
+			<th width="100px">Januari</th>
+            <th width="100px">Februari</th>
+            <th width="100px">Maret</th>
+            <th width="100px">April</th>
+            <th width="100px">Mei</th>
+            <th width="100px">Juni</th>
         </tr>
     </thead>
     </table> 

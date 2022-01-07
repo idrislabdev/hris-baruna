@@ -20,10 +20,18 @@ $reqKodeSubBantu= httpFilterPost("reqKodeSubBantu");
 $reqKodeBukuBesar= httpFilterPost("reqKodeBukuBesar");
 $reqKodeValuta= httpFilterPost("reqKodeValuta");
 $reqJumlah= httpFilterPost("reqJumlah");
-$reqJumlahTriwulan1= httpFilterPost("reqJumlahTriwulan1");
-$reqJumlahTriwulan2= httpFilterPost("reqJumlahTriwulan2");
-$reqJumlahTriwulan3= httpFilterPost("reqJumlahTriwulan3");
-$reqJumlahTriwulan4= httpFilterPost("reqJumlahTriwulan4");
+$reqJumlahBulanJuli= httpFilterPost("reqJumlahBulanJuli");
+$reqJumlahBulanAgustus= httpFilterPost("reqJumlahBulanAgustus");
+$reqJumlahBulanSeptember= httpFilterPost("reqJumlahBulanSeptember");
+$reqJumlahBulanOktober= httpFilterPost("reqJumlahBulanOktober");
+$reqJumlahBulanNovember= httpFilterPost("reqJumlahBulanNovember");
+$reqJumlahBulanDesember= httpFilterPost("reqJumlahBulanDesember");
+$reqJumlahBulanJanuari= httpFilterPost("reqJumlahBulanJanuari");
+$reqJumlahBulanFebruari= httpFilterPost("reqJumlahBulanFebruari");
+$reqJumlahBulanMaret= httpFilterPost("reqJumlahBulanMaret");
+$reqJumlahBulanApril= httpFilterPost("reqJumlahBulanApril");
+$reqJumlahBulanMei= httpFilterPost("reqJumlahBulanMei");
+$reqJumlahBulanJuni= httpFilterPost("reqJumlahBulanJuni");
 
 $kbbt_neraca_angg->setField("THN_BUKU", $reqTahunBuku);
 $kbbt_neraca_angg->setField("KD_CABANG", "96");
@@ -35,10 +43,19 @@ $kbbt_neraca_angg->setField("KD_SUB_BANTU", $reqKodeSubBantu);
 $kbbt_neraca_angg->setField("KD_BUKU_BESAR", $reqKodeBukuBesar);
 $kbbt_neraca_angg->setField("KD_VALUTA", $reqKodeValuta);
 $kbbt_neraca_angg->setField("ANGG_TAHUNAN", dotToNo($reqJumlah));
-$kbbt_neraca_angg->setField("ANGG_TRW1", dotToNo($reqJumlahTriwulan1));
-$kbbt_neraca_angg->setField("ANGG_TRW3", dotToNo($reqJumlahTriwulan3));
-$kbbt_neraca_angg->setField("ANGG_TRW2", dotToNo($reqJumlahTriwulan2));
-$kbbt_neraca_angg->setField("ANGG_TRW4", dotToNo($reqJumlahTriwulan4));
+$kbbt_neraca_angg->setField("P01_ANGG", dotToNo($reqJumlahBulanJuli));
+$kbbt_neraca_angg->setField("P02_ANGG", dotToNo($reqJumlahBulanAgustus));
+$kbbt_neraca_angg->setField("P03_ANGG", dotToNo($reqJumlahBulanSeptember));
+$kbbt_neraca_angg->setField("P04_ANGG", dotToNo($reqJumlahBulanOktober));
+$kbbt_neraca_angg->setField("P05_ANGG", dotToNo($reqJumlahBulanNovember));
+$kbbt_neraca_angg->setField("P06_ANGG", dotToNo($reqJumlahBulanDesember));
+$kbbt_neraca_angg->setField("P07_ANGG", dotToNo($reqJumlahBulanJanuari));
+$kbbt_neraca_angg->setField("P08_ANGG", dotToNo($reqJumlahBulanFebruari));
+$kbbt_neraca_angg->setField("P09_ANGG", dotToNo($reqJumlahBulanMaret));
+$kbbt_neraca_angg->setField("P10_ANGG", dotToNo($reqJumlahBulanApril));
+$kbbt_neraca_angg->setField("P11_ANGG", dotToNo($reqJumlahBulanMei));
+$kbbt_neraca_angg->setField("P12_ANGG", dotToNo($reqJumlahBulanJuni));
+
 
 if($reqMode == "insert")
 {	

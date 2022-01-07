@@ -34,18 +34,22 @@ DESCRIPTION			:
 						   KD_CABANG, THN_BUKU, KD_BUKU_BESAR, 
 						   KD_SUB_BANTU, KD_BUKU_PUSAT, KD_VALUTA, 
 						   ANGG_TAHUNAN, MUTA_TAHUNAN, LAST_UPDATE_DATE, 
-						   LAST_UPDATED_BY, PROGRAM_NAME, ANGG_TRW1, 
-						   ANGG_TRW2, ANGG_TRW3, ANGG_TRW4) 
+						   LAST_UPDATED_BY, PROGRAM_NAME, 
+						   P01_ANGG, P02_ANGG, P03_ANGG, P04_ANGG, P05_ANGG, P06_ANGG,
+						   P07_ANGG, P08_ANGG, P09_ANGG, P10_ANGG, P11_ANGG, P12_ANGG) 
 				VALUES ('".$this->getField("KD_CABANG")."', '".$this->getField("THN_BUKU")."', '".$this->getField("KD_BUKU_BESAR")."',
 							'".$this->getField("KD_SUB_BANTU")."', '".$this->getField("KD_BUKU_PUSAT")."', '".$this->getField("KD_VALUTA")."',
 							'".$this->getField("ANGG_TAHUNAN")."', '".$this->getField("MUTA_TAHUNAN")."', ".$this->getField("LAST_UPDATE_DATE").",
-							'".$this->getField("LAST_UPDATED_BY")."', '".$this->getField("PROGRAM_NAME")."', '".$this->getField("ANGG_TRW1")."',
-							'".$this->getField("ANGG_TRW2")."', '".$this->getField("ANGG_TRW3")."', '".$this->getField("ANGG_TRW4")."'		
+							'".$this->getField("LAST_UPDATED_BY")."', '".$this->getField("PROGRAM_NAME")."', 
+							'".$this->getField("P01_ANGG")."', '".$this->getField("P02_ANGG")."', '".$this->getField("P03_ANGG")."',
+							'".$this->getField("P04_ANGG")."', '".$this->getField("P05_ANGG")."', '".$this->getField("P06_ANGG")."',
+							'".$this->getField("P07_ANGG")."', '".$this->getField("P08_ANGG")."', '".$this->getField("P09_ANGG")."',
+							'".$this->getField("P10_ANGG")."', '".$this->getField("P11_ANGG")."', '".$this->getField("P12_ANGG")."'	
 				)";
 				
 		$this->id = $this->getField("KBBT_NERACA_ANGG_ID");
 		$this->query = $str;
-		//echo $str;
+		// echo $str;
 		return $this->execQuery($str);
     }
 
@@ -55,10 +59,18 @@ DESCRIPTION			:
 				UPDATE PPI_SIUK.KBBT_NERACA_ANGG
 				SET    ANGG_TAHUNAN     = '".$this->getField("ANGG_TAHUNAN")."',
 					   MUTA_TAHUNAN     = '".$this->getField("MUTA_TAHUNAN")."',
-					   ANGG_TRW1        = '".$this->getField("ANGG_TRW1")."',
-					   ANGG_TRW2        = '".$this->getField("ANGG_TRW2")."',
-					   ANGG_TRW3        = '".$this->getField("ANGG_TRW3")."',
-					   ANGG_TRW4        = '".$this->getField("ANGG_TRW4")."'
+					   P01_ANGG        = '".$this->getField("P01_ANGG")."',
+					   P02_ANGG        = '".$this->getField("P02_ANGG")."',
+					   P03_ANGG        = '".$this->getField("P03_ANGG")."',
+					   P04_ANGG        = '".$this->getField("P04_ANGG")."',
+					   P05_ANGG        = '".$this->getField("P05_ANGG")."',
+					   P06_ANGG        = '".$this->getField("P06_ANGG")."',
+					   P07_ANGG        = '".$this->getField("P07_ANGG")."',
+					   P08_ANGG        = '".$this->getField("P08_ANGG")."',
+					   P09_ANGG        = '".$this->getField("P09_ANGG")."',
+					   P10_ANGG        = '".$this->getField("P10_ANGG")."',
+					   P11_ANGG        = '".$this->getField("P11_ANGG")."',
+					   P12_ANGG        = '".$this->getField("P12_ANGG")."'
 				WHERE  THN_BUKU = '".$this->getField("THN_BUKU_1")."' AND
 					   KD_BUKU_BESAR = '".$this->getField("KD_BUKU_BESAR_1")."' AND
 					   KD_BUKU_PUSAT = '".$this->getField("KD_BUKU_PUSAT_1")."'

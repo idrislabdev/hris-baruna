@@ -25,10 +25,19 @@ $tempDepartemen = $userLogin->idDepartemen;
 	$tempKodeBukuBesar = $kbbt_neraca_angg->getField("KD_BUKU_BESAR");
 	$tempKodeValuta = $kbbt_neraca_angg->getField("KD_VALUTA");
 	$tempJumlah = $kbbt_neraca_angg->getField("ANGG_TAHUNAN");
-	$tempJumlahTriwulan1 = $kbbt_neraca_angg->getField("ANGG_TRW1");
-	$tempJumlahTriwulan2 = $kbbt_neraca_angg->getField("ANGG_TRW2");
-	$tempJumlahTriwulan3 = $kbbt_neraca_angg->getField("ANGG_TRW3");
-	$tempJumlahTriwulan4 = $kbbt_neraca_angg->getField("ANGG_TRW4");
+
+	$tempBulanJuli = $kbbt_neraca_angg->getField("P01_ANGG");
+	$tempBulanAgustus = $kbbt_neraca_angg->getField("P02_ANGG");
+	$tempBulanSeptember = $kbbt_neraca_angg->getField("P03_ANGG");
+	$tempBulanOktober = $kbbt_neraca_angg->getField("P04_ANGG");
+	$tempBulanNovember = $kbbt_neraca_angg->getField("P05_ANGG");
+	$tempBulanDesember = $kbbt_neraca_angg->getField("P06_ANGG");
+	$tempBulanJanuari = $kbbt_neraca_angg->getField("P07_ANGG");
+	$tempBulanFebruari = $kbbt_neraca_angg->getField("P08_ANGG");
+	$tempBulanMaret = $kbbt_neraca_angg->getField("P09_ANGG");
+	$tempBulanApril = $kbbt_neraca_angg->getField("P10_ANGG");
+	$tempBulanMei = $kbbt_neraca_angg->getField("P11_ANGG");
+	$tempBulanJuni = $kbbt_neraca_angg->getField("P12_ANGG");
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -221,27 +230,57 @@ padding: 5px;
             </td>     
         </tr>
         <tr>
-        	<td>Jumlah Triwulan 1</td>
+        	<td>Jumlah Bulan Juli</td>
             <td>
-            	<input name="reqJumlahTriwulan1" type="text" id="reqJumlahTriwulan1" class="easyui-validatebox" size="10" value="<?=numberToIna($tempJumlahTriwulan1)?>"  OnFocus="FormatAngka('reqJumlahTriwulan1')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+            	<input name="reqJumlahBulanJuli" type="text" id="reqJumlahBulanJuli" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanJuli)?>"  OnFocus="FormatAngka('reqJumlahBulanJuli')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
                 &nbsp;&nbsp;
-                Jumlah Triwulan 3
-                <input name="reqJumlahTriwulan3" type="text" id="reqJumlahTriwulan3" class="easyui-validatebox" size="10" value="<?=numberToIna($tempJumlahTriwulan3)?>"  OnFocus="FormatAngka('reqJumlahTriwulan3')" OnKeyUp="FormatUang('reqJumlahTriwulan3')" OnBlur="FormatUang('reqJumlahTriwulan3')"/>
+                Jumlah Bulan Agustus
+            	<input name="reqJumlahBulanAgustus" type="text" id="reqJumlahBulanAgustus" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanAgustus)?>"  OnFocus="FormatAngka('reqJumlahBulanAgustus')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
             </td>
         </tr>
-        <tr>
-        	<td>Jumlah Triwulan 2</td>
+		<tr>
+        	<td>Jumlah Bulan September</td>
             <td>
-            	<input name="reqJumlahTriwulan2" type="text" id="reqJumlahTriwulan2" class="easyui-validatebox" size="10" value="<?=numberToIna($tempJumlahTriwulan2)?>"  OnFocus="FormatAngka('reqJumlahTriwulan2')" OnKeyUp="FormatUang('reqJumlahTriwulan2')" OnBlur="FormatUang('reqJumlahTriwulan2')"/>
+            	<input name="reqJumlahBulanSeptember" type="text" id="reqJumlahBulanSeptember" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanSeptember)?>"  OnFocus="FormatAngka('reqJumlahBulanSeptember')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
                 &nbsp;&nbsp;
-                Jumlah Triwulan 4
-                <input name="reqJumlahTriwulan4" type="text" id="reqJumlahTriwulan4" class="easyui-validatebox" size="10" value="<?=numberToIna($tempJumlahTriwulan4)?>"  OnFocus="FormatAngka('reqJumlahTriwulan4')" OnKeyUp="FormatUang('reqJumlahTriwulan4')" OnBlur="FormatUang('reqJumlahTriwulan4')"/>
+                Jumlah Bulan Oktober
+            	<input name="reqJumlahBulanOktober" type="text" id="reqJumlahBulanOktober" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanOktober)?>"  OnFocus="FormatAngka('reqJumlahBulanOktober')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
             </td>
         </tr>
-        <tr>
-        	<td>Jumlah</td>
+		<tr>
+        	<td>Jumlah Bulan November</td>
             <td>
-            	<input name="reqJumlah" type="text" id="reqJumlah" class="easyui-validatebox" size="10" value="<?=numberToIna($tempJumlah)?>"  OnFocus="FormatAngka('reqJumlah')" OnKeyUp="FormatUang('reqJumlah')" OnBlur="FormatUang('reqJumlah')"/>
+            	<input name="reqJumlahBulanNovember" type="text" id="reqJumlahBulanNovember" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanNovember)?>"  OnFocus="FormatAngka('reqJumlahBulanNovember')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+                &nbsp;&nbsp;
+                Jumlah Bulan Desember
+            	<input name="reqJumlahBulanDesember" type="text" id="reqJumlahBulanDesember" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanDesember)?>"  OnFocus="FormatAngka('reqJumlahBulanDesember')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+            </td>
+        </tr>
+		<tr>
+        	<td>Jumlah Bulan Januari</td>
+            <td>
+            	<input name="reqJumlahBulanJanuari" type="text" id="reqJumlahBulanJanuari" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanJanuari)?>"  OnFocus="FormatAngka('reqJumlahBulanJanuari')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+                &nbsp;&nbsp;
+                Jumlah Bulan Februari
+            	<input name="reqJumlahBulanFebruari" type="text" id="reqJumlahBulanFebruari" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanFebruari)?>"  OnFocus="FormatAngka('reqJumlahBulanFebruari')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+            </td>
+        </tr>
+		<tr>
+        	<td>Jumlah Bulan Maret</td>
+            <td>
+            	<input name="reqJumlahBulanMaret" type="text" id="reqJumlahBulanMaret" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanMaret)?>"  OnFocus="FormatAngka('reqJumlahBulanMaret')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+                &nbsp;&nbsp;
+                Jumlah Bulan April
+            	<input name="reqJumlahBulanApril" type="text" id="reqJumlahBulanApril" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanApril)?>"  OnFocus="FormatAngka('reqJumlahBulanApril')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+            </td>
+        </tr>
+		<tr>
+        	<td>Jumlah Bulan Mei</td>
+            <td>
+            	<input name="reqJumlahBulanMei" type="text" id="reqJumlahBulanMei" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanMei)?>"  OnFocus="FormatAngka('reqJumlahBulanMei')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
+                &nbsp;&nbsp;
+                Jumlah Bulan Juni
+            	<input name="reqJumlahBulanJuni" type="text" id="reqJumlahBulanJuni" class="easyui-validatebox" size="10" value="<?=numberToIna($tempBulanJuni)?>"  OnFocus="FormatAngka('reqJumlahBulanJuni')" OnKeyUp="FormatUang('reqJumlahTriwulan1')" OnBlur="FormatUang('reqJumlahTriwulan1')"/>
             </td>
         </tr>
     </table>
