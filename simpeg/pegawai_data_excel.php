@@ -67,33 +67,32 @@ $worksheet->set_column(15, 15, 15.00);
 $worksheet->set_column(16, 16, 15.00);
 $worksheet->set_column(17, 17, 15.00);
 $worksheet->set_column(18, 18, 8.00);
-$worksheet->set_column(19, 19, 15.00);
-$worksheet->set_column(20, 20, 25.00);
-$worksheet->set_column(21, 21, 33.00);
+ 
+$worksheet->set_column(19, 19, 25.00);
+$worksheet->set_column(20, 20, 33.00);
+$worksheet->set_column(21, 21, 15.00);
 $worksheet->set_column(22, 22, 15.00);
 $worksheet->set_column(23, 23, 15.00);
-$worksheet->set_column(24, 24, 15.00);
+$worksheet->set_column(24, 24, 25.00);
 $worksheet->set_column(25, 25, 25.00);
 $worksheet->set_column(26, 26, 25.00);
 $worksheet->set_column(27, 27, 25.00);
 $worksheet->set_column(28, 28, 25.00);
-$worksheet->set_column(29, 29, 25.00);
+$worksheet->set_column(29, 29, 15.00);
 $worksheet->set_column(30, 30, 15.00);
 $worksheet->set_column(31, 31, 15.00);
 $worksheet->set_column(32, 32, 15.00);
 $worksheet->set_column(33, 33, 15.00);
-$worksheet->set_column(34, 34, 15.00);
 
+$worksheet->set_column(34, 34, 15.00);
 $worksheet->set_column(35, 35, 15.00);
 $worksheet->set_column(36, 36, 15.00);
 $worksheet->set_column(37, 37, 15.00);
-$worksheet->set_column(38, 38, 15.00);
 
-//$worksheet->set_column(14, 14, 38.00);
-//$worksheet->set_column(15, 15, 18.00);
-//$worksheet->set_column(16, 16, 22.00);
-//$worksheet->set_column(17, 17, 10.00);
-//$worksheet->set_column(18, 18, 22.00);
+$worksheet->set_column(38, 38, 15.00);
+$worksheet->set_column(39, 39, 15.00);
+$worksheet->set_column(40, 40, 15.00);
+ 
 
 $tanggal =& $workbook->addformat(array(num_format => ' dd mmmm yyy'));
 
@@ -190,7 +189,7 @@ $uang_line->set_border_color('black');
 $uang_line->set_left(1);
 $uang_line->set_right(1);
 $uang_line->set_top(1);
-$uang_line->set_bottom(1);
+$uang_line->set_bottom(1); 
 
 //$worksheet->insert_bitmap('B1', 'images/logo_cetak.bmp', 5, 5);
 $worksheet->write(1, 1, "Yayasan Barunawati Biru Surabaya", $text_format);
@@ -209,33 +208,35 @@ $worksheet->write(3, 9, "JENIS KELAMIN", $text_format_line_bold);
 $worksheet->write(3, 10, "TEMPAT LAHIR ", $text_format_line_bold);
 $worksheet->write(3, 11, "TGL LAHIR ", $text_format_line_bold);
 $worksheet->write(3, 12, "STATUS KAWIN", $text_format_line_bold);
-$worksheet->write(3, 13, "STATUS KELUARGA", $sstext_format_line_bold);
+$worksheet->write(3, 13, "STATUS KELUARGA", $text_format_line_bold);
 $worksheet->write(3, 14, "PENDIDIKAN TERAKHIR", $text_format_line_bold);
 $worksheet->write(3, 15, "UMUR", $text_format_line_bold);
 $worksheet->write(3, 16, "TINGGI", $text_format_line_bold);
 $worksheet->write(3, 17, "BERAT BADAN", $text_format_line_bold);
-$worksheet->write(3, 18, "AGAMA", $text_format_line_bold);
-$worksheet->write(3, 19, "HOBBY", $text_format_line_bold);
-$worksheet->write(3, 20, "NO KTP", $text_format_line_bold);
-$worksheet->write(3, 21, "ALAMAT", $text_format_line_bold);
-$worksheet->write(3, 22, "TELEPON", $text_format_line_bold);
-$worksheet->write(3, 23, "EMAIL", $text_format_line_bold);
-$worksheet->write(3, 24, "NAMA BANK", $text_format_line_bold);
-$worksheet->write(3, 25, "A.N. REKENING", $text_format_line_bold);
-$worksheet->write(3, 26, "NO. REKENING", $text_format_line_bold);
-$worksheet->write(3, 27, "NPWP", $text_format_line_bold);
-$worksheet->write(3, 28, "NO MPP", $text_format_line_bold);
-$worksheet->write(3, 29, "TANGGAL MPP", $text_format_line_bold);
-$worksheet->write(3, 30, "NO JAMSOSTEK", $text_format_line_bold);
-$worksheet->write(3, 31, "TANGGAL JAMSOSTEK", $text_format_line_bold);
-$worksheet->write(3, 32, "TANGGAL MASUK", $text_format_line_bold);
-$worksheet->write(3, 33, "TANGGAL PENSIUN", $text_format_line_bold);
-$worksheet->write(3, 34, "TANGGAL MUTASI KELUAR", $text_format_line_bold);
-$worksheet->write(3, 35, "TANGGAL WAFAT", $text_format_line_bold);
-$worksheet->write(3, 36, "BIDANG STUDI", $text_format_line_bold);
-$worksheet->write(3, 37, "LINERITAS", $text_format_line_bold);
-$worksheet->write(3, 38, "SPESIFIKASI PRESTASI KARYA", $text_format_line_bold);
-$worksheet->write(3, 39, "TUGAS PEMBIMBINGAN", $text_format_line_bold);
+$worksheet->write(3, 18, "AGAMA", $text_format_line_bold); 
+$worksheet->write(3, 19, "NO KTP", $text_format_line_bold);
+$worksheet->write(3, 20, "ALAMAT", $text_format_line_bold);
+$worksheet->write(3, 21, "TELEPON", $text_format_line_bold);
+$worksheet->write(3, 22, "EMAIL", $text_format_line_bold);
+$worksheet->write(3, 23, "NAMA BANK", $text_format_line_bold);
+$worksheet->write(3, 24, "A.N. REKENING", $text_format_line_bold);
+$worksheet->write(3, 25, "NO. REKENING", $text_format_line_bold);
+$worksheet->write(3, 26, "NPWP", $text_format_line_bold);
+$worksheet->write(3, 27, "NO MPP", $text_format_line_bold);
+$worksheet->write(3, 28, "TANGGAL MPP", $text_format_line_bold);
+$worksheet->write(3, 29, "NO JAMSOSTEK", $text_format_line_bold);
+$worksheet->write(3, 30, "TANGGAL JAMSOSTEK", $text_format_line_bold);
+$worksheet->write(3, 31, "TANGGAL MASUK", $text_format_line_bold);
+$worksheet->write(3, 32, "MASA KERJA", $text_format_line_bold);
+$worksheet->write(3, 33, "UMUR PENSIUN", $text_format_line_bold);
+$worksheet->write(3, 34, "TANGGAL PENSIUN", $text_format_line_bold); 
+$worksheet->write(3, 35, "TANGGAL MUTASI KELUAR", $text_format_line_bold);
+$worksheet->write(3, 36, "TANGGAL WAFAT", $text_format_line_bold);
+$worksheet->write(3, 37, "BIDANG STUDI", $text_format_line_bold);
+$worksheet->write(3, 38, "LINERITAS", $text_format_line_bold);
+$worksheet->write(3, 39, "SPESIFIKASI PRESTASI KARYA", $text_format_line_bold);
+$worksheet->write(3, 40, "TUGAS PEMBIMBINGAN", $text_format_line_bold);
+
 
 
 
@@ -265,41 +266,35 @@ while($pegawai->nextRow())
 	$worksheet->write($row, 12, $pegawai->getField("STATUS_KAWIN"), $text_format_line);
 	$worksheet->write($row, 13, $pegawai->getField("STATUS_KELUARGA"), $text_format_line);
 	$worksheet->write($row, 14, $pegawai->getField("PENDIDIKAN_TERAKHIR"), $text_format_line_left);
-	$worksheet->write($row, 15, $pegawai->getField("UMUR"), $text_format_line);
+	$worksheet->write($row, 15, $pegawai->getField("UMUR"), $uang_line);
 	$worksheet->write($row, 16, $pegawai->getField("TINGGI"), $text_format_line);
 	$worksheet->write($row, 17, $pegawai->getField("BERAT_BADAN"), $text_format_line);
 	$worksheet->write($row, 18, $pegawai->getField("AGAMA_NAMA"), $text_format_line);
-	$worksheet->write($row, 19, $pegawai->getField("HOBBY"), $text_format_line);
-	$worksheet->write($row, 20, $pegawai->getField("KTP_NO"), $text_format_line);
-	$worksheet->write($row, 21, $pegawai->getField("ALAMAT"), $text_format_line);
-	$worksheet->write($row, 22, $pegawai->getField("TELEPON"), $text_format_line);
-	$worksheet->write($row, 23, $pegawai->getField("EMAIL"), $text_format_line);
-	$worksheet->write($row, 24, $pegawai->getField("NAMA_BANK"), $text_format_line);
-	$worksheet->write($row, 25, $pegawai->getField("REKENING_NAMA"), $text_format_line);
-	$worksheet->write($row, 26, $pegawai->getField("REKENING_NO"), $text_format_line);
-	$worksheet->write($row, 27, $pegawai->getField("NPWP"), $text_format_line);
-	$worksheet->write($row, 28, $pegawai->getField("NO_MPP"), $text_format_line);
-	$worksheet->write($row, 29,dateToPageCheck($pegawai->getField("TANGGAL_MPP")), $text_format_line);
-	$worksheet->write($row, 30, $pegawai->getField("JAMSOSTEK_NO"), $text_format_line);
-	$worksheet->write($row, 31,dateToPageCheck($pegawai->getField("JAMSOSTEK_TANGGAL")), $text_format_line);
-	$worksheet->write($row, 32,dateToPageCheck($pegawai->getField("TANGGAL_MASUK")), $text_format_line);
-	$worksheet->write($row, 33,dateToPageCheck($pegawai->getField("TANGGAL_PENSIUN")), $text_format_line);
-	$worksheet->write($row, 34,dateToPageCheck($pegawai->getField("TANGGAL_MUTASI_KELUAR")), $text_format_line);
-	$worksheet->write($row, 35,dateToPageCheck($pegawai->getField("TANGGAL_WAFAT")), $text_format_line);
-	$worksheet->write($row, 36, $pegawai->getField("BIDANG_STUDI"), $text_format_line);
-	$worksheet->write($row, 37, $pegawai->getField("LINERITAS"), $text_format_line);
-	$worksheet->write($row, 38, $pegawai->getField("SPESIFIKASI_PRESTASI_KARYA"), $text_format_line);
-	$worksheet->write($row, 39, $pegawai->getField("TUGAS_PEMBIMBINGAN"), $text_format_line);
+	$worksheet->write($row, 19, $pegawai->getField("KTP_NO"), $text_format_line);
+	$worksheet->write($row, 20, $pegawai->getField("ALAMAT"), $text_format_line);
+	$worksheet->write($row, 21, $pegawai->getField("TELEPON"), $text_format_line);
+	$worksheet->write($row, 22, $pegawai->getField("EMAIL"), $text_format_line);
+	$worksheet->write($row, 23, $pegawai->getField("NAMA_BANK"), $text_format_line);
+	$worksheet->write($row, 24, $pegawai->getField("REKENING_NAMA"), $text_format_line);
+	$worksheet->write($row, 25, $pegawai->getField("REKENING_NO"), $text_format_line);
+	$worksheet->write($row, 26, $pegawai->getField("NPWP"), $text_format_line);
+	$worksheet->write($row, 27, $pegawai->getField("NO_MPP"), $text_format_line);
+	$worksheet->write($row, 28,dateToPageCheck($pegawai->getField("TANGGAL_MPP")), $text_format_line);
+	$worksheet->write($row, 29, $pegawai->getField("JAMSOSTEK_NO"), $text_format_line);
+	$worksheet->write($row, 30,dateToPageCheck($pegawai->getField("JAMSOSTEK_TANGGAL")), $text_format_line);
+	$worksheet->write($row, 31,dateToPageCheck($pegawai->getField("TANGGAL_MASUK")), $text_format_line);
+	$worksheet->write($row, 32,dateToPageCheck($pegawai->getField("MASA_KERJA")), $uang_line);
+	$worksheet->write($row, 33,dateToPageCheck($pegawai->getField("UMUR_PENSIUN")), $uang_line);
+	$worksheet->write($row, 34,dateToPageCheck($pegawai->getField("TANGGAL_PENSIUN")), $text_format_line);
+	$worksheet->write($row, 35,dateToPageCheck($pegawai->getField("TANGGAL_MUTASI_KELUAR")), $text_format_line);
+	$worksheet->write($row, 36,dateToPageCheck($pegawai->getField("TANGGAL_WAFAT")), $text_format_line);
+	$worksheet->write($row, 37, $pegawai->getField("BIDANG_STUDI"), $text_format_line);
+	$worksheet->write($row, 38, $pegawai->getField("LINERITAS"), $text_format_line);
+	$worksheet->write($row, 39, $pegawai->getField("SPESIFIKASI_PRESTASI_KARYA"), $text_format_line);
+	$worksheet->write($row, 40, $pegawai->getField("TUGAS_PEMBIMBINGAN"), $text_format_line);
 
 
-
-	//$worksheet->write($row, 2, $pegawai->getField("NIPP"), $text_format_line);
-	//$worksheet->write($row, 14, getZodiac((int)getDay($pegawai->getField("TANGGAL_LAHIR")), (int)getMonth($pegawai->getField("TANGGAL_LAHIR"))), $text_format_line);
-	//$worksheet->write($row, 10, $pegawai->getField("AGAMA_NAMA"), $text_format_line);
-	//$worksheet->write($row, 14, $pegawai->getField("ALAMAT"), $text_format_line_left);
-	//$worksheet->write($row, 16, $pegawai->getField("EMAIL"), $text_format_line);
-	//$worksheet->write($row, 18, $pegawai->getField("HOBBY"), $text_format_line);
-	/*for ($k=4; $k<=34; $k++)
+ 	/*for ($k=4; $k<=34; $k++)
 	{
 			$worksheet->write($row, $k, $absensi_koreksi->getField('HARI_'.($k-3)), $text_format_line);
 	}*/
