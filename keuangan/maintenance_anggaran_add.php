@@ -20,10 +20,10 @@ $tempDepartemen = $userLogin->idDepartemen;
 	
 	$tempTahunBuku = $kbbt_neraca_angg->getField("TAHUN_BUKU");
 	//$tempKodeBukuPusat = $kbbt_neraca_angg->getField("KD_BUKU_PUSAT");
-	$tempKodeBukuPusat = "000.00.00";
-	$tempKodeSubBantu = $kbbt_neraca_angg->getField("KD_SUB_BANTU");
+	$tempKodeBukuPusat = $kbbt_neraca_angg->getField("KD_BUKU_PUSAT"); //"000.00.00";
+	$tempKodeSubBantu = "00000";// $kbbt_neraca_angg->getField("KD_SUB_BANTU");
 	$tempKodeBukuBesar = $kbbt_neraca_angg->getField("KD_BUKU_BESAR");
-	$tempKodeValuta = $kbbt_neraca_angg->getField("KD_VALUTA");
+	$tempKodeValuta = "IDR"; //$kbbt_neraca_angg->getField("KD_VALUTA");
 	$tempJumlah = $kbbt_neraca_angg->getField("ANGG_TAHUNAN");
 
 	$tempBulanJuli = $kbbt_neraca_angg->getField("P01_ANGG");
@@ -183,7 +183,7 @@ padding: 5px;
                 data-options="
                 valueField: 'id',
 				textField: 'text',
-                url:'../json-keuangansiuk/buku_besar_combo_json.php',
+                url:'../json-keuangansiuk/buku_besar_combo_json.php?filterKode=anggaran',
                 onSelect: function(rec){
                 var url = '../json-keuangansiuk/buku_besar_combo_json.php?reqId='+rec.id;
                 $('#reqKodeBukuBesar').combobox('reload', url);
@@ -192,14 +192,14 @@ padding: 5px;
                 &nbsp;&nbsp;
             </td>
         </tr>
-        <tr style="display:none">
-            <td>Kode&nbsp;Buku&nbsp;Pusat</td>
+        <tr>
+            <td>Kode&nbsp;Pusat&nbsp;Biaya</td>
             <td>
                 <input id="reqKodeBukuPusat" name="reqKodeBukuPusat" class="easyui-combobox" required 
                 data-options="
                 valueField: 'id',
 				textField: 'text',
-                url:'../json-keuangansiuk/buku_pusat_combo_json.php',
+                url:'../json-keuangansiuk/buku_pusat_combo_json.php?filterKode=anggaran',
                 onSelect: function(rec){
                 var url = '../json-keuangansiuk/buku_pusat_combo_json.php?reqId='+rec.id;
                 $('#reqKodeBukuPusat').combobox('reload', url);
@@ -208,7 +208,7 @@ padding: 5px;
                 &nbsp;&nbsp;
             </td>
         </tr>
-        <tr>
+        <tr style="display:none">
             <td>Kode&nbsp;Sub&nbsp;Bantu</td>
             <td>
             <input type="text" class="easyui-validatebox" size="10" name="reqKodeSubBantu" id="reqKodeSubBantu" value="<?=$tempKodeSubBantu?>" maxlength="5"  />
@@ -217,7 +217,7 @@ padding: 5px;
         <tr>
         	<td>Kode Valuta</td>
             <td>
-                <input id="reqKodeValuta" name="reqKodeValuta" class="easyui-combobox" required 
+                <input id="reqKodeValuta" name="reqKodeValuta" class="easyui-combobox" required readonly
                 data-options="
                 valueField: 'id',
 				textField: 'text',

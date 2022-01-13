@@ -26,8 +26,9 @@ else
 $kbbr_tahun_buku->selectByParamsCombo();
 while($kbbr_tahun_buku->nextRow())
 {
+	$tahun_depan = $kbbr_tahun_buku->getField("THN_BUKU")+1;
 	$arr_parent[$j]['id'] = $kbbr_tahun_buku->getField("THN_BUKU");
-	$arr_parent[$j]['text'] = $kbbr_tahun_buku->getField("THN_BUKU");
+	$arr_parent[$j]['text'] = $kbbr_tahun_buku->getField("THN_BUKU")."-".$tahun_depan;
 	$j++;
 }
 

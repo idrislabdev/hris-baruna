@@ -33,7 +33,7 @@ $arr_json = array();
 for($i=0; $i< count($arrTahun); $i++)
 {
 	$arr_json[$i]['id'] = "id".$arrTahun[$i];
-	$arr_json[$i]['text'] = $arrTahun[$i];
+	$arr_json[$i]['text'] = $arrTahun[$i].'-'.$arrTahun[$i]+1;
 }
 
 echo json_encode($arr_json);

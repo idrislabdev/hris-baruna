@@ -12,14 +12,21 @@ include_once("../WEB-INF-SIUK/classes/base-keuanganSiuk/KbbrBukuBesar.php");
 $kbbr_buku_besar = new KbbrBukuBesar();
 
 $reqId = httpFilterGet("reqId");
+$filterKode = httpFilterGet("filterKode");
+
 
 $j=0;
 
-if($reqId == ""){}
-else
-$statement= " AND UPPER(A.KD_BUKU_BESAR) LIKE '%".strtoupper($reqId)."%' ";
+if($filterKode != "" && $filterKode == 'anggaran')
+	$statement= "AND (SUBSTR(KD_BUKU_BESAR, 1, 1) = 5 OR SUBSTR(KD_BUKU_BESAR, 1, 1) = 4)";
 
-$kbbr_buku_besar->selectByParams(array(), -1, -1, "  ", " ORDER BY A.KD_BUKU_BESAR ASC ");
+// if($reqId == ""){}
+// else
+// $statement= " AND UPPER(A.KD_BUKU_BESAR) LIKE '%".strtoupper($reqId)."%' ";
+// $kbbr_buku_pusat->selectByParams(array(), -1, -1, $statement);
+
+$kbbr_buku_besar->selectByParams(array(), -1, -1, "  ", "$statement ORDER BY A.KD_BUKU_BESAR ASC ");
+// echo $kbbr_buku_besar->query;
 while($kbbr_buku_besar->nextRow())
 {
 	$arr_parent[$j]['id'] = $kbbr_buku_besar->getField("KD_BUKU_BESAR");
