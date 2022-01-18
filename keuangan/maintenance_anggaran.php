@@ -16,7 +16,7 @@ $reqId = httpFilterGet("reqId");
 $reqTahunBuku = httpFilterGet("reqTahunBuku");
 
 if($reqTahunBuku == "") 
-	$reqTahunBuku = date("Y");
+	$reqTahunBuku = date("Y") - 1;
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -182,6 +182,10 @@ if($reqTahunBuku == "")
 				}
 			  });	
 
+			  $('#btnEksporXls').on('click', function () {
+				  document.location.href = "maintenance_anggaran_excel.php?reqTahunBuku="+$("#reqTahunBuku").combotree('getValue')
+			  });
+
 			  $('#btnCetakLaporan').on('click', function () {
 				  if(anSelectedData == "")
 					  return false;			
@@ -287,6 +291,7 @@ if($reqTahunBuku == "")
             <a href="#" id="btnAdd" onClick="window.parent.OpenDHTML('maintenance_anggaran_add.php?reqMode=insert', 'Office Management - Aplikasi Keuangan', '600', '300');" title="Tambah">Tambah</a>
             <a href="#" id="btnEdit" title="Edit">Ubah</a>
             <a href="#" id="btnDeleteRow" title="Hapus">Hapus</a>
+			<a href="#" id="btnEksporXls" title="Ekspor Excel"> Export Excel</a>
             </li>        
         </ul>
     </div>
