@@ -164,6 +164,24 @@ if($reqTahunBuku == "")
 				  window.parent.OpenDHTML('maintenance_anggaran_add.php?reqMode=update&reqBesar='+anSelectedId+'&reqPusat='+anSelectedPusat+'&reqTahun='+$('#reqTahunBuku').combotree("getValue"), 'Office Management - Aplikasi Keuangan', '600', '300');	
 			  });
 			  
+			  $('#btnDeleteRow').on('click', function () {
+				if(anSelectedData == "")
+					return false;
+				if ( confirm( "Apakah anda yakin, menghapus data ini ?" ) ) {
+					$.getJSON('../json-keuangansiuk/delete.php?reqMode=maintenance_anggaran&reqBesar='+anSelectedId+'&reqPusat='+anSelectedPusat+'&reqTahun='+$('#reqTahunBuku').combotree("getValue"), function (data) 
+					{
+						$.each(data, function (i, SingleElement) {
+							// oTable.fnReloadAjax("../json-keuangansiuk/maintenance_anggaran_json.php?reqTahunBuku="+$('#reqTahunBuku').combotree('getValue'));
+						});
+					});
+					
+					oTable.fnDraw(oTable.fnSettings());
+					oTable.fnDraw(oTable.fnSettings());
+					oTable.fnDraw(oTable.fnSettings());
+
+				}
+			  });	
+
 			  $('#btnCetakLaporan').on('click', function () {
 				  if(anSelectedData == "")
 					  return false;			

@@ -8,6 +8,10 @@ $reqId = $_GET['id'];
 $reqRowId = $_GET['reqRowId'];
 $reqMode = $_GET['reqMode'];
 
+$reqBesar = $_GET['reqBesar'];
+$reqTahun = $_GET['reqTahun'];
+$reqPusat = $_GET['reqPusat'];
+
 /* LOGIN CHECK */
 /*if ($userLogin->checkUserLogin()) 
 { 
@@ -314,5 +318,22 @@ elseif($reqMode == "rekening_buku_besar")
 		$alertMsg .= "Data berhasil dihapus";
 	else
 		$alertMsg .= "Error ".$rekening_buku_besar->getErrorMsg();
+}
+
+elseif($reqMode == "maintenance_anggaran")
+{
+	include_once("../WEB-INF-SIUK/classes/base-keuangansiuk/KbbtNeracaAngg.php");
+	$maintenance_anggaran	= new KbbtNeracaAngg();
+	$maintenance_anggaran->setField('KD_BUKU_PUSAT', $reqPusat);
+	$maintenance_anggaran->setField('KD_BUKU_BESAR', $reqBesar);
+	$maintenance_anggaran->setField('THN_BUKU', $reqTahun);
+
+	
+	if($maintenance_anggaran->delete())
+		$alertMsg .= "Data berhasil dihapus";
+	else
+		$alertMsg .= "Error ".$maintenance_anggaran->getErrorMsg();
+
+	return $alertMsg;
 }
 ?>
