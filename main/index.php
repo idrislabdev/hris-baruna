@@ -358,20 +358,20 @@ function goforit() {
                                 </div>
                             </div>
                             <?php } ?>
-                            <?php if ($userLogin->aksesPenghasilan == 'YES') { ?>
-                            <div id="penghasilan" class="tile  bg-color-white">
-                                <div class="tile-icon-large ">
-                                    <a href="../penghasilan/index.php"><img src="../WEB-INF/images/app-penghasilan.jpg"></a>
-                                </div>
-                            </div>
-                            <?php } ?>
-                            <?php if ($userLogin->aksesPresensi == 'YES') { ?>
+                            <?php /*if ($userLogin->aksesPenghasilan == 'YES') { ?>
+                             <div id="penghasilan" class="tile  bg-color-white">
+                                 <div class="tile-icon-large ">
+                                     <a href="../penghasilan/index.php"><img src="../WEB-INF/images/app-penghasilan.jpg"></a>
+                                 </div>
+                             </div>  
+                            <?php } */?>
+                            <?php /* if ($userLogin->aksesPresensi == 'YES') { ?>
                             <div id="presensi" class="tile  bg-color-white">
                                 <div class="tile-icon-large ">
                                     <a href="../presensi/index.php"><img src="../WEB-INF/images/app-presensi.png"></a>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <?php } */ ?>
                             <?php if ($userLogin->aksesKeuangan == 'YES') { ?>
                             <div id="keuangan" class="tile  bg-color-white">
                                 <div class="tile-icon-large ">
