@@ -174,7 +174,7 @@ $worksheet->write(5, 4, "Manager SDM dan Umum", $text_format_line_left);*/
 $row = 4;
 while($kbbt_neraca_angg->nextRow())
 {
-	$worksheet->write($row, 1, $kbbt_neraca_angg->getField("THN_BUKU"), $text_format_line);
+	$worksheet->write($row, 1, $kbbt_neraca_angg->getField("THN_BUKU")."-".($kbbt_neraca_angg->getField("THN_BUKU")+1), $text_format_line);
 	$worksheet->write($row, 2, $kbbt_neraca_angg->getField("KD_BUKU_PUSAT"), $text_format_line_left);
 	$worksheet->write($row, 3, $kbbt_neraca_angg->getField("KD_BUKU_BESAR"), $text_format_line_left);
 	$worksheet->write($row, 4, $kbbt_neraca_angg->getField("ANGG_TAHUNAN"), $text_format_line_left);

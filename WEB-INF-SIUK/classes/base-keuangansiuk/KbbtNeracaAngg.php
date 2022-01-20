@@ -280,7 +280,7 @@ DESCRIPTION			:
 	
 	function getCountByParamsMaintenanceAnggaran($paramsArray=array(), $statement="")
 	{
-		$str = "SELECT COUNT(KD_BUKU_BESAR) AS ROWCOUNT FROM MAINTENANCE_ANGGARAN_TAHUNAN
+		$str = "SELECT COUNT(KD_BUKU_BESAR) AS ROWCOUNT FROM KBBT_NERACA_ANGG
 		        WHERE 1=1 ".$statement; 
 		
 		while(list($key,$val)=each($paramsArray))
