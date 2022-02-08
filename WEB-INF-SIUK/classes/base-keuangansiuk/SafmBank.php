@@ -137,6 +137,25 @@ DESCRIPTION			:
 		return $this->selectLimit($str,$limit,$from); 
     }
 
+
+
+	function selectByParamsBk_Besar($paramsArray=array(),$limit=-1,$from=-1, $statement="",$sOrder="ORDER BY 1 ASC")
+	{
+		$str = " select  kd_buku_besar MBANK_KODE_BB,   concat(kd_buku_besar ,nm_buku_besar)   MBANK_NAMA, '-'    MBANK_KARTU_BB   from  kbbr_buku_besar  
+		where kd_buku_besar like '101.%' and  kd_buku_besar not like '101.00.%'   	WHERE 1 = 1
+				"; 
+		//, FOTO
+		while(list($key,$val) = each($paramsArray))
+		{
+			$str .= " AND $key = '$val' ";
+		}
+		
+		$str .= $statement." ".$sOrder;
+		$this->query = $str;
+		return $this->selectLimit($str,$limit,$from); 
+    }
+
+
     function selectByParamsPencarian($paramsArray=array(),$limit=-1,$from=-1, $statement="",$sOrder="ORDER BY MBANK_KODE ASC")
 	{
 		$str = "
