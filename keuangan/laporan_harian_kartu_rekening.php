@@ -9,7 +9,7 @@ $kbbr_key_table  = new KbbrKeyTabel();
 $safm_bank = new SafmBank();
 
 $kbbr_key_table->selectByParams(array("KD_SUBSIS" => "ALL", "ID_TABEL" => "OFFICER"));
-$safm_bank->selectByParams(array(), -1, -1, "", " ORDER BY MBANK_KODE_BB ASC ");
+$safm_bank->selectByParamsBk_Besar(array(), -1, -1, "", " ORDER BY 1 ASC ");
 
 $i=0;
 while($kbbr_key_table->nextRow())
@@ -80,14 +80,15 @@ while($kbbr_key_table->nextRow())
             <td><input id="reqTanggal" name="" class="easyui-datebox" data-options="validType:'date'" /></td>
         </tr>
         <tr>
-        	<td>Rekening</td>
+        	<td>Rekening </td>
             <td>
-            	<select id="reqRekening">
+            	<select id="reqRekening"  >
                 <?
                 while($safm_bank->nextRow())
 				{
 				?>
-                	<option value="<?=$safm_bank->getField("MBANK_KODE_BB")?> <?=$safm_bank->getField("MBANK_KARTU_BB")?>-<?=$safm_bank->getField("MBANK_NAMA")?>"><?=$safm_bank->getField("MBANK_KODE_BB")?> <?=$safm_bank->getField("MBANK_KARTU_BB")?></option>
+						 <!--? echo    "test";?       -->  
+                		<option value="<?=$safm_bank->getField("MBANK_KODE_BB")?>"><?=$safm_bank->getField("MBANK_KODE_BB")?> - <?=$safm_bank->getField("MBANK_NAMA")?></option>
                 <?
 				}
 				?>
