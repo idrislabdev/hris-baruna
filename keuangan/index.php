@@ -712,7 +712,7 @@ ddsmoothmenu.init({
 											"link" => "realisasi_biaya_jenis_pusat.php"
 										),
 										array(
-											"nama" => "Laporan Bulanan Semua",
+											"nama" => "Laporan Bulanan Semua (biaya pusat jenis)",
 											"link" => "realisasi_biaya_pusat_jenis.php"
 										),
 										array(
