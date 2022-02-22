@@ -17,7 +17,7 @@ if($reqNotId == "")
 else
 	$statement = " AND NOT KD_BUKU_BESAR LIKE '".$reqNotId."%' ";
 
-$kbbr_buku_besar->selectByParamsSimple(array(), -1, -1, $statement."  AND (KD_BUKU_BESAR LIKE '".$search_term."%' OR UPPER(NM_BUKU_BESAR) LIKE UPPER('%".$search_term."%')) ", " ORDER BY A.KD_BUKU_BESAR ASC ");
+$kbbr_buku_besar->selectByParamsSimple(array(), -1, -1, $statement."  and  grup_dtl_kode='D'  AND (KD_BUKU_BESAR LIKE '".$search_term."%' OR UPPER(NM_BUKU_BESAR) LIKE UPPER('%".$search_term."%')) ", " ORDER BY A.KD_BUKU_BESAR ASC ");
 $j=0;
 while($kbbr_buku_besar->nextRow())
 {

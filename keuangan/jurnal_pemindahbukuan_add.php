@@ -73,7 +73,17 @@ $safr_valuta->selectByParams(array("KD_AKTIF" => "A"));
 				url:'../json-keuangansiuk/jurnal_pemindahbukuan_add.php',
 				onSubmit:function(){
 					$(this).find(':input').removeAttr('disabled');
-					return $(this).form('validate');
+          if($("#reqUnbalance").is(':checked'))
+					{
+						$.messager.alert('Info', "Jurnal tidak balance.", 'info');	
+						$("#reqBalance").prop('disabled','true');
+						$("#reqUnbalance").prop('disabled','true');
+						$("#reqAll").prop('disabled','true');
+						$("#reqUnbalance").prop('checked','true');
+						return false;					
+					}
+					else
+						return $(this).form('validate');			
 				},
 				success:function(data){
 					data = data.split("-");					

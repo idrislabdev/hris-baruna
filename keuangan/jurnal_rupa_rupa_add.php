@@ -171,6 +171,10 @@ $safr_valuta->selectByParams(array("KD_AKTIF" => "A"));
 					if($("#reqUnbalance").is(':checked'))
 					{
 						$.messager.alert('Info', "Jurnal tidak balance.", 'info');	
+						$("#reqBalance").prop('disabled','true');
+						$("#reqUnbalance").prop('disabled','true');
+						$("#reqAll").prop('disabled','true');
+						$("#reqUnbalance").prop('checked','true');
 						return false;					
 					}
 					else

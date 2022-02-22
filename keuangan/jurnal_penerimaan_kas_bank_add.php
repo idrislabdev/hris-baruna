@@ -158,12 +158,18 @@ $safr_valuta->selectByParams(array("KD_AKTIF" => "A"));
 			$('#ff').form({
 				url:'../json-keuangansiuk/jurnal_penerimaan_kas_bank_add.php',
 				//url:'../json-keuangansiuk/1.php',
-				onSubmit:function(){
+				onSubmit:function()
+				{
 					$(this).find(':input').removeAttr('disabled');
 					if($("#reqUnbalance").is(':checked'))
 					{
-						$.messager.alert('Info', "Jurnal tidak balance.", 'info');	
-						return false;					
+						$.messager.alert('Info', "Jurnal tidak balance.", 'info');
+						$("#reqBalance").prop('disabled','true');
+						$("#reqUnbalance").prop('disabled','true');
+						$("#reqAll").prop('disabled','true');
+						$("#reqUnbalance").prop('checked','true');
+						return false;	
+
 					}
 					else
 						return $(this).form('validate');
@@ -376,10 +382,10 @@ $safr_valuta->selectByParams(array("KD_AKTIF" => "A"));
                     <input type="text" name="reqKeterangan[]" class="easyui-validatebox" value="<?=$kbbt_jur_bb_d_tmp->getField("KET_TAMBAH")?>" style="width:95%;" tabindex="<? $last_tab++; echo $last_tab ?>" onMouseDown="tabindex=<?=$last_tab?>" />
                   </td>
                   <td>
-                    <input type="text" name="reqDebet[]" id="reqDebet<?=$checkbox_index?>" style="text-align:right; width:95%;" OnFocus="FormatAngka('reqDebet<?=$checkbox_index?>')" OnKeyUp="FormatUang('reqDebet<?=$checkbox_index?>'); hitungDebetTotal('dataTableRowDinamis'); setTimeout(setCheckBalance, 1000);" OnBlur="FormatUang('reqDebet<?=$checkbox_index?>')" value="<?=numberToIna($kbbt_jur_bb_d_tmp->getField('SALDO_VAL_DEBET'))?>" tabindex="<? $last_tab++; echo $last_tab ?>" onMouseDown="tabindex=<?=$last_tab?>">
+                    <input type="text" name="reqDebet[]" id="reqDebet<?=$checkbox_index?>" style="text-align:right; width:165px;" OnFocus="FormatAngka('reqDebet<?=$checkbox_index?>')" OnKeyUp="FormatUang('reqDebet<?=$checkbox_index?>'); hitungDebetTotal('dataTableRowDinamis'); setTimeout(setCheckBalance, 1000);" OnBlur="FormatUang('reqDebet<?=$checkbox_index?>')" value="<?=numberToIna($kbbt_jur_bb_d_tmp->getField('SALDO_VAL_DEBET'))?>" tabindex="<? $last_tab++; echo $last_tab ?>" onMouseDown="tabindex=<?=$last_tab?>">
                   </td>
                   <td>
-                    <input type="text" name="reqKredit[]" id="reqKredit<?=$checkbox_index?>" style="text-align:right; width:95%;" OnFocus="FormatAngka('reqKredit<?=$checkbox_index?>')" OnKeyUp="FormatUang('reqKredit<?=$checkbox_index?>'); hitungKreditTotal('dataTableRowDinamis');setTimeout(setCheckBalance, 1000);" OnBlur="FormatUang('reqKredit<?=$checkbox_index?>')" value="<?=numberToIna($kbbt_jur_bb_d_tmp->getField('SALDO_VAL_KREDIT'))?>" tabindex="<? $last_tab++; echo $last_tab ?>" onMouseDown="tabindex=<?=$last_tab?>">
+                    <input type="text" name="reqKredit[]" id="reqKredit<?=$checkbox_index?>" style="text-align:right; width:165px;" OnFocus="FormatAngka('reqKredit<?=$checkbox_index?>')" OnKeyUp="FormatUang('reqKredit<?=$checkbox_index?>'); hitungKreditTotal('dataTableRowDinamis');setTimeout(setCheckBalance, 1000);" OnBlur="FormatUang('reqKredit<?=$checkbox_index?>')" value="<?=numberToIna($kbbt_jur_bb_d_tmp->getField('SALDO_VAL_KREDIT'))?>" tabindex="<? $last_tab++; echo $last_tab ?>" onMouseDown="tabindex=<?=$last_tab?>">
                   </td>
                   <td align="center">
                   <label>
